@@ -1,0 +1,16 @@
+{
+  "name": "journey",
+  "version": "1.0.0",
+  "description": "journey",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Halim Lee",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.1"
+  }
+}
