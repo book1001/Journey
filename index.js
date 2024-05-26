@@ -24,6 +24,12 @@ app.get("/register", (req, res) => {
   });
 });
 
+app.get("/yourtube", (req, res) => {
+  return res.status(200).json({
+    meg:"you tu be",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Backend running on $(PORT)`);
 });
