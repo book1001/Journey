@@ -1,0 +1,64 @@
+html,body{
+  margin:0;
+  padding:0;
+  overflow:scroll;
+/*   background: green; */
+}
+
+#content {
+  display: grid;
+  height:100%;
+  grid-template-columns: 200px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  align-items: flex-end;
+  padding-right: 100px;
+  direction: rtl;
+  text-align: justify;
+}
+
+
+.item1 {
+  display: inline;
+/*   background: lightblue; */
+/*   height: 100px; */
+  overflow: auto;
+  border: 0px solid;
+/*   padding: 10px;
+  margin: 5px; */
+}
+
+.item1:before {
+  text-orientation: upright;
+  word-break: break-all;
+  content: "░\A░\A░\A░\A░\A░\A░\A░\A░\A";
+}
+
+.item1:after {
+  text-orientation: upright;
+  content: "\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░";
+}
+
+.item2 {
+  display: inline;
+/*   background: lightblue; */
+/*   height: 100px; */
+  overflow: auto;
+  border: 0px solid;
+/*   padding: 10px;
+  margin: 5px; */
+  color: blue;
+}
+
+
+.item3 {
+  display: inline;
+/*   background: lightblue; */
+/*   height: 100px; */
+  overflow: auto;
+  border: 0px solid;
+/*   padding: 10px;
+  margin: 5px; */
+  color: green;
+  direction: ltr; 
+}

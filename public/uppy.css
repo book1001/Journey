@@ -1,0 +1,21 @@
+.uppy-Root {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+  font-family: Menlo !important;
+}
+
+.uppy-Dashboard-inner {
+  width: auto !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.uppy-Dashboard-AddFiles {
+  border: none !important;
+}
+
+.uppy-Dashboard-AddFiles-info {
+  display: none !important;
+}
+

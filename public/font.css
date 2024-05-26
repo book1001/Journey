@@ -1,0 +1,31 @@
+/* font: import ================================================ */
+
+@font-face {
+  font-family: 'Menlo';
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
+}
+
+::-webkit-scrollbar { /* width */
+  width: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Menlo;
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 0.027em;
+/*   font-family: monospace; */
+  color: red;
+  cursor: text;
+}
+
+::selection {
+  color: green;
+  text-shadow: 0 0px 6px yellow;
+  background: red;
+}
