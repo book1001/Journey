@@ -6,10 +6,39 @@ const fs = require('fs');
 
 
 // ==================================================
-// express
+// express + Uppy
 // ==================================================
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const path = require("path");
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: `${__dirname}/uploads/`,
+  filename: (req, file, cb) => {
+    // const fileName = `${Date.now()}${path.extname(file.originalname)}`;
+    const fileName = `hi${path.extname(file.originalname)}`;
+    cb(null, fileName);
+  }
+});
+
+const uploadImage = multer({storage}).single("photo");
+
+app.use(cors());
+app.use(express.static('public'));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "public/index.html"));
+});
+
+app.post("/image", uploadImage, (req, res) => {
+  console.log(req.file);
+  if(req.file) return res.json({mes: "good job uploading that image"});
+
+  res.send("Image upload failed");
+});
+
 
 require("dotenv").config();
 
@@ -21,29 +50,28 @@ const PORT = process.env.PORT;
 //   });
 // });
 
-app.get("/login", (req, res) => {
-  return res.status(200).json({
-    meg:"You are on login route",
-  });
-});
+// app.get("/login", (req, res) => {
+//   return res.status(200).json({
+//     meg:"You are on login route",
+//   });
+// });
 
-app.get("/register", (req, res) => {
-  return res.status(200).json({
-    meg:"You are on register route",
-  });
-});
+// app.get("/register", (req, res) => {
+//   return res.status(200).json({
+//     meg:"You are on register route",
+//   });
+// });
 
-app.get("/yourtube", (req, res) => {
-  return res.status(200).json({
-    meg:"you tu be",
-  });
-});
+// app.get("/yourtube", (req, res) => {
+//   return res.status(200).json({
+//     meg:"you tu be",
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`Backend running on $(PORT)`);
 });
 
-app.use(express.static('public'));
 
 
 
@@ -75,37 +103,81 @@ const vision = require('@google-cloud/vision');
 
 // const client = new vision.ImageAnnotatorClient(CONFIG);
 
-// const detectText = async (file_path) => {
-//     let [result] = await client.textDetection(file_path);
-//     const newText = '●' + result.fullTextAnnotation.text;
-    
-//     // Read the existing text from the JSON file
-//     let existingText = '';
-//     try {
-//         existingText = fs.readFileSync("./public/db.json", "utf-8");
-//         existingText = JSON.parse(existingText);
-//     } catch (error) {
-//         if (error.code === 'ENOENT') {
-//             // If the file doesn't exist, start with an empty string
-//             existingText = '';
-//         } else {
-//             throw error;
-//         }
-//     }
-    
-//     // Append the new text to the existing text
-//     const updatedText = existingText + newText;
-    
-//     // Write the updated text back to the JSON file
-//     fs.writeFileSync("./public/db.json", JSON.stringify(updatedText), "utf-8");
-// };
-
-// const detectText = async (file_path) => {
+// // const detectText = async (file_path) => {
+// //   let [result] = await client.textDetection(file_path);
   
-//     let [result] = await client.textDetection(file_path);
-//     console.log(result.fullTextAnnotation.text);
-//     const text = result.fullTextAnnotation.text;
-//     fs.writeFileSync("./public/db.json", JSON.stringify(text), "utf-8");
+// //   // Check if any text was detected
+// //   if (result.fullTextAnnotation && result.fullTextAnnotation.text) {
+// //       const newText = '●' + result.fullTextAnnotation.text;
+
+// //       // Read the existing text from the JSON file
+// //       let existingText = '';
+// //       try {
+// //           existingText = fs.readFileSync("./public/db.json", "utf-8");
+// //           existingText = JSON.parse(existingText);
+// //       } catch (error) {
+// //           if (error.code === 'ENOENT') {
+// //               // If the file doesn't exist, start with an empty string
+// //               existingText = '';
+// //           } else {
+// //               throw error;
+// //           }
+// //       }
+
+// //       // Append the new text to the existing text
+// //       const updatedText = existingText + newText;
+
+// //       // Write the updated text back to the JSON file
+// //       fs.writeFileSync("./public/db.json", JSON.stringify(updatedText), "utf-8");
+// //   } else {
+// //       console.log("No text detected in the image.");
+// //   }
+// // };
+
+// // const detectText = async (file_path) => {
+// //     let [result] = await client.textDetection(file_path);
+// //     const newText = '●' + result.fullTextAnnotation.text;
+    
+// //     // Read the existing text from the JSON file
+// //     let existingText = '';
+// //     try {
+// //         existingText = fs.readFileSync("./public/db.json", "utf-8");
+// //         existingText = JSON.parse(existingText);
+// //     } catch (error) {
+// //         if (error.code === 'ENOENT') {
+// //             // If the file doesn't exist, start with an empty string
+// //             existingText = '';
+// //         } else {
+// //             throw error;
+// //         }
+// //     }
+    
+// //     // Append the new text to the existing text
+// //     const updatedText = existingText + newText;
+    
+// //     // Write the updated text back to the JSON file
+// //     fs.writeFileSync("./public/db.json", JSON.stringify(updatedText), "utf-8");
+// // };
+
+// const detectText = async (file_path) => {
+//   let [result] = await client.textDetection(file_path);
+  
+//   if (result.fullTextAnnotation && result.fullTextAnnotation.text) {
+//       console.log(result.fullTextAnnotation.text);
+//       const text = result.fullTextAnnotation.text;
+//       fs.writeFileSync("./public/db.json", JSON.stringify(text), "utf-8");
+//   } else {
+//       console.log("No text detected in the image.");
+//   }
 // };
 
-// detectText('https://www.todayifoundout.com/wp-content/uploads/2014/10/McDonalds.jpg');
+// // const detectText = async (file_path) => {
+  
+// //     let [result] = await client.textDetection(file_path);
+// //     console.log(result.fullTextAnnotation.text);
+// //     const text = result.fullTextAnnotation.text;
+// //     fs.writeFileSync("./public/db.json", JSON.stringify(text), "utf-8");
+// // };
+
+// // detectText('https://www.todayifoundout.com/wp-content/uploads/2014/10/McDonalds.jpg');
+// detectText('./uploads/hi.jpg');
