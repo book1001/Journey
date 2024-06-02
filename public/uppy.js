@@ -28,8 +28,8 @@ const uppy = new Uppy()
      }
   });
   uppy.use(XHRUpload, { 
-    endpoint: 'https://journey-qxo4f.ondigitalocean.app/upload',
-    // endpoint: 'http://localhost:8000/image',
+    // endpoint: 'https://journey-qxo4f.ondigitalocean.app/upload',
+    endpoint: 'http://localhost:8000/image',
     fieldName: 'photo',
     formData: true
   });
