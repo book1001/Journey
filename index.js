@@ -16,6 +16,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: `${__dirname}/uploads/`,
+  // destination: `${__dirname}/uploads/`,
   filename: (req, file, cb) => {
     // const fileName = `${Date.now()}${path.extname(file.originalname)}`;
     const fileName = `hi${path.extname(file.originalname)}`;
@@ -62,11 +63,11 @@ const PORT = process.env.PORT;
 //   });
 // });
 
-// app.get("/yourtube", (req, res) => {
-//   return res.status(200).json({
-//     meg:"you tu be",
-//   });
-// });
+app.get("/upload", (req, res) => {
+  return res.status(200).json({
+    meg:"upload",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Backend running on $(PORT)`);

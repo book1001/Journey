@@ -1,4 +1,4 @@
-import { Uppy, Dashboard, Webcam, XHRUpload } from "https://releases.transloadit.com/uppy/v3.25.2/uppy.min.mjs"
+import { Uppy, Dashboard, Webcam, XHRUpload, AwsS3 } from "https://releases.transloadit.com/uppy/v3.25.2/uppy.min.mjs"
     
 // const Uppy = require("@uppy/core");
 // const XHRUpload = require("@uppy/xhr-upload");
@@ -28,10 +28,16 @@ const uppy = new Uppy()
      }
   });
   uppy.use(XHRUpload, { 
-    endpoint: 'http://localhost:8000/image',
+    endpoint: 'https://journey-qxo4f.ondigitalocean.app/upload',
+    // endpoint: 'http://localhost:8000/image',
     fieldName: 'photo',
     formData: true
   });
+  // uppy.use(AwsS3, {
+	// 	shouldUseMultipart: (file) => file.size > 100 * 2 ** 20,
+	// 	companionUrl: 'https://companion.uppy.io',
+  //   limit: 1
+	// });
 
 
   uppy.on('complete', (res) => {
