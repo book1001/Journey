@@ -1,12 +1,25 @@
+/* font: import ================================================ */
+
+@font-face {
+  font-family: 'Menlo';
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
+}
+
+
+/* ============================================= */
+/* Main */
+/* ============================================= */
 .uppy-Root {
   position: fixed !important;
-  bottom: 0;
-  width: 100%;
+  top: 0;
   font-family: Menlo !important;
 }
 
 .uppy-Dashboard-inner {
   width: auto !important;
+  height: auto !important;
+  /* height: 100svh !important; */
   background-color: transparent !important;
   border: none !important;
 }
@@ -27,16 +40,23 @@
   display: none !important;
 }
 
+.uppy-size--md .uppy-Dashboard-AddFiles-list{
+  position: absolute;
+  bottom: 0;
+}
+
 /* ============================================= */
 /* Camera Icon */
 /* ============================================= */
 .uppy-Root *, .uppy-Root :after, .uppy-Root :before {
-  fill: black !important;
+  fill: #ffffff !important;
 }
 
 .uppy-DashboardTab-inner {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
   background-color: red !important;
-  border-radius: 16px !important;
 }
 
 .uppy-DashboardTab-inner:hover {
@@ -46,6 +66,12 @@
 .uppy-DashboardTab-btn:hover {
   background-color: transparent !important;
 }
+
+.uppy-size--md .uppy-DashboardTab-name{
+  display: none !important;
+}
+
+
 /* .uppy-DashboardTab-inner {
   position: relative;
   width: 32px; 
@@ -91,18 +117,80 @@
   visibility: visible;
 }
 
+.uppy-DashboardContent-back, .uppy-DashboardContent-save {
+  font-family: Menlo !important;
+  color: #000000 !important;
+}
+
 .uppy-Webcam-buttonContainer svg {
   display: none !important;
 }
 
+/* .uppy-size--md .uppy-Dashboard-AddFiles-list {
+  background-color: red !important;
+} */
+
+.uppy-size--md .uppy-Webcam-button {
+  width: 45px;
+  height: 45px;
+}
+
+
+/* ============================================= */
+/* Camera On: WebCamSize */
+/* ============================================= */
+.uppy-Webcam-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* ============================================= */
+/* Camera On: Icon */
+/* ============================================= */
+.uppy-Webcam-button {
+  position: fixed;
+  bottom: 0;
+  background-color: red !important;
+  border: none !important;
+  transition: none !important;
+}
+
+.uppy-Webcam-button:focus {
+  box-shadow: none !important;
+}
+
+.uppy-Webcam-button:hover {
+  background-color: green;
+}
+
+.uppy-transitionenter {
+  transition: none !important;
+}
+
+.uppy-transition-slideDownUp-enter-active {
+  transition: none !important;
+}
+
+.uppy-Webcam-button--picture {
+  margin-right: 0 !important;
+}
 
 /* ============================================= */
 /* Camera On: BG */
 /* ============================================= */
-.uppy-Webcam-videoContainer {
-  background-color: #000000 !important;
+.uppy-DashboardContent-bar {
+  background-color: transparent !important;
+  border-bottom: none !important;
 }
 
+.uppy-Webcam-videoContainer {
+  background-color: transparent !important;
+}
+
+.uppy-DashboardContent-panel {
+  background-color: transparent !important;
+}
 
 /* ============================================= */
 /* Upload 1 file */
@@ -119,6 +207,76 @@
   display: none !important;
 }
 
+.uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
+  background-color: transparent !important;
+}
+
 /* .uppy-StatusBar.is-complete .uppy-StatusBar-progress {
   background-color: #1bb240;
 } */
+
+.uppy-Dashboard-Item-previewInnerWrap {
+  background-color: transparent !important;
+}
+
+
+/* ============================================= */
+/* Camera On Permission */
+/* ============================================= */
+.uppy-Webcam-permissons {
+  font-family: Menlo !important;
+  color: #000000 !important;
+}
+
+.uppy-Webcam-permissonsIcon {
+  display: none !important;
+}
+
+.uppy-Webcam-title {
+  font-family: Menlo !important;
+  color: #000000 !important;
+}
+
+.uppy-StatusBar {
+  background-color: transparent !important;
+  border-top: none !important;
+  height: auto !important;
+}
+
+.is-waiting {
+  background-color: transparent !important;
+  border-top: none !important;
+  height: auto !important;
+}
+
+
+/* ============================================= */
+/* Camera On Permission: Btn */
+/* ============================================= */
+/* .uppy-StatusBar.is-waiting {
+  position: fixed;
+  bottom: 0;
+} */
+
+.uppy-StatusBar-actionBtn--upload {
+  position: fixed;
+  bottom: 0;
+}
+
+/* ============================================= */
+/* Mobile */
+/* ============================================= */
+
+.uppy-DashboardTab {
+  border-bottom: none !important;
+}
+
+.uppy-DashboardTab-btn {
+  justify-content: center !important;
+}  
+
+.uppy-DashboardTab-name{
+  display: none !important;
+}
+
+

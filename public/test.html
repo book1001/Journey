@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- css -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+</head>
+
+
+<body>
+  <style>
+    * { box-sizing: border-box; }
+
+    body { font-family: sans-serif; }
+
+    /* ---- grid ---- */
+
+    .grid {
+      position: relative;
+      background: #EEE;
+      max-width: 1200px;
+    }
+
+    /* clearfix */
+    .grid:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* ---- grid-item ---- */
+
+    .grid-item {
+      width: 160px;
+      height: 120px;
+      float: left;
+      background: #D26;
+      border: 2px solid #333;
+      border-color: hsla(0, 0%, 0%, 0.5);
+      border-radius: 5px;
+    }
+
+    .grid-item--width2 { width: 320px; }
+    .grid-item--width3 { width: 480px; }
+    .grid-item--width4 { width: 720px; }
+
+    .grid-item--height2 { height: 200px; }
+    .grid-item--height3 { height: 260px; }
+    .grid-item--height4 { height: 360px; }
+
+    /* ---- stamp ---- */
+
+    /* position stamp elements with CSS */
+    .stamp {
+      position: absolute;
+      background: orange;
+      border: 4px dotted black;
+    }
+    .stamp1 {
+      left: 30%;
+      top: 500px;
+      width: 20%;
+      height: 180px;
+      position: sticky;
+    }
+    .stamp2 {
+      right: 10%;
+      top: 330px;
+      width: 70%;
+      height: 60px;
+    }
+  </style>
+
+  <!-- <div id="content"></div> -->
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  fetch('db.json')
+      .then(response => response.json())
+      .then(data => {
+          // Assuming the JSON data is a single string
+          let jsonData = data;
+
+          jsonData = jsonData.replace(/\n/g, '🌞');
+      
+          // Split the string by newline characters
+          // const items = jsonData.split('\n\n');
+          const items = jsonData.split('●');
+
+          // Get the content div
+          const contentDiv = document.getElementById('content');
+
+          // Loop through each item and create a div for it
+          items.forEach((item, index) => {
+              const masonryDiv = document.createElement('div');
+              masonryDiv.classList.add(`grid-item`);
+
+              const itemDiv = document.createElement('div');
+              // Assign a class based on index (for demonstration, cycle through 3 styles)
+              // itemDiv.classList.add(`item${(index % 3) + 1}`);
+              itemDiv.classList.add(`grid-item`);
+
+              const roofDiv = document.createElement('div');
+              roofDiv.classList.add(`roof${(index % 3) + 1}`);
+              roofDiv.textContent 
+              = `░░░░░░░░░░░░
+              ░░░░░░░░░░░░░░░░░░░░░░░
+              ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░`;
+
+              const wallDiv = document.createElement('div');
+              wallDiv.classList.add(`wall${(index % 3) + 1}`);
+              wallDiv.textContent = '▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█▓▓█';
+
+              const textDiv = document.createElement('div');
+              textDiv.classList.add(`textSign`);
+              textDiv.textContent = item;
+
+              contentDiv.appendChild(itemDiv);
+              // itemDiv.appendChild(roofDiv);
+              // itemDiv.appendChild(wallDiv);
+              // itemDiv.appendChild(textDiv);
+          });
+      })
+      .catch(error => console.error('Error fetching JSON data:', error));
+});
+
+  </script>
+
+<div id="content">
+  <div class="grid-item grid-item--height3"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item grid-item--width3"></div>
+  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="stamp stamp1"></div>
+  <!-- <div class="grid-item"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+  
+  <div class="grid-item grid-item--height3"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item grid-item--width3"></div>
+  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="stamp stamp1"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item grid-item--width2 grid-item--height3"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+  <div class="grid-item grid-item--width2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height3"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--height2"></div> -->
+</div>
+
+  <script>
+    $('#content').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: 160,
+      stamp: '.stamp'
+    });
+  </script>
+
+  <!-- <script type="module" src="uppy.js"></script> -->
+  <!-- <script type="text/javascript" src="index2.js"></script> -->
+</body>
+</html>

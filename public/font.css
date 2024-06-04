@@ -12,14 +12,12 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   font-family: Menlo;
+  /*   font-family: monospace; */
   font-size: 12px;
   text-align: left;
-  letter-spacing: 0.027em;
-/*   font-family: monospace; */
+  /* letter-spacing: 0.027em; */
+  line-height: 12px;
   color: red;
   cursor: text;
 }

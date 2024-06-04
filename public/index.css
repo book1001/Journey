@@ -1,64 +1,109 @@
+* { 
+  box-sizing: border-box; 
+}
+
 html,body{
+  width: 100vw;
+  height: 100vh;
   margin:0;
   padding:0;
-  overflow:scroll;
+  overflow: auto;
 /*   background: green; */
 }
 
 #content {
-  display: grid;
-  height:100%;
-  grid-template-columns: 200px;
-  grid-auto-flow: column;
-  grid-auto-columns: 100px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
   align-items: flex-end;
-  padding-right: 100px;
+  align-content: flex-end;
+  align-items: flex-end;
   direction: rtl;
   text-align: justify;
 }
 
-
-.item1 {
-  display: inline;
-/*   background: lightblue; */
-/*   height: 100px; */
-  overflow: auto;
-  border: 0px solid;
-/*   padding: 10px;
-  margin: 5px; */
+.infoItem {
+  direction: ltr;
 }
 
-.item1:before {
+.item {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: none;
+  text-align: center;
+  direction: ltr;
+  overflow: hidden;
+}
+
+.item1 {
+  width: 250px;
+  height: 190px;
+}
+
+/* .item1:before {
   text-orientation: upright;
   word-break: break-all;
-  content: "░\A░\A░\A░\A░\A░\A░\A░\A░\A";
+  content: "████|░░░░░░░░░░\A";
+  text-align: right;
 }
 
 .item1:after {
   text-orientation: upright;
-  content: "\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░\A░";
-}
+  content: "\A░░░░░░░░░░|████";
+  text-align: left;
+} */
 
 .item2 {
-  display: inline;
-/*   background: lightblue; */
-/*   height: 100px; */
-  overflow: auto;
-  border: 0px solid;
-/*   padding: 10px;
-  margin: 5px; */
+  width: 100px;
+  height: 100px;
+  background: red;
   color: blue;
 }
 
 
 .item3 {
-  display: inline;
-/*   background: lightblue; */
-/*   height: 100px; */
-  overflow: auto;
-  border: 0px solid;
-/*   padding: 10px;
-  margin: 5px; */
+  width: 100px;
+  height: 100px;
   color: green;
-  direction: ltr; 
 }
+
+
+.roof1 {
+  grid-area: 1 / 1 / 2 / 4; 
+  width: 250px;
+  word-wrap: break-word;
+}
+
+.wall1 {
+  grid-area: 2 / 1 / 4 / 4; 
+  width: 250px;
+  word-wrap: break-word;
+}
+
+.wall2 {
+  grid-area: 2 / 1 / 4 / 4; 
+  width: 100px;
+  word-wrap: break-word;
+}
+
+.wall3 {
+  grid-area: 2 / 1 / 4 / 4; 
+  width: 100px;
+  word-wrap: break-word;
+}
+
+.textSign {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 80px;
+  background: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
