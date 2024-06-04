@@ -15,7 +15,7 @@ const uppy = new Uppy()
 
   uppy.use(Dashboard, { 
     inline: true, 
-    target: '#app',
+    target: '#uppy',
     // target: 'body' 
   });
   uppy.use(Webcam, { 
