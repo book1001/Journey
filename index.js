@@ -161,17 +161,17 @@ const client = new vision.ImageAnnotatorClient(CONFIG);
 //     fs.writeFileSync("./public/db.json", JSON.stringify(updatedText), "utf-8");
 // };
 
-const detectText = async (file_path) => {
-  let [result] = await client.textDetection(file_path);
+// const detectText = async (file_path) => {
+//   let [result] = await client.textDetection(file_path);
   
-  if (result.fullTextAnnotation && result.fullTextAnnotation.text) {
-      console.log(result.fullTextAnnotation.text);
-      const text = result.fullTextAnnotation.text;
-      fs.writeFileSync("./public/db.json", JSON.stringify(text), "utf-8");
-  } else {
-      console.log("No text detected in the image.");
-  }
-};
+//   if (result.fullTextAnnotation && result.fullTextAnnotation.text) {
+//       console.log(result.fullTextAnnotation.text);
+//       const text = result.fullTextAnnotation.text;
+//       fs.writeFileSync("./public/db.json", JSON.stringify(text), "utf-8");
+//   } else {
+//       console.log("No text detected in the image.");
+//   }
+// };
 
 // const detectText = async (file_path) => {
   
@@ -182,4 +182,6 @@ const detectText = async (file_path) => {
 // };
 
 // detectText('https://www.todayifoundout.com/wp-content/uploads/2014/10/McDonalds.jpg');
-detectText('./uploads/hi.jpg');
+// detectText('./uploads/hi.jpg');
+// detectText('https://journey-spaces.nyc3.digitaloceanspaces.com/hello.png');
+
