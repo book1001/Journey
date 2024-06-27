@@ -1,7 +1,7 @@
 
 // JSON 데이터를 가져오는 함수
 async function fetchData() {
-  const response = await fetch('db.json');
+  const response = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
   const data = await response.json();
   return data;
 }
