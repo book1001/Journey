@@ -8,18 +8,17 @@ html,body{
   margin:0;
   padding:0;
   overflow: auto;
-/*   background: green; */
 }
 
 #content {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: end;
   align-content: flex-end;
-  align-items: flex-end;
   direction: rtl;
   text-align: justify;
+  gap: 50px 0px;
 }
 
 .infoItem {
@@ -27,77 +26,153 @@ html,body{
 }
 
 .item {
+  width: 240px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
   grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 0px 0px;
   border: none;
   text-align: center;
   direction: ltr;
   overflow: hidden;
 }
 
-.item1 {
-  width: 250px;
-  height: 190px;
+.color1 {
+  color: red;
 }
 
-/* .item1:before {
-  text-orientation: upright;
-  word-break: break-all;
-  content: "████|░░░░░░░░░░\A";
-  text-align: right;
-}
-
-.item1:after {
-  text-orientation: upright;
-  content: "\A░░░░░░░░░░|████";
-  text-align: left;
-} */
-
-.item2 {
-  width: 100px;
-  height: 100px;
-  background: red;
+.color2 {
   color: blue;
 }
 
-
-.item3 {
-  width: 100px;
-  height: 100px;
+.color3 {
   color: green;
 }
 
-
 .roof1 {
-  grid-area: 1 / 1 / 2 / 4; 
-  width: 250px;
+  grid-area: 1 / 1 / 2 / 4;
   word-wrap: break-word;
 }
 
-.wall1 {
-  grid-area: 2 / 1 / 4 / 4; 
-  width: 250px;
+.roof2 {
+  grid-area: 1 / 1 / 2 / 4;
   word-wrap: break-word;
+}
+
+.roof3 {
+  grid-area: 1 / 1 / 2 / 4;
+  word-wrap: break-word;
+}
+
+.text1 {
+  grid-area: 2 / 2 / 3 / 3;
+  background: white;
+  z-index: 2;
+}
+
+.text2 {
+  grid-area: 2 / 2 / 3 / 3;
+  background: white;
+  z-index: 2;
+}
+
+.text3 {
+  grid-area: 2 / 2 / 3 / 3;
+  background: white;
+  z-index: 2;
+}
+
+/* .text1:before {
+  text-orientation: upright;
+  word-break: break-all;
+  content: "█░\A";
+  text-align: right;
+}
+
+.text1:after {
+  text-orientation: upright;
+  content: "\A░█";
+  text-align: left;
+} */
+
+
+.wall1 {
+  grid-area: 2 / 1 / 4 / 4;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .wall2 {
-  grid-area: 2 / 1 / 4 / 4; 
-  width: 100px;
+  grid-area: 2 / 1 / 4 / 4;
   word-wrap: break-word;
+  overflow: hidden;
 }
 
 .wall3 {
-  grid-area: 2 / 1 / 4 / 4; 
-  width: 100px;
+  grid-area: 2 / 1 / 4 / 4;
   word-wrap: break-word;
+  overflow: hidden;
 }
 
-.textSign {
+
+.size1 {
+  height: 72px;
+}
+
+.size2 {
+  height: 96px;
+}
+
+.size3 {
+  height: 120px;
+}
+
+.gardenR1 {
+  width: 24px;
+  margin-right: 12px;
+  margin-left: auto;
+  grid-area: 2 / 3 / 4 / 4;
+  word-wrap: break-word;
+  z-index: 2;
+  color: #00FF00;
+}
+
+.gardenR2 {
+  width: 24px;
+  margin-right: 12px;
+  margin-left: auto;
+  grid-area: 2 / 3 / 4 / 4;
+  word-wrap: break-word;
+  z-index: 2;
+  color: #00FF00;
+}
+
+.gardenR3 {
+  grid-area: 2 / 3 / 4 / 4;
+  word-wrap: break-word;
+  z-index: 2;
+}
+
+.tree1 {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+
+.tree2 {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+
+.tree3 {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+/* .textSign {
   grid-area: 2 / 2 / 3 / 3;
   width: 80px;
   background: white;
@@ -105,5 +180,5 @@ html,body{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} */
 

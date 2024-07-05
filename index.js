@@ -2,7 +2,7 @@
 // Json File Upload
 // ==================================================
 const fs = require('fs');
-
+// const fetch = require('node-fetch');
 
 
 // ==================================================
@@ -68,9 +68,244 @@ app.get("/upload", (req, res) => {
   });
 });
 
+
+// ==================================================
+// Json File Upload 2
+// ==================================================
+app.use(express.json());
+
+// Function to fetch new data and append to db.json
+async function fetchAndAppendData() {
+  try {
+    const hiResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
+    const hiData = await hiResponse.json();
+
+    // Extract only the first item
+    const firstItem = hiData[0];
+
+    // Remove specific words from the first item's "text" field
+    const wordsToRemove = ["Created", "with", "Transloadit", "Transtuauit", "Transtult", "Transload", "Transinadit"];
+    let modifiedText = firstItem.text;
+    wordsToRemove.forEach(word => {
+      modifiedText = modifiedText.replace(new RegExp(word, 'gi'), '');
+    });
+
+    // Update the text of the first item
+    firstItem.text = modifiedText.trim();
+
+    // Fetch data from obj.json
+    const objResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/obj.json');
+    const objData = await objResponse.json();
+
+    // Process objData to add tree classes for items with "Tree" in the name
+    const processedTreeData = objData
+      .filter(item => item.name.includes("Tree"))
+      .map(item => {
+        return {
+          treeClass: randomTree()
+        };
+      });
+
+    // Read existing data from db.json
+    const existingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+
+    // Process hiData and combine with processedTreeData
+    const processedHiData = hiData.slice(1).filter(item => !isDerivedText(item.text)).map(item => {
+      return {
+        sizeClass: randomSize(),
+        colorClass: randomColor(),
+        roofClass: randomRoof(),
+        // text: item.text,
+        text: firstItem.text,
+        textClass: randomText(),
+        wallClass: randomWall(),
+        gardenRClass: randomGardenR()
+      };
+    });
+
+    // Combine all processed data
+    const combinedData = [...existingData, ...processedHiData, ...processedTreeData];
+
+
+
+    // Write combined data back to db.json
+    fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
+    console.log('New data has been appended to db.json');
+  } catch (error) {
+    console.error('Failed to fetch and append data:', error);
+  }
+}
+
+// Function to fetch and process tree data from obj.json
+// async function fetchAndProcessTreeData() {
+//   try {
+//     const response = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/obj.json');
+//     const treeData = await response.json();
+
+//     // Process tree data to add tree classes
+//     const processedTreeData = treeData
+//       .filter(item => item.name.includes("Tree"))
+//       .map(item => {
+//         return {
+//           treeClass: randomTree()
+//         };
+//       });
+
+//     // Read existing data from db.json
+//     const existingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+
+//     // Append tree data to existing data
+//     const combinedData = [...existingData, ...processedTreeData];
+
+//     // Write combined data back to db.json
+//     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
+//     console.log('Tree data has been processed and appended to db.json');
+//   } catch (error) {
+//     console.error('Failed to fetch and process tree data:', error);
+//   }
+// }
+
+// Endpoint to fetch new data and append to db.json
+app.get("/fetch-and-append-data", async (req, res) => {
+  await fetchAndAppendData();
+  // await fetchAndProcessTreeData(); 
+  res.send('New data has been fetched and appended to db.json');
+});
+
+// Endpoint to get JSON data (optional, for testing)
+app.get("/data", (req, res) => {
+  try {
+    const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+    res.json(data);
+  } catch (error) {
+    console.error('Failed to read data:', error);
+    res.status(500).json({ error: 'Failed to read data' });
+  }
+});
+
+// Helper function to check if text contains derived words
+function isDerivedText(text) {
+  const derivedTexts = ["Created", "with", "Transloadit", "Transtuauit"];
+  return derivedTexts.some(word => text.includes(word));
+}
+
+// Helper functions to generate random classes
+function getRandomElement(elements) {
+  return elements[Math.floor(Math.random() * elements.length)];
+}
+
+function randomSize() {
+  const classes = ['size1', 'size2', 'size3'];
+  return getRandomElement(classes);
+}
+
+function randomColor() {
+  const classes = ['color1', 'color2', 'color3'];
+  return getRandomElement(classes);
+}
+
+function randomRoof() {
+  const classes = ['roof1', 'roof2', 'roof3'];
+  return getRandomElement(classes);
+}
+
+function randomText() {
+  const classes = ['text1', 'text2', 'text3'];
+  return getRandomElement(classes);
+}
+
+function randomWall() {
+  const classes = ['wall1', 'wall2', 'wall3'];
+  return getRandomElement(classes);
+}
+
+function randomGardenR() {
+  const classes = ['gardenR1', 'gardenR2', 'gardenR3'];
+  return getRandomElement(classes);
+}
+
+function randomTree() {
+  const classes = ['tree1', 'tree2', 'tree3'];
+  return getRandomElement(classes);
+}
+
+
+// // Endpoint to get JSON data
+// app.get("/data", async (req, res) => {
+//   try {
+//     const response = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
+//     const data = await response.json();
+//     res.json(data);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ error: "Failed to fetch data" });
+//   }
+// });
+
+// // app.get("/data", (req, res) => {
+// //   fs.readFile(path.join(__dirname, 'public', 'db_test.json'), 'utf8', (err, data) => {
+// //     if (err) {
+// //       console.error(err);
+// //       return res.status(500).json({ error: "Failed to read data" });
+// //     }
+// //     res.json(JSON.parse(data));
+// //   });
+// // });
+
+// // Endpoint to process data and save to db.json
+// app.get("/process-data", async (req, res) => {
+//   try {
+//     const response = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
+//     const data = await response.json();
+
+//     const processedData = data.slice(1).filter(item => {
+//       return !isDerivedText(item.text);
+//     }).map(item => {
+//       return {
+//         roofClass: randomRoof(),
+//         text: item.text,
+//         textClass: randomText(),
+//         wallClass: randomWall()
+//       };
+//     });
+
+//     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(processedData, null, 2), 'utf-8');
+//     console.log('Data has been saved to db.json');
+//     res.send('Data has been processed and saved to db.json');
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send('Failed to process and save data');
+//   }
+// });
+
+// function isDerivedText(text) {
+//   const derivedTexts = ["Created", "with", "Transloadit"];
+//   return derivedTexts.some(word => text.includes(word));
+// }
+
+// function getRandomElement(elements) {
+//   return elements[Math.floor(Math.random() * elements.length)];
+// }
+
+// function randomRoof() {
+//   const classes = ['roof1', 'roof2', 'roof3'];
+//   return getRandomElement(classes);
+// }
+
+// function randomText() {
+//   const classes = ['text1', 'text2', 'text3'];
+//   return getRandomElement(classes);
+// }
+
+// function randomWall() {
+//   const classes = ['wall1', 'wall2', 'wall3'];
+//   return getRandomElement(classes);
+// }
+
 app.listen(PORT, () => {
   console.log(`Backend running on $(PORT)`);
 });
+
 
 
 

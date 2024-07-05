@@ -56,9 +56,42 @@ const uppy = new Uppy()
   //   limit: 1
 	// });
 
-
-  uppy.on('complete', (res) => {
-    console.log(res.successful);
+  
+  uppy.on('complete', async (result) => {
+    const successfulUploads = result.successful;
+    if (successfulUploads.length > 0) {
+      setTimeout(async () => {
+        try {
+          const response = await fetch('/fetch-and-append-data');
+          const message = await response.text();
+          console.log(message);
+        } catch (error) {
+          console.error('Failed to fetch and append data:', error);
+          // Handle error scenario
+        }
+      }, 500); // 0.5초를 밀리초 단위로 지정
+    }
   });
 
+  // uppy.on('complete', async (result) => {
+  //   const successfulUploads = result.successful;
+  //   if (successfulUploads.length > 0) {
+  //     try {
+  //       const response = await fetch('/fetch-and-append-data');
+  //       const message = await response.text();
+  //       console.log(message);
+  //     } catch (error) {
+  //       console.error('Failed to fetch and append data:', error);
+  //       // Handle error scenario
+  //     }
+  //   }
+  // });
+  
+  
+
+  // uppy.on('complete', (res) => {
+  //   console.log(res.successful);
+  // });
+
+  
 
