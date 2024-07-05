@@ -546,7 +546,7 @@
     "gardenRClass": "gardenR3"
   },
   {
-    "treeClass": "tree2"
+    "treeClass": "tree3"
   },
   {
     "sizeClass": "size3",
@@ -558,7 +558,7 @@
     "gardenRClass": "gardenR2"
   },
   {
-    "treeClass": "tree1"
+    "treeClass": "tree3"
   },
   {
     "sizeClass": "size3",
@@ -705,7 +705,7 @@
     "gardenRClass": "gardenR3"
   },
   {
-    "treeClass": "tree1"
+    "treeClass": "tree3"
   },
   {
     "sizeClass": "size3",
@@ -771,6 +771,9 @@
     "gardenRClass": "gardenR1"
   },
   {
+    "treeClass": "tree3"
+  },
+  {
     "sizeClass": "size3",
     "colorClass": "color1",
     "roofClass": "roof3",
@@ -787,6 +790,9 @@
     "textClass": "text1",
     "wallClass": "wall3",
     "gardenRClass": "gardenR2"
+  },
+  {
+    "treeClass": "tree3"
   },
   {
     "sizeClass": "size3",
@@ -810,6 +816,6 @@
     "treeClass": "tree3"
   },
   {
-    "treeClass": "tree2"
+    "treeClass": "tree1"
   }
 ]

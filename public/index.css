@@ -18,8 +18,21 @@ html,body{
   align-content: flex-end;
   direction: rtl;
   text-align: justify;
-  gap: 50px 0px;
+  gap: 50px 10px;
 }
+
+#landscape {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: end;
+  align-content: flex-end;
+  direction: rtl;
+  text-align: justify;
+  gap: 50px 10px;
+  z-index: 2;
+}
+
 
 .infoItem {
   direction: ltr;
@@ -155,22 +168,32 @@ html,body{
   z-index: 2;
 }
 
+
+
+
+.tree {
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+  direction: ltr;
+  overflow: hidden;
+}
+
 .tree1 {
-  width: 100px;
-  height: 100px;
-  background: green;
+  width: 96px;
+  word-wrap: break-word;
 }
 
 .tree2 {
-  width: 100px;
-  height: 100px;
-  background: green;
+  width: 80px;
+  /* width: 200px;
+  margin: 0 20px; */
 }
 
 .tree3 {
-  width: 100px;
-  height: 100px;
-  background: green;
+  width: 80px;
+  /* width: 200px;
+  margin: 0 20px; */
 }
 /* .textSign {
   grid-area: 2 / 2 / 3 / 3;
