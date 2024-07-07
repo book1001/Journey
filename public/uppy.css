@@ -14,6 +14,7 @@
   position: fixed !important;
   top: 0;
   font-family: Menlo !important;
+  z-index: 3;
 }
 
 .uppy-Dashboard-inner {
@@ -53,6 +54,14 @@
 }
 
 .uppy-DashboardTab-inner {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translate(-50%, 0); /* Safari */
+  -moz-transform: translate(-50%, 0); /* Firefox */
+  -ms-transform: translate(-50%, 0); /* IE 9 */
+  -o-transform: translate(-50%, 0); /* Opera */
+  transform: translate(-50%, 0);
   width: 45px !important;
   height: 45px !important;
   border-radius: 50% !important;
@@ -118,6 +127,10 @@
 }
 
 .uppy-DashboardContent-back, .uppy-DashboardContent-save {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100px;
   font-family: Menlo !important;
   color: #000000 !important;
 }
@@ -150,7 +163,13 @@
 /* ============================================= */
 .uppy-Webcam-button {
   position: fixed;
-  bottom: 0;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translate(-50%, 0); /* Safari */
+  -moz-transform: translate(-50%, 0); /* Firefox */
+  -ms-transform: translate(-50%, 0); /* IE 9 */
+  -o-transform: translate(-50%, 0); /* Opera */
+  transform: translate(-50%, 0);
   background-color: red !important;
   border: none !important;
   transition: none !important;
@@ -185,7 +204,13 @@
 }
 
 .uppy-Webcam-videoContainer {
-  background-color: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black !important;
+  /* background-color: transparent !important; */
 }
 
 .uppy-DashboardContent-panel {
@@ -215,8 +240,42 @@
   background-color: #1bb240;
 } */
 
+.uppy-Dashboard-Item-preview {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .uppy-Dashboard-Item-previewInnerWrap {
   background-color: transparent !important;
+}
+
+
+/* ============================================= */
+/* Upload 1 file: btn */
+/* ============================================= */
+
+.uppy-StatusBar.is-waiting .uppy-StatusBar-actionBtn--upload {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, 0); /* Safari */
+  -moz-transform: translate(-50%, 0); /* Firefox */
+  -ms-transform: translate(-50%, 0); /* IE 9 */
+  -o-transform: translate(-50%, 0); /* Opera */
+  transform: translate(-50%, 0) !important;
+  width: 100% !important;
+  text-transform: uppercase !important;
+}
+
+
+/* ============================================= */
+/* Progress Indicator */
+/* ============================================= */
+
+.uppy-Dashboard-progressindicators {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 
@@ -261,6 +320,7 @@
 .uppy-StatusBar-actionBtn--upload {
   position: fixed;
   bottom: 0;
+  text-transform: uppercase !important;
 }
 
 /* ============================================= */

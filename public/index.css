@@ -2,21 +2,34 @@
   box-sizing: border-box; 
 }
 
+::-webkit-scrollbar { /* width */
+  width: 0;
+}
+
 html,body{
   width: 100vw;
   height: 100vh;
   margin:0;
   padding:0;
+  cursor: text;
   overflow: auto;
+  transition: background-color 0.5s;
 }
+
+
+/* ============================================= */
+/* Json: Container */
+/* ============================================= */
 
 #content {
   display: flex;
-  flex-wrap: wrap-reverse;
+  margin: 0 10px 50px 10px;
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
   justify-content: space-between;
   align-items: end;
   align-content: flex-end;
-  direction: rtl;
+  /* direction: rtl; */
   text-align: justify;
   gap: 50px 10px;
 }
@@ -34,9 +47,35 @@ html,body{
 }
 
 
+/* ============================================= */
+/* Json: Info */
+/* ============================================= */
+
 .infoItem {
-  direction: ltr;
+  text-transform: uppercase;
+  /* direction: ltr; */
+  /* order: 1; */
 }
+
+.qrItem {
+  width: 240px;
+  height: 100px;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+  /* direction: ltr; */
+  overflow: hidden;
+  background: green;
+}
+
+.qrImg {
+  width: 86px;
+}
+
+
+/* ============================================= */
+/* Json: House > Item */
+/* ============================================= */
 
 .item {
   width: 240px;
@@ -64,6 +103,12 @@ html,body{
   color: green;
 }
 
+
+
+/* ============================================= */
+/* Json: House > Roof */
+/* ============================================= */
+
 .roof1 {
   grid-area: 1 / 1 / 2 / 4;
   word-wrap: break-word;
@@ -74,42 +119,44 @@ html,body{
   word-wrap: break-word;
 }
 
-.roof3 {
+.roof3-R {
   grid-area: 1 / 1 / 2 / 4;
   word-wrap: break-word;
+  border-bottom: 1px solid white;
+  color: red;
 }
+
+.roof3-G {
+  grid-area: 1 / 1 / 2 / 4;
+  word-wrap: break-word;
+  border-bottom: 1px solid white;
+  color: green;
+  
+}
+
+.roof3-B {
+  grid-area: 1 / 1 / 2 / 4;
+  word-wrap: break-word;
+  border-bottom: 1px solid white;
+  color: blue;
+}
+
+
+/* ============================================= */
+/* Json: House > Text */
+/* ============================================= */
 
 .text1 {
   grid-area: 2 / 2 / 3 / 3;
   background: white;
   z-index: 2;
+  transition: background-color 0.5s;
 }
 
-.text2 {
-  grid-area: 2 / 2 / 3 / 3;
-  background: white;
-  z-index: 2;
-}
 
-.text3 {
-  grid-area: 2 / 2 / 3 / 3;
-  background: white;
-  z-index: 2;
-}
-
-/* .text1:before {
-  text-orientation: upright;
-  word-break: break-all;
-  content: "█░\A";
-  text-align: right;
-}
-
-.text1:after {
-  text-orientation: upright;
-  content: "\A░█";
-  text-align: left;
-} */
-
+/* ============================================= */
+/* Json: House > Wall */
+/* ============================================= */
 
 .wall1 {
   grid-area: 2 / 1 / 4 / 4;
@@ -129,7 +176,6 @@ html,body{
   overflow: hidden;
 }
 
-
 .size1 {
   height: 72px;
 }
@@ -142,36 +188,62 @@ html,body{
   height: 120px;
 }
 
+
+/* ============================================= */
+/* Json: House > Graden */
+/* ============================================= */
+
 .gardenR1 {
+  position: relative;
   width: 24px;
   margin-right: 12px;
   margin-left: auto;
-  grid-area: 2 / 3 / 4 / 4;
+  grid-area: 1 / 3 / 4 / 4;
   word-wrap: break-word;
   z-index: 2;
   color: #00FF00;
 }
 
 .gardenR2 {
+  position: relative;
   width: 24px;
   margin-right: 12px;
   margin-left: auto;
-  grid-area: 2 / 3 / 4 / 4;
+  grid-area: 1 / 3 / 4 / 4;
   word-wrap: break-word;
   z-index: 2;
   color: #00FF00;
 }
 
 .gardenR3 {
-  grid-area: 2 / 3 / 4 / 4;
+  position: relative;
+  grid-area: 1 / 3 / 4 / 4;
   word-wrap: break-word;
   z-index: 2;
+
+  width: 40px;
+  font-size: 6px;
+  line-height: 6px;
+  color: red;
+}
+
+.gardenImg-R {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
-
+/* ============================================= */
+/* Json: Objects > Tree */
+/* ============================================= */
 
 .tree {
+  position: relative;
   margin: 0 auto;
   border: none;
   text-align: center;
@@ -180,28 +252,69 @@ html,body{
 }
 
 .tree1 {
-  width: 96px;
+  width: 240px;
+  margin: 0 0 0 auto;
   word-wrap: break-word;
 }
 
-.tree2 {
-  width: 80px;
-  /* width: 200px;
-  margin: 0 20px; */
+.tree_ball {
+  position: absolute;
+  top: 0;
+  width: 240px;
+  color: transparent;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.tree3 {
-  width: 80px;
-  /* width: 200px;
-  margin: 0 20px; */
-}
-/* .textSign {
-  grid-area: 2 / 2 / 3 / 3;
-  width: 80px;
-  background: white;
-  text-transform: uppercase;
-  white-space: nowrap;
+
+/* ============================================= */
+/* Json: Objects > Flower */
+/* ============================================= */
+
+.flower {
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+  direction: ltr;
   overflow: hidden;
-  text-overflow: ellipsis;
-} */
+  transition: background-color 0.5s;
+}
+
+.flower1 {
+  width: 240px;
+  font-size: 6px;
+  line-height: 6px;
+}
+
+
+/* ============================================= */
+/* Json: Objects > Light */
+/* ============================================= */
+
+.light {
+  position: relative;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+  direction: ltr;
+  overflow: hidden;
+}
+
+.light:hover {
+  cursor: pointer;
+}
+
+.light1 {
+  top: 0;
+  width: 240px;
+}
+
+.light_ball {
+  position: absolute;
+  top: 0;
+  width: 240px;
+  color: transparent;
+  z-index: 2;
+  pointer-events: none;
+}
 

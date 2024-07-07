@@ -6,10 +6,6 @@
   src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
 }
 
-::-webkit-scrollbar { /* width */
-  width: 0;
-}
-
 html,
 body {
   font-family: Menlo;
@@ -19,7 +15,6 @@ body {
   /* letter-spacing: 0.027em; */
   line-height: 12px;
   color: red;
-  cursor: text;
 }
 
 ::selection {
