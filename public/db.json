@@ -432,7 +432,7 @@
     "text": "WHOLE\nFOODS\nMARKET\nD",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size1",
@@ -441,7 +441,7 @@
     "text": "WHOLE\nFOODS\nMARKET\nD",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size2",
@@ -450,7 +450,7 @@
     "text": "WHOLE\nFOODS\nMARKET\nD",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -459,7 +459,7 @@
     "text": "11.06\n \nQO i\nToday",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size3",
@@ -468,7 +468,7 @@
     "text": "11.06\n \nQO i\nToday",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size2",
@@ -477,7 +477,7 @@
     "text": "11.06\n \nQO i\nToday",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size3",
@@ -486,7 +486,7 @@
     "text": "11.06\n \nQO i\nToday",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size2",
@@ -495,7 +495,7 @@
     "text": "Coated",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -504,7 +504,7 @@
     "text": "QO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size2",
@@ -513,7 +513,7 @@
     "text": "Tree",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "treeClass": "tree3"
@@ -525,7 +525,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -534,7 +534,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size2",
@@ -543,7 +543,7 @@
     "text": "WHOLE\nFOODS\n \n\nMARKET",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "treeClass": "tree3"
@@ -555,7 +555,7 @@
     "text": "WHOLE\nFOODS\n \n\nMARKET",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "treeClass": "tree3"
@@ -567,7 +567,7 @@
     "text": "WHOLE\nFOODS\n \n\nMARKET",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -576,7 +576,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size2",
@@ -585,7 +585,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size2",
@@ -594,7 +594,7 @@
     "text": "Transinadit\nUNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size1",
@@ -603,7 +603,7 @@
     "text": "Transinadit\nUNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size1",
@@ -612,7 +612,7 @@
     "text": "Transinadit\nUNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size3",
@@ -621,7 +621,7 @@
     "text": "WHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size2",
@@ -630,7 +630,7 @@
     "text": "WHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size2",
@@ -639,7 +639,7 @@
     "text": "WHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size1",
@@ -648,7 +648,7 @@
     "text": "WHOLE\nFOODS\nMARKET\nCreated with\nTransloadit",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size2",
@@ -657,7 +657,7 @@
     "text": "WHOLE\nFOODS\nMARKET\nCreated with\nTransloadit",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -666,7 +666,7 @@
     "text": "WHOLE\nFOODS\nMARKET\nCreated with\nTransloadit",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size2",
@@ -675,7 +675,7 @@
     "text": "UNI\nQLO\n \nQO Tansloadit",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size1",
@@ -684,7 +684,7 @@
     "text": "UNI\nQLO\n \nQO Tansloadit",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size2",
@@ -693,7 +693,7 @@
     "text": "UNI\nQLO\n \nQO Tansloadit",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size1",
@@ -702,7 +702,7 @@
     "text": "UNI\nQLO\n \nQO Tansloadit",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "treeClass": "tree3"
@@ -714,7 +714,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \nQO",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size1",
@@ -723,7 +723,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \nQO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -732,7 +732,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \nQO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size3",
@@ -741,7 +741,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \nQO",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size1",
@@ -750,7 +750,7 @@
     "text": "WHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size2",
@@ -759,7 +759,7 @@
     "text": "WHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size2",
@@ -768,7 +768,7 @@
     "text": "WHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "treeClass": "tree3"
@@ -783,7 +783,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "treeClass": "tree1"
@@ -795,7 +795,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "flowerClass": "flower1"
@@ -807,7 +807,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size1",
@@ -816,7 +816,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "lightClass": "light1"
@@ -837,7 +837,7 @@
     "text": "Pexels\nd \nTransleadit\nVisi",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -846,7 +846,7 @@
     "text": "Pexels\nd \nTransleadit\nVisi",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size2",
@@ -855,7 +855,7 @@
     "text": "Pexels\nd \nTransleadit\nVisi",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size3",
@@ -864,7 +864,7 @@
     "text": "Pexels\nd \nTransleadit\nVisi",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -873,7 +873,7 @@
     "text": "Ind",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "treeClass": "tree1"
@@ -891,7 +891,7 @@
     "text": "QO",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "flowerClass": "flower1"
@@ -909,7 +909,7 @@
     "text": "Tranetoadit",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "lightClass": "light1"
@@ -921,7 +921,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \n\nDG",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size1",
@@ -930,7 +930,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \n\nDG",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size3",
@@ -939,7 +939,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \n\nDG",
     "textClass": "text1",
     "wallClass": "wall1",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size3",
@@ -948,7 +948,7 @@
     "text": "WHOLE\nFOODS\nMARKET\n \n\nDG",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -957,7 +957,7 @@
     "text": "OO \nWHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -966,7 +966,7 @@
     "text": "OO \nWHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size1",
@@ -975,7 +975,7 @@
     "text": "OO \nWHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size2",
@@ -984,7 +984,7 @@
     "text": "OO \nWHOLE\nFOODS\nMARKET",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   },
   {
     "sizeClass": "size3",
@@ -993,7 +993,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall3",
-    "gardenRClass": "gardenR2"
+    "gardenClass": "garden2"
   },
   {
     "sizeClass": "size1",
@@ -1002,7 +1002,7 @@
     "text": "UNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR1"
+    "gardenClass": "garden1"
   },
   {
     "sizeClass": "size3",
@@ -1011,6 +1011,6 @@
     "text": "34",
     "textClass": "text1",
     "wallClass": "wall2",
-    "gardenRClass": "gardenR3"
+    "gardenClass": "garden3"
   }
 ]

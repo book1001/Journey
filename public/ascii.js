@@ -37,11 +37,18 @@ document.addEventListener('DOMContentLoaded', async function () {
   try {
     const response = await fetch('db.json');
     const data = await response.json();
-
     const reversedData = data.reverse();
 
-    const contentDiv = document.getElementById('content');
 
+    // =============================================
+    // Add: Container
+    // =============================================
+    const contentDiv = document.getElementById('content');
+    
+
+    // =============================================
+    // Add: Info
+    // =============================================
     const infoDiv = document.createElement('div');
     infoDiv.classList.add(`infoItem`);
     infoDiv.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
@@ -60,9 +67,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     // qrDiv.appendChild(qrImg);
 
 
+
     reversedData.forEach(item => {
       let itemDiv = document.createElement('div');
 
+      // =============================================
+      // Json: House
+      // =============================================
       let roofText = '';
       switch (item.roofClass) {
         case 'roof1':
@@ -92,15 +103,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
             `;
           break;
-        // case 'roof2':
-        //   roofText = 
-        //   `
-        //               ▒▒▒▒▒▒▒▒▒▒▒           
-        //         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒     
-        //    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-        //    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-        //    `;
-        //   break;
         case 'roof3-R':
           roofText = 
           `
@@ -146,30 +148,6 @@ document.addEventListener('DOMContentLoaded', async function () {
           ████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████
             `;
           break;
-        // case 'roof1':
-        //   roofText = 
-        //   `
-        //     ░░░░░░░░░░░░
-        //     ░░░░░░░░░░░░░░░░░░░░░░░
-        //     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-        //     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-        //     `;
-        //   break;
-        // case 'roof3':
-        //   roofText = 
-        //   `
-        //   █████████████████████████████████
-        //   ████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████
-        //   ▓▓▓▓███▓▓▓▓███▓▓▓▓▓███▓▓▓▓███▓▓▓▓
-        //   ████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████
-        //   ▓▓▓▓███▓▓▓▓███▓▓▓▓▓███▓▓▓▓███▓▓▓▓
-        //   ████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████
-        //   ▓▓▓▓███▓▓▓▓███▓▓▓▓▓███▓▓▓▓███▓▓▓▓
-        //   ████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████
-        //   ▓▓▓▓███▓▓▓▓███▓▓▓▓▓███▓▓▓▓███▓▓▓▓
-        //   ████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████
-        //    `;
-        //   break;
       }
 
       let wallText = '';
@@ -219,107 +197,11 @@ document.addEventListener('DOMContentLoaded', async function () {
           ██████████████░░░░░██████████████
           `;
           break;
-
-        // case 'wall3':
-        //   wallText = 
-        //   `
-        //   █████████████████████████████████
-        //   █████████████████████████████████
-        //   █████████████████████████████████
-        //   ████╔═╦═╗███████████████╔═╦═╗████
-        //   █████   ████████████████╠═╬═╣████
-        //   ██████████████░░░░░█████╚═╩═╝████
-        //   ██████████████░░░░░██████████████
-        //   ██████████████░░░░░██████████████
-        //   ██████████████░░░░░██████████████
-        //   ██████████████░░░░░██████████████
-        //   `;
-        //   break;
-        // case 'wall3':
-        //   wallText = 
-        //   `
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╣
-        //   `;
-        //   break;
-        // case 'wall4':
-        //   wallText = 
-        //   `
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   |___|___|___|___|___|___|___|___|
-        //   `;
-        //   break;
       }
 
-      let gardenRText = '';
-      switch (item.gardenRClass) {
-        case 'gardenR1':
-          gardenRText = 
-          `
-             
-           ▀▄
-           ▀▄▀▄
-           ▀▄  
-           |
-           |
-           |
-           |
-           `;
-          break;
-        case 'gardenR2':
-          gardenRText = 
-          `
-            & &
-          &\ |/
-            \|
-             |
-           `;
-          break;
-        case 'gardenR3':
-          gardenRText = 
-          `
-              ▄█▆█▄  
-              ▀█▆█▀  
-          ▄█▆█▄ ░    
-          ▀█▆█▀ ░    
-             ░  ░    
-             ░ ░     
-              ░      
-              ░      
-           `;
-          break;
-      }
-      
-      let gardenRImg = '';
-      switch (item.gardenRClass) {
-        case 'gardenR1':
-          gardenRImg = './img/plant1.png';
-          break;
-        case 'gardenR2':
-          gardenRImg = './img/plant1.png';
-          break;
-        case 'gardenR3':
-          gardenRImg = './img/plant1.png';
-          break;
-      }
-
-
+      // =============================================
+      // Json: Objects > Tree
+      // =============================================
       let treeText = '';
       switch (item.treeClass) {
         case 'tree1':
@@ -363,6 +245,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                    ▒             ▒         
            `;
             
+      // =============================================
+      // Json: Objects > Flower
+      // =============================================
       let flowerText = '';
       switch (item.flowerClass) {
         case 'flower1':
@@ -380,6 +265,9 @@ document.addEventListener('DOMContentLoaded', async function () {
           break;
       }
 
+      // =============================================
+      // Json: Objects > Light
+      // =============================================
       let lightText = '';
       switch (item.lightClass) {
         case 'light1':
@@ -423,8 +311,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                                            
             `;
 
-
-
     //   const roofDiv = document.createElement('div');
     //   roofDiv.textContent = roofText;
     //   roofDiv.classList.add(item.roofClass);
@@ -438,10 +324,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     //   wallDiv.classList.add(item.wallClass);
     //   wallDiv.classList.add(item.sizeClass);
 
-    //   const gardenRDiv = document.createElement('div');
-    //   gardenRDiv.textContent = gardenRText;
-    //   gardenRDiv.classList.add(item.gardenRClass);
-
     //   const treeDiv = document.createElement('div');
     //   treeDiv.textContent = treeText;
     //   treeDiv.classList.add(item.treeClass);
@@ -450,11 +332,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     //   itemDiv.appendChild(roofDiv);
     //   itemDiv.appendChild(textDiv);
     //   itemDiv.appendChild(wallDiv);
-    //   // itemDiv.appendChild(gardenRDiv);
+    //   // itemDiv.appendChild(gardenDiv);
     //   contentDiv.appendChild(treeDiv);
     // });
 
       contentDiv.appendChild(itemDiv);
+
+        // =============================================
+        // Add: House > Roof
+        // =============================================
         if (item.roofClass) {
           itemDiv.classList.add('item');
           itemDiv.classList.add(item.colorClass);
@@ -465,6 +351,9 @@ document.addEventListener('DOMContentLoaded', async function () {
           itemDiv.appendChild(roofDiv);
         }
 
+        // =============================================
+        // Add: House > Text
+        // =============================================
         if (item.text) {
           itemDiv.classList.add('item');
           itemDiv.classList.add(item.colorClass);
@@ -474,6 +363,9 @@ document.addEventListener('DOMContentLoaded', async function () {
           itemDiv.appendChild(textDiv);
         }
 
+        // =============================================
+        // Add: House > Wall
+        // =============================================
         if (item.wallClass) {
           itemDiv.classList.add('item');
           itemDiv.classList.add(item.colorClass);
@@ -484,27 +376,33 @@ document.addEventListener('DOMContentLoaded', async function () {
           itemDiv.appendChild(wallDiv);
         }
 
-        // if (item.gardenRClass) {
+        // =============================================
+        // Add: House > Garden
+        // =============================================
+        // if (item.gardenClass) {
         //   itemDiv.classList.add('item');
         //   itemDiv.classList.add(item.colorClass);
-        //   const gardenRDiv = document.createElement('div');
-        //   gardenRDiv.classList.add(item.gardenRClass);
-        //   itemDiv.appendChild(gardenRDiv);
-        //   const gardenRImgC = document.createElement('img');
-        //   gardenRImgC.src = gardenRImg;
-        //   gardenRImgC.classList.add('gardenImg-R'); 
-        //   gardenRDiv.appendChild(gardenRImgC);
+        //   const gardenDiv = document.createElement('div');
+        //   gardenDiv.classList.add(item.gardenClass);
+        //   itemDiv.appendChild(gardenDiv);
+        //   const gardenImgC = document.createElement('img');
+        //   gardenImgC.src = gardenImg;
+        //   gardenImgC.classList.add('gardenImg-R'); 
+        //   gardenDiv.appendChild(gardenImgC);
         // }   
 
-        // if (item.gardenRClass) {
+        // if (item.gardenClass) {
         //   itemDiv.classList.add('item');
         //   itemDiv.classList.add(item.colorClass);
-        //   const gardenRDiv = document.createElement('div');
-        //   gardenRDiv.textContent = gardenRText;
-        //   gardenRDiv.classList.add(item.gardenRClass);
-        //   itemDiv.appendChild(gardenRDiv);
+        //   const gardenDiv = document.createElement('div');
+        //   gardenDiv.textContent = gardenText;
+        //   gardenDiv.classList.add(item.gardenClass);
+        //   itemDiv.appendChild(gardenDiv);
         // }
 
+        // =============================================
+        // Add: Objects > Tree
+        // =============================================
         if (item.treeClass) {
           itemDiv.classList.add('tree');
           const treeDiv = document.createElement('div');
@@ -518,6 +416,9 @@ document.addEventListener('DOMContentLoaded', async function () {
           itemDiv.appendChild(treeBallDiv);
         }
 
+        // =============================================
+        // Add: Objects > Flower
+        // =============================================
         if (item.flowerClass) {
           itemDiv.classList.add('flower');
           const flowerDiv = document.createElement('div');
@@ -526,15 +427,9 @@ document.addEventListener('DOMContentLoaded', async function () {
           itemDiv.appendChild(flowerDiv);
         }
 
-        // if (item.lightClass) {
-        //   itemDiv.classList.add('light');
-        //   const lightDiv = document.createElement('div');
-        //   lightDiv.textContent = lightText;
-        //   lightDiv.classList.add(item.lightClass);
-        //   itemDiv.appendChild(lightDiv);
-        // }
-
-
+        // =============================================
+        // Add: Objects > Light
+        // =============================================
         if (item.lightClass) {
           itemDiv.classList.add('light');
           const lightDiv = document.createElement('div');
@@ -547,19 +442,21 @@ document.addEventListener('DOMContentLoaded', async function () {
           lightBallDiv.classList.add('light_ball');
           itemDiv.appendChild(lightBallDiv);
         
-          // Add click event listener to toggle background color
+          // ---------------------------------------------
+          // Light: Function (Toggle)
+          // ---------------------------------------------
           lightDiv.addEventListener('click', function() {
             if (document.body.style.backgroundColor === 'black') {
-              document.body.style.backgroundColor = ''; // Reset to original color
-              resetTextColor();
+              document.body.style.backgroundColor = '';
+              dayMode();
             } else {
-              document.body.style.backgroundColor = 'black'; // Replace 'newColor' with the desired color
-              changeTextColorToWhite();
+              document.body.style.backgroundColor = 'black';
+              nightMode();
             }
           });
         }
 
-        function changeTextColorToWhite() {
+        function nightMode() {
           document.querySelectorAll('.infoItem').forEach(div => {
             div.style.color = 'white';
             div.style.textShadow = '0 0px 3px yellow';
@@ -601,7 +498,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           });
         }
 
-        function resetTextColor() {
+        function dayMode() {
           document.querySelectorAll('.infoItem').forEach(div => {
             div.style.color = '';
             div.style.textShadow = '';

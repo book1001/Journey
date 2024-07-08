@@ -117,12 +117,11 @@ async function fetchAndAppendData() {
         sizeClass: randomSize(),
         colorClass: randomColor(),
         roofClass: randomRoof(),
-        // roofColorClass: randomRoofColor(),
         // text: item.text,
         text: firstItem.text,
         textClass: randomText(),
         wallClass: randomWall(),
-        gardenRClass: randomGardenR()
+        // gardenClass: randomGarden()
       };
     });
 
@@ -190,11 +189,6 @@ function randomRoof() {
   return getRandomElement(classes);
 }
 
-// function randomRoofColor() {
-//   const classes = ['roofColor1', 'roofColor2', 'roofColor3'];
-//   return getRandomElement(classes);
-// }
-
 function randomText() {
   const classes = ['text1', 'text1', 'text1'];
   return getRandomElement(classes);
@@ -205,10 +199,10 @@ function randomWall() {
   return getRandomElement(classes);
 }
 
-function randomGardenR() {
-  const classes = ['gardenR1', 'gardenR2', 'gardenR3'];
-  return getRandomElement(classes);
-}
+// function randomGarden() {
+//   const classes = ['garden1', 'garden2', 'garden3'];
+//   return getRandomElement(classes);
+// }
 
 
 // ==================================================
