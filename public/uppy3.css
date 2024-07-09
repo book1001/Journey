@@ -111,6 +111,7 @@
 /* ======================================================================================================================================= */
 /* 2. WebCam: Container */
 /* ============================================= */
+/* Container: Position Fixed */
 .uppy-Dashboard-innerWrap {
   position: fixed !important;
   top: 0 !important;
@@ -118,14 +119,6 @@
   width: 100% !important;
   height: 100% !important;
 }
-
-/* .uppy-DashboardContent-panel {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-} */
 
 /* Container: Area */
 .uppy-Webcam-videoContainer {
@@ -137,3 +130,85 @@
   display: none !important;
   transition: none !important;
 }
+
+
+/* ============================================= */
+/* 2. WebCam: Header */
+/* ============================================= */
+/* Header: Area */
+.uppy-DashboardContent-bar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background-color: black !important;
+  border-bottom: none !important;
+}
+
+/* Header: Title Text */
+.uppy-DashboardContent-title {
+  display: none !important;
+  text-transform: uppercase;
+  color: white !important;
+}
+
+/* Header: Back Button */
+[dir=ltr] .uppy-DashboardContent-back {
+  text-transform: uppercase;
+  color: white !important;
+}
+
+
+/* ============================================= */
+/* 2. WebCam: Camera Icon Area */
+/* ============================================= */
+/* Camera Icon: Position */
+.uppy-Webcam-footer {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* Camera Icon: Touch area */
+.uppy-Webcam-buttonContainer {
+  width: auto !important;
+  margin-left: 50% !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* Camera Icon: Margin Right */
+.uppy-Webcam-button--picture {
+  margin-right: 0 !important;
+}
+
+
+/* ============================================= */
+/* 2. WebCam: Camera Icon */
+/* ============================================= */
+/* Camera Icon: bg */
+.uppy-Webcam-button {
+  background-image: url("icon/camera.svg");
+  background-color: red !important;
+}
+
+/* Camera Icon: bg focused */
+.uppy-Webcam-button:focus {
+  box-shadow: none !important;
+}
+
+/* Camera Icon: Original SVG */
+.uppy-Webcam-button svg {
+  display: none !important;
+}
+
