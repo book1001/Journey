@@ -37,12 +37,12 @@
 }
 
 .uppy-Dashboard {
-  height: 100svh !important;
+  height: 100% !important;
 }
 
 .uppy-Dashboard-inner {
   width: auto !important;
-  height: 100svh !important;
+  height: 100% !important;
   /* width: 100svw !important;
   height: 100svh !important; */
   max-width: none !important;
