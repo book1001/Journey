@@ -111,13 +111,21 @@
 /* ======================================================================================================================================= */
 /* 2. WebCam: Container */
 /* ============================================= */
-.uppy-DashboardContent-panel {
+.uppy-Dashboard-innerWrap {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
 }
+
+/* .uppy-DashboardContent-panel {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+} */
 
 /* Container: Area */
 .uppy-Webcam-videoContainer {
