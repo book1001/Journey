@@ -7,14 +7,31 @@
 }
 
 
-/* ============================================= */
-/* Main */
+
+/* ======================================================================================================================================= */
+/* 0. Position + Z-index */
 /* ============================================= */
 .uppy-Root {
   position: fixed !important;
   top: 0;
   font-family: Menlo !important;
   z-index: 3;
+}
+
+
+/* ======================================================================================================================================= */
+/* 1. Dashboard */
+/* ============================================= */
+.uppy-Dashboard-AddFiles-title {
+  display: none !important;
+}
+
+[data-uppy-acquirer-id="MyDevice"] {
+  display: none !important;
+}
+
+.uppy-Dashboard-AddFiles-info {
+  display: none !important;
 }
 
 .uppy-Dashboard-inner {
@@ -27,18 +44,6 @@
 
 .uppy-Dashboard-AddFiles {
   border: none !important;
-}
-
-.uppy-Dashboard-AddFiles-info {
-  display: none !important;
-}
-
-.uppy-Dashboard-AddFiles-title {
-  display: none !important;
-}
-
-[data-uppy-acquirer-id="MyDevice"] {
-  display: none !important;
 }
 
 .uppy-size--md .uppy-Dashboard-AddFiles-list{
@@ -67,21 +72,15 @@
   border-radius: 50% !important;
   background-image: url("icon/camera.svg");
   background-color: red !important;
-  transition: background-color 0.5s;
+  /* transition: background-color 0.5s; */
 }
 
-.uppy-DashboardTab-inner:hover {
+/* .uppy-DashboardTab-inner:hover {
   background-color: green !important;
-}
+} */
 
 .uppy-DashboardTab-btn svg {
   display: none !important;
-}
-
-.iconCamera {
-  width: 45px;
-  height: 45px;
-  pointer-events: none;
 }
 
 .uppy-DashboardTab-btn:hover {
@@ -185,8 +184,8 @@
   -ms-transform: translate(-50%, 0); /* IE 9 */
   -o-transform: translate(-50%, 0); /* Opera */
   transform: translate(-50%, 0);
+  background-image: url("icon/camera.svg");
   background-color: red !important;
-  border: 1px solid #e32437 !important;
   transition: none !important;
 }
 
@@ -272,16 +271,26 @@
 
 .uppy-StatusBar.is-waiting .uppy-StatusBar-actionBtn--upload {
   position: fixed !important;
-  bottom: 0 !important;
+  bottom: 20px !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, 0); /* Safari */
-  -moz-transform: translate(-50%, 0); /* Firefox */
-  -ms-transform: translate(-50%, 0); /* IE 9 */
-  -o-transform: translate(-50%, 0); /* Opera */
-  transform: translate(-50%, 0) !important;
-  width: 100% !important;
-  text-transform: uppercase !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  background-image: url("icon/camera.svg");
+  background-color: green !important;
+  font-size: 0 !important;
 }
+
+/* Upload Icon: focused */
+.uppy-StatusBar-actionBtn--upload:focus {
+  box-shadow: none !important;
+}
+
 
 
 /* ============================================= */
