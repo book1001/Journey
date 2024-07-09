@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', async function () {
               ▔ ▔ ▔▒▔ ▔ ▔   ▔ ▔ ▔▒▔ ▔ ▔    
                    ▒             ▒         
                    ▒             ▒         
-           `;
+            `;
           break;
       }
 

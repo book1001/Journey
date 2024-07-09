@@ -106,6 +106,14 @@ async function fetchAndAppendData() {
         };
       });
 
+    const lightEtcData = objData
+      .filter(item => item.name.includes("Lamp"))
+      .map(item => {
+        return {
+          lightClass: randomLight()
+        };
+      });
+
 
     // ==================================================
     // Read existing data from db.json
@@ -126,7 +134,7 @@ async function fetchAndAppendData() {
     });
 
     // Combine all processed data
-    const combinedData = [...existingData, ...processedHiData, ...treeData, ...flowerData, ...lightData];
+    const combinedData = [...existingData, ...processedHiData, ...treeData, ...flowerData, ...lightData, ...lightEtcData];
 
 
 

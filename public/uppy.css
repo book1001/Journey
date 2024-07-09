@@ -66,10 +66,21 @@
   height: 45px !important;
   border-radius: 50% !important;
   background-color: red !important;
+  transition: background-color 0.5s;
 }
 
 .uppy-DashboardTab-inner:hover {
   background-color: green !important;
+}
+
+.uppy-DashboardTab-btn svg {
+  display: none !important;
+}
+
+.iconCamera {
+  width: 45px;
+  height: 45px;
+  pointer-events: none;
 }
 
 .uppy-DashboardTab-btn:hover {
@@ -119,11 +130,14 @@
 }
 .uppy-DashboardContent-back::before {
   visibility: visible;
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: fixed !important;
+  top: 20px;
+  left: 20px;
   text-align: center;
   visibility: visible;
+  color: white;
+  font-size: 12px !important;
+  text-transform: uppercase;
 }
 
 .uppy-DashboardContent-back, .uppy-DashboardContent-save {
@@ -171,7 +185,7 @@
   -o-transform: translate(-50%, 0); /* Opera */
   transform: translate(-50%, 0);
   background-color: red !important;
-  border: none !important;
+  border: 1px solid #e32437 !important;
   transition: none !important;
 }
 
@@ -188,6 +202,7 @@
 }
 
 .uppy-transition-slideDownUp-enter-active {
+  display: none !important;
   transition: none !important;
 }
 
