@@ -54,3 +54,22 @@
 [data-uppy-drag-drop-supported=true] .uppy-Dashboard-AddFiles {
   border: none;
 }
+
+
+
+/* ============================================= */
+/* 1. Dashboard: Camera Icon Area */
+/* ============================================= */
+/* Camera Icon: Position */
+.uppy-DashboardTab {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  width: auto !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  border-bottom: none !important;
+}
