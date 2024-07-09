@@ -117,11 +117,20 @@
 /* ============================================= */
 /* Camera On */
 /* ============================================= */
+/* Header: Title Text */
 .uppy-DashboardContent-title {
   display: none !important;
+  text-transform: uppercase;
+  color: white !important;
 }
 
-.uppy-DashboardContent-back::before {
+/* Header: Back Button */
+[dir=ltr] .uppy-DashboardContent-back {
+  text-transform: uppercase;
+  color: transparent !important;
+}
+
+/* .uppy-DashboardContent-back::before {
   content: "Back";
 }
 .uppy-DashboardContent-back {
@@ -147,7 +156,7 @@
   width: 100px;
   font-family: Menlo !important;
   color: #000000 !important;
-}
+} */
 
 .uppy-Webcam-buttonContainer svg {
   display: none !important;
@@ -184,8 +193,9 @@
   -ms-transform: translate(-50%, 0); /* IE 9 */
   -o-transform: translate(-50%, 0); /* Opera */
   transform: translate(-50%, 0);
-  background-image: url("icon/camera.svg");
-  background-color: red !important;
+    /* background-image: url("icon/camera.svg");
+  background-color: red !important; */
+  background-color: transparent !important;
   transition: none !important;
 }
 
@@ -214,6 +224,7 @@
 /* Camera On: BG */
 /* ============================================= */
 .uppy-DashboardContent-bar {
+  /* position: fixed !important; */
   background-color: transparent !important;
   border-bottom: none !important;
 }
