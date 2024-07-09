@@ -240,8 +240,24 @@
 }
 
 /* Captured Image: Remove Icon */
-[dir=ltr] .uppy-Dashboard--singleFile.uppy-size--height-md .uppy-Dashboard-Item-action--remove {
+.uppy-Dashboard-Item-fileInfoAndButtons {
   display: none !important;
+}
+
+/* Captured Image: Captured Photo */
+.uppy-Dashboard-Item-preview {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Captured Image: Padding Right */
+[dir=ltr] .uppy-Dashboard:not(.uppy-Dashboard--singleFile) .uppy-Dashboard-Item {
+  padding-right: 10px !important;
+}
+
+/* Captured Image: Border Bottom */
+.uppy-Dashboard-Item {
+  border-bottom: none !important;
 }
 
 /* Captured Image: Padding */
@@ -256,6 +272,7 @@
 
 /* Captured Image: Container Background Color */
 .uppy-Dashboard-Item-previewInnerWrap {
+  box-shadow: none !important;
   background-color: transparent !important;
 }
 
