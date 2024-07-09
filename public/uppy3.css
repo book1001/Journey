@@ -73,3 +73,37 @@
   transform: translate(-50%, 0);
   border-bottom: none !important;
 }
+
+/* Camera Icon: Touch area */
+.uppy-DashboardTab-btn {
+  width: auto !important;
+  padding: 0 !important;
+}
+
+/* Camera Icon: Margin Right */
+[dir=ltr] .uppy-DashboardTab-inner {
+  margin-right: 0 !important;
+}
+
+
+/* ============================================= */
+/* 1. Dashboard: Camera Icon */
+/* ============================================= */
+/* Camera Icon: bg */
+.uppy-DashboardTab-inner {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  background-image: url("icon/camera.svg");
+  background-color: red !important;
+}
+
+/* Camera Icon: Original SVG */
+.uppy-DashboardTab-btn svg {
+  display: none !important;
+}
+
+/* Camera Icon: Text */
+.uppy-DashboardTab-name {
+  display: none !important;
+}
