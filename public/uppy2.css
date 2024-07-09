@@ -47,7 +47,7 @@
   height: 100svh !important; */
   /* max-width: none !important;
   max-height: none !important; */
-  background-color: yellow !important;
+  background-color: blue !important;
   border: none !important;
   border-radius: 0 !important;
 }
@@ -61,7 +61,7 @@
 /* 1. Dashboard: Camera Icon Area */
 /* ============================================= */
 /* Camera Icon: Position */
-.uppy-DashboardTab {
+/* .uppy-DashboardTab {
   position: fixed !important;
   bottom: 20px !important;
   left: 50% !important;
@@ -72,7 +72,7 @@
   -o-transform: translate(-50%, 0) !important;
   transform: translate(-50%, 0) !important;
   border-bottom: none !important;
-}
+} */
 
 /* Camera Icon: Touch area */
 .uppy-DashboardTab-btn {
