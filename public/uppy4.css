@@ -315,15 +315,10 @@
   width: 100% !important;
 }
 
-/* Upload Button: Flex Area */
-.uppy-StatusBar:not([aria-hidden=true]).is-waiting {
-  border-top: none !important;
-  background-color: transparent !important;
-  /* justify-content: center !important; */
-}
+
 
 /* Upload Button: Position Container */
-/* .uppy-StatusBar-actions {
+.uppy-StatusBar-actions {
   width: auto !important;
   height: 45px !important;
   padding: 0 !important;
@@ -334,7 +329,7 @@
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   background-color: transparent !important;
-} */
+}
 
 /* Upload Icon: Area Border-top */
 .uppy-StatusBar:before {
