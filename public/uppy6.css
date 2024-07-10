@@ -152,7 +152,7 @@
   top: 50%;
   left: 50%;
   max-width: 100%;
-  max-height: calc(100% - 65px);
+  max-height: calc(100svh - 65px);
   margin: 0;
   padding: 0;
   -webkit-transform: translate(-50%, -50%);
