@@ -359,7 +359,9 @@
   display: none !important;
 }
 
+.uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
 
+}
 /* ============================================= */
 /* 3. Upload 1 File: Footer > Upload Button
 /* ============================================= */
@@ -380,6 +382,7 @@
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
+  -webkit-backface-visibility: hidden;
 }
 
 /* Upload Icon: focused */
