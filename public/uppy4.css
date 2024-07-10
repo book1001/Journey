@@ -342,16 +342,16 @@
 /* Upload Button: Position Container */
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
 .uppy-StatusBar-actions {
-  width: auto !important;
+  /* width: auto !important;
   height: 45px !important;
-  padding: 0 !important;
+  padding: 0 !important; */
   /* margin-left: 50% !important;
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0); */
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
 }
 
 /* Upload Icon: Area Border-top */
