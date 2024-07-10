@@ -398,6 +398,11 @@
   background-image: url("icon/camera.svg");
   background-color: green !important;
   font-size: 0 !important;
+
+  position: fixed !important;
+  left: 0 !important;
+  top: auto !important;
+  bottom: 0 !important;
 }
 
 /* Upload Icon: focused */

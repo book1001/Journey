@@ -216,5 +216,29 @@
     "text": "Preatog \nL",
     "textClass": "text1",
     "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "R\nAlter\nHedi",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "R\nAlter\nHedi",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "R\nAlter\nHedi",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]
