@@ -6,5 +6,13 @@
     "text": "",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof1",
+    "text": "comma",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]

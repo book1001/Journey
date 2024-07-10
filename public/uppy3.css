@@ -131,6 +131,12 @@
   transition: none !important;
 }
 
+/* Container: Camera Area */
+.uppy-Webcam-video {
+  height: calc(100% - 65px) !important;
+  margin: 0 auto auto auto !important;
+}
+
 
 /* ============================================= */
 /* 2. WebCam: Header */
@@ -232,6 +238,9 @@
   left: 0;
   width: 100%;
   height: calc(100% - 105px);
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
 }
 
 /* Captured Image: Position */
