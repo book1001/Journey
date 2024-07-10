@@ -359,6 +359,7 @@
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0); */
   /* background-color: transparent !important; */
+  background-color: green !important; */
 }
 
 /* Upload Icon: Area Border-top */
@@ -367,8 +368,12 @@
 }
 
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
-/* .uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
-  width: auto !important;
+.uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
+  position: fixed !important;
+  left: 0 !important;
+  top: auto !important;
+  bottom: 0 !important;
+  /* width: auto !important;
   height: 45px !important;
   padding: 0 !important;
   margin-left: 50% !important;
@@ -377,8 +382,8 @@
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  background-color: transparent !important;
-} */
+  background-color: transparent !important; */
+}
 
 
 /* ============================================= */
