@@ -40,7 +40,7 @@
 }
 
 .uppy-Dashboard-inner {
-  width: auto !important;
+  width: 0 !important;
   height: 100% !important;
   /* width: 100svw !important;
   height: 100svh !important; */
@@ -112,7 +112,7 @@
 /* 2. WebCam: Container */
 /* ============================================= */
 /* Container: Position Fixed */
-.uppy-Dashboard-innerWrap {
+.uppy-DashboardContent-panel {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
@@ -380,12 +380,14 @@
 /* ============================================= */
 /* Footer: Area */
 .uppy-StatusBar {
-  height: 65px !important;
+  /* height: 65px !important; */
+  /* height: auto !important; */
   background-color: transparent !important;
 }
 
 /* Footer: Complete Text Area */
 .uppy-StatusBar-content {
+  /* height: 65px !important; */
   height: 45px !important;
 }
 

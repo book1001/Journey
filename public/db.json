@@ -14,5 +14,126 @@
     "text": "comma",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": ".05",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": ".05",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "05",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "05",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "95",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": ".05",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "Transloa",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof2",
+    "text": ".05",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "50\n05",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "50\n05",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "Transloa",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "lightClass": "light1"
   }
 ]
