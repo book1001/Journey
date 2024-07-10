@@ -384,6 +384,21 @@ button {
 
 
 
+/* ============================================= */
+/* 3. Upload 1 File: Upload Loading
+/* ============================================= */
+/* Upload Loading: Upload 1 File Text */
+.uppy-StatusBar-actionBtn--upload {
+  font-size: 0 !important;
+}
+
+/* Upload Loading: Circle Buttons (Pause / Cancle) */
+.uppy-StatusBar-actionCircleBtn {
+  display: none !important;
+}
+
+
+
 /* ======================================================================================================================================= */
 /* 4. Upload Complete
 /* ============================================= */

@@ -1299,5 +1299,101 @@
     "text": "R\nAltern\nHedion",
     "textClass": "text1",
     "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "EXIT\nCreat",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "EXIT\nCreat",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "Q\nR\nAltema\nHedion",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "Q\nR\nAltema\nHedion",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "Q\nR\nAltema\nHedion",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-R",
+    "text": "R\nAltema\nMedica",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "R\nAltema\nMedica",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "R\nAltema\nMedica",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "R\n \nAlter\n \nHedon",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "R\n \nAlter\n \nHedon",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "R\n \nAlter\n \nHedon",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "R\n \nAlter\n \nHedon",
+    "textClass": "text1",
+    "wallClass": "wall1"
   }
 ]
