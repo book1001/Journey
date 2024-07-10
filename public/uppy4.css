@@ -360,8 +360,19 @@
 }
 
 .uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
-
+  width: auto !important;
+  height: 45px !important;
+  padding: 0 !important;
+  margin-left: 50% !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background-color: transparent !important;
 }
+
+
 /* ============================================= */
 /* 3. Upload 1 File: Footer > Upload Button
 /* ============================================= */
@@ -373,16 +384,6 @@
   background-image: url("icon/camera.svg");
   background-color: green !important;
   font-size: 0 !important;
-
-  position: fixed !important;
-  bottom: 20px !important;
-  left: 50% !important;
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  -webkit-backface-visibility: hidden;
 }
 
 /* Upload Icon: focused */
