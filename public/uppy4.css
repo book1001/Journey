@@ -342,13 +342,13 @@
 /* Upload Button: Position Container */
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
 .uppy-StatusBar-actions {
-  display: block !important;
+  /* display: block !important;
   position: fixed !important;
   left: 0 !important;
   top: auto !important;
   bottom: 0 !important;
   width: 45px !important;
-  height: 45px !important;
+  height: 45px !important; */
   /* width: auto !important;
   height: 45px !important;
   padding: 0 !important; */
