@@ -643,5 +643,253 @@
     "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof2",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-R",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof2",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "13\nE\nD\nR\nT\nY\nG\n111\nC\nB\nH\n \nQ\nU\n9\nZ\nM\nK\nO\n-0\nV\ncomma",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "w\nT\nR\nAlterna\nNedic",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]
