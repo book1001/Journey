@@ -308,28 +308,15 @@
 /* 3. Upload 1 File: Footer > Upload Button Area
 /* ============================================= */
 /* Upload Button: Footer */
-.uppy-Dashboard-progressindicators {
-  position: fixed !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-}
 
 
-
-/* Upload Button: Position Container */
-.uppy-StatusBar-actions {
-  width: auto !important;
-  height: 45px !important;
-  padding: 0 !important;
-  margin-left: 50% !important;
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+/* Upload Button: Flex Area */
+.uppy-StatusBar:not([aria-hidden=true]).is-waiting {
+  border-top: none !important;
   background-color: transparent !important;
+  /* justify-content: center !important; */
 }
+
 
 /* Upload Icon: Area Border-top */
 .uppy-StatusBar:before {
