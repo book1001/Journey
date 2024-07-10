@@ -1,0 +1,45 @@
+/* font: import /* ======================================================================================================================================= */
+@font-face {
+  font-family: 'Menlo';
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
+}
+
+/* ======================================================================================================================================= */
+/* 0. Position + Z-index */
+/* ============================================= */
+.uppy-Root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  position: fixed;
+  /* width: 100% !important;
+  height: 100% !important; */
+  top: 0;
+  left: 0;
+  font-family: 'Menlo';
+}
+
+.uppy-Dashboard-inner {
+  width: auto !important; 
+  height: auto !important; 
+}
+.uppy-Dashboard-dropFilesHereHint {
+  display: none;
+}
+
+.uppy-Dashboard-AddFiles {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+.uppy-Dashboard-AddFiles-title {
+  display: none;
+}
+
+.uppy-Dashboard-AddFiles-info {
+  display: none;
+}
+

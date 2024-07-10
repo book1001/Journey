@@ -3669,7 +3669,13 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
   flex: 1;
   margin: 0;
   overflow-y: auto;
-  padding: 0 0 10px
+  padding: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .uppy-size--md .uppy-Dashboard-files {
