@@ -915,5 +915,37 @@
     "text": "laadit\ncontrol",
     "textClass": "text1",
     "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "R\nAltern\nMedia",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-R",
+    "text": "R\nAltern\nMedia",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "R\nAltern\nMedia",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "R\nAltern\nMedia",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]
