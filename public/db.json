@@ -496,5 +496,64 @@
     "text": "do\nCreate",
     "textClass": "text1",
     "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "Trans\nR\nAlter\nHed",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "Trans\nR\nAlter\nHed",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "Trans\nR\nAlter\nHed",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof2",
+    "text": "Trans\nR\nAlter\nHed",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof2",
+    "text": "R\nAltern\nHedion",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "R\nAltern\nHedion",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "R\nAltern\nHedion",
+    "textClass": "text1",
+    "wallClass": "wall1"
   }
 ]
