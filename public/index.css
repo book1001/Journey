@@ -18,6 +18,26 @@ html,body{
 
 
 /* ============================================= */
+/* Help */
+/* ============================================= */
+#help {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  border: 1px solid red;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  z-index: 6;
+}
+
+
+/* ============================================= */
 /* Json: Container */
 /* ============================================= */
 #content {
