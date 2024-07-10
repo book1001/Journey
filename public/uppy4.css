@@ -325,7 +325,7 @@
 /* Upload Button: Position Container */
 .uppy-StatusBar-actions {
   width: auto !important;
-  height: 45px !important;
+  /* height: 45px !important; 이거 */
   padding: 0 !important;
   margin-left: 50% !important;
   -webkit-transform: translate(-50%, 0);
@@ -360,3 +360,64 @@
   box-shadow: none !important;
 }
 
+
+/* ======================================================================================================================================= */
+/* 4. Upload Complete
+/* ============================================= */
+
+
+/* ============================================= */
+/* 4. Upload Complete: Captured Image
+/* ============================================= */
+/* Captured Image: Completed Icon */
+[dir=ltr] .uppy-Dashboard-Item.is-complete .uppy-Dashboard-Item-progress {
+  display: none !important;
+}
+
+
+/* ============================================= */
+/* 4. Upload Complete: Footer > Area
+/* ============================================= */
+/* Footer: Area */
+.uppy-StatusBar {
+  /* height: 65px !important; */
+  /* height: auto !important; */
+  background-color: transparent !important;
+}
+
+/* Footer: Complete Text Area */
+.uppy-StatusBar-content {
+  /* height: 65px !important; */
+  /* height: 45px !important; 이거 */
+}
+
+/* Footer: Done Button Right Position */
+[dir=ltr] .uppy-StatusBar-actions {
+  right: 0 !important;
+}
+
+/* ============================================= */
+/* 4. Upload Complete: Footer > Done Button
+/* ============================================= */
+/* Done Button */
+.uppy-StatusBar-actionBtn {
+  font-size: 12px !important;
+  color: green !important;
+  text-transform: uppercase;
+}
+
+/* Done Button: focused */
+.uppy-StatusBar-actionBtn:focus {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+
+/* ============================================= */
+/* 4. Upload Complete: Footer > Progress Bar
+/* ============================================= */
+/* Progress Bar */
+.uppy-StatusBar-progress {
+  bottom: 0 !important;
+  background-color: green !important;
+}
