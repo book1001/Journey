@@ -66,7 +66,7 @@ async function fetchAndAppendData() {
     const firstItem = hiData[0];
 
     // Remove specific words from the first item's "text" field
-    const wordsToRemove = ["Created", "with", "Transloadit", "Transtuauit", "Transtult", "Transload", "Transinadit", "Transleadit", "Tranetoadit", "QO"];
+    const wordsToRemove = ["Created", "with", "Transloadit", "Transtuauit", "Transtult", "Transload", "Transinadit", "Transleadit", "Tranetoadit", "Trans", "Transloa", "QO"];
     let modifiedText = firstItem.text;
     wordsToRemove.forEach(word => {
       modifiedText = modifiedText.replace(new RegExp(word, 'gi'), '');

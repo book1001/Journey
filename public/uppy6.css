@@ -9,6 +9,9 @@
 button {
   font-family: 'Menlo';
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  color: red;
   cursor: pointer;
 }
 
@@ -334,6 +337,7 @@ button {
   /* height: 45px; */
   margin-left: 20px;
   margin-right: auto;
+  text-transform: uppercase;
 }
 
 /* Footer: Done Button Margin Right */
@@ -346,7 +350,6 @@ button {
 .uppy-StatusBar-actionBtn--done {
   height: 45px;
   border: none;
-  background: transparent;
 }
 
 .uppy-StatusBar-statusIndicator .uppy-c-icon svg {

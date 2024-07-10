@@ -555,5 +555,93 @@
     "text": "R\nAltern\nHedion",
     "textClass": "text1",
     "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof2",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "9\nA\n2\n2\nM\nC\nMarocko\n3\nM\n\"\na",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]
