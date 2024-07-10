@@ -288,6 +288,11 @@
   background-color: transparent !important;
 }
 
+/* Captured Image: Preview SVG Icon */
+.uppy-Dashboard-Item-previewIcon {
+  display: none !important;
+}
+
 
 /* ============================================= */
 /* 3. Upload 1 File: File Info
@@ -308,7 +313,13 @@
 /* 3. Upload 1 File: Footer > Upload Button Area
 /* ============================================= */
 /* Upload Button: Footer */
-
+/* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
+.uppy-Dashboard-progressindicators {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  /* width: 100% !important; */
+}
 
 /* Upload Button: Flex Area */
 .uppy-StatusBar:not([aria-hidden=true]).is-waiting {
@@ -317,6 +328,20 @@
   /* justify-content: center !important; */
 }
 
+/* Upload Button: Position Container */
+/* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
+.uppy-StatusBar-actions {
+  width: auto !important;
+  height: 45px !important;
+  padding: 0 !important;
+  margin-left: 50% !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background-color: transparent !important;
+}
 
 /* Upload Icon: Area Border-top */
 .uppy-StatusBar:before {
