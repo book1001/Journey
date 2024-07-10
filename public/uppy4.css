@@ -223,6 +223,17 @@
 
 
 /* ============================================= */
+/* 3. Upload 1 File: Camera On Permission
+/* ============================================= */
+.uppy-Webcam-permissons {
+  display: none !important;
+}
+
+.uppy-Webcam-permissonsIcon {
+  display: none !important;
+}
+
+/* ============================================= */
 /* 3. Upload 1 File: Hearder
 /* ============================================= */
 /* Icon: Upload More */
@@ -330,7 +341,7 @@
 
 /* Upload Button: Position Container */
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
-.uppy-StatusBar-actions {
+/* .uppy-StatusBar-actions {
   width: auto !important;
   height: 45px !important;
   padding: 0 !important;
@@ -341,7 +352,7 @@
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   background-color: transparent !important;
-}
+} */
 
 /* Upload Icon: Area Border-top */
 .uppy-StatusBar:before {
