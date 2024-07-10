@@ -75,9 +75,37 @@
 /* 3. Upload 1 File: Camera On Permission
 /* ============================================= */
 .uppy-Webcam-permissons {
-  display: none !important;
+  display: none;
 }
 
 .uppy-Webcam-permissonsIcon {
-  display: none !important;
+  display: none;
+}
+
+/* ============================================= */
+/* 3. Upload 1 File: Hearder
+/* ============================================= */
+/* Icon: Upload More */
+.uppy-DashboardContent-addMore {
+  display: none;
+}
+
+
+/* ============================================= */
+/* 3. Upload 1 File: Captured Image
+/* ============================================= */
+/* Captured Image: Remove Icon */
+.uppy-Dashboard-Item-fileInfoAndButtons {
+  display: none;
+}
+
+
+/* ============================================= */
+/* 3. Upload 1 File: Footer > Upload Button Area
+/* ============================================= */
+/* Upload Button: Footer */
+.uppy-Dashboard-progressindicators {
+  position: fixed;
+  bottom: 0;
+  left: 150px;
 }
