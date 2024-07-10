@@ -40,7 +40,7 @@
 }
 
 .uppy-Dashboard-inner {
-  width: 0 !important;
+  width: auto !important;
   height: 100% !important;
   /* width: 100svw !important;
   height: 100svh !important; */

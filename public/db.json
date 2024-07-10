@@ -135,5 +135,32 @@
   },
   {
     "lightClass": "light1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "8\n.05\n \nTransloa",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "8\n.05\n \nTransloa",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-R",
+    "text": "8\n.05\n \nTransloa",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "lightClass": "light1"
   }
 ]
