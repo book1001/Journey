@@ -240,5 +240,29 @@
     "text": "R\nAlter\nHedi",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "R\nAltema\nNedica",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "R\nAltema\nNedica",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "R\nAltema\nNedica",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]
