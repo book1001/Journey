@@ -368,5 +368,117 @@
     "text": "O\nP\nK\nA\nL\nI\n36\ncommand\noption\n \nQ\nreturn",
     "textClass": "text1",
     "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof1",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof1",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
+    "textClass": "text1",
+    "wallClass": "wall1"
   }
 ]
