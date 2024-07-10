@@ -264,5 +264,29 @@
     "text": "R\nAltema\nNedica",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "R\nAlten\nHedica",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-R",
+    "text": "R\nAlten\nHedica",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "R\nAlten\nHedica",
+    "textClass": "text1",
+    "wallClass": "wall3"
   }
 ]
