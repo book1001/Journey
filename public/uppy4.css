@@ -143,13 +143,13 @@
 /* ============================================= */
 /* Header: Area */
 .uppy-DashboardContent-bar {
-  position: fixed !important;
+  /* position: fixed !important;
   bottom: 20px !important;
   left: 0 !important;
   width: auto !important;
   height: 45px !important;
   background-color: black !important;
-  border-bottom: none !important;
+  border-bottom: none !important; */
 }
 
 /* Header: Title Text */
@@ -326,9 +326,9 @@
 /* Upload Button: Footer */
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
 .uppy-Dashboard-progressindicators {
-  /* position: fixed !important;
+  position: fixed !important;
   bottom: 0 !important;
-  left: 0 !important; */
+  left: 0 !important;
   /* width: 100% !important; */
 }
 
@@ -342,24 +342,24 @@
 /* Upload Button: Position Container */
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
 .uppy-StatusBar-actions {
-  /* display: block !important;
+  display: block !important;
   position: fixed !important;
   left: 0 !important;
   top: auto !important;
   bottom: 0 !important;
   width: 45px !important;
-  height: 45px !important; */
-  /* width: auto !important;
   height: 45px !important;
-  padding: 0 !important; */
-  /* margin-left: 50% !important;
+  width: auto !important;
+  height: 45px !important;
+  padding: 0 !important;
+  margin-left: 50% !important;
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0); */
-  /* background-color: transparent !important; */
-  background-color: green !important; */
+  transform: translate(-50%, 0);
+  background-color: transparent !important;
+  /* background-color: green !important; */ */
 }
 
 /* Upload Icon: Area Border-top */
@@ -369,10 +369,10 @@
 
 /* 잘 못 건들면 모버알에서 대시보드 카메라 아이콘 사라짐 */
 .uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
-  position: fixed !important;
+  /* position: fixed !important;
   left: 0 !important;
   top: auto !important;
-  bottom: 0 !important;
+  bottom: 0 !important; */
   /* width: auto !important;
   height: 45px !important;
   padding: 0 !important;
