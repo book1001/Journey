@@ -253,6 +253,7 @@ button {
 }
 
 .uppy-Dashboard-Item-previewInnerWrap {
+  padding: 45px 20px 85px 20px !important;
   background-color: transparent !important;
   /* align-items: center;
   display: flex;
@@ -295,7 +296,8 @@ button {
 /* Captured Image: Captured Photo Img */
 .uppy-Dashboard-Item-previewImg {
   width: 100%;
-  padding: 45px 10px 85px 10px;
+  border-radius: 10px;
+  /* padding: 45px 10px 85px 10px; */
   /* padding: 10px; */
   /* position: fixed;
   top: 50%;
@@ -310,6 +312,14 @@ button {
 }
 
 
+
+/* ============================================= */
+/* 3. Upload 1 File: Captured Image > Fail
+/* ============================================= */
+/* 나중에 수정하기 / 촬영 실패시 프리뷰 이미지 */
+.uppy-Dashboard-Item-previewIconWrap {
+  display: none; 
+}
 
 /* ============================================= */
 /* 3. Upload 1 File: Footer > Upload Button Area
@@ -354,8 +364,8 @@ button {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-image: url("icon/camera.svg");
-  background-color: green;
+  background-image: url("icon/upload.svg");
+  background-color: blue;
   font-size: 0;
 }
 
@@ -400,8 +410,8 @@ button {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-image: url("icon/camera.svg");
-  background-color: blue;
+  background-image: url("icon/done.svg");
+  background-color: green;
   font-size: 0;
 }
 
