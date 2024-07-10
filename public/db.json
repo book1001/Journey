@@ -963,5 +963,213 @@
     "text": "",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof3-B",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color3",
+    "roofClass": "roof2",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "200\n0\nA\n7 3\n0\nV\nA\nN\n0\nL\nM",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "R\nAltema\nNedon",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "R\nAltema\nNedon",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "R\nAltema\nNedon",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "Q \nR\nAltern\nHed",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size2",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "Q \nR\nAltern\nHed",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof3-R",
+    "text": "Q \nR\nAltern\nHed",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-B",
+    "text": "Q \nR\nAltern\nHed",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color2",
+    "roofClass": "roof1",
+    "text": "R\nAltern\nNedo",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "R\nAltern\nNedo",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color3",
+    "roofClass": "roof1",
+    "text": "R\nAltern\nNedo",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof2",
+    "text": "R\nAltern\nNedo",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof1",
+    "text": "R\nAlterna\nHedon",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "R\nAlterna\nHedon",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "R\nAlterna\nHedon",
+    "textClass": "text1",
+    "wallClass": "wall2"
   }
 ]
