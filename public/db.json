@@ -480,5 +480,21 @@
     "text": "MacBook Pro\nU\nI\nM\n \n \nK\nO\nL\nSH\nshift\nэс\ncommand\noption",
     "textClass": "text1",
     "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof3-R",
+    "text": "do\nCreate",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-G",
+    "text": "do\nCreate",
+    "textClass": "text1",
+    "wallClass": "wall1"
   }
 ]
