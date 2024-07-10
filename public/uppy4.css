@@ -40,8 +40,9 @@
 }
 
 .uppy-Dashboard-inner {
-  width: auto !important;
-  height: 100% !important;
+  /* width 다른거로 바꾸면 안됌 > 모바일에서 카메라 버튼 안보임 */
+  width: auto !important; 
+  height: auto !important;
   /* width: 100svw !important;
   height: 100svh !important; */
   max-width: none !important;
