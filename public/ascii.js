@@ -31,7 +31,7 @@
 //   }
 // });
 
-function appendElement(item) {
+function createItem(item) {
   let itemDiv = document.createElement('div');
 
   // =============================================
@@ -299,8 +299,6 @@ function appendElement(item) {
 //   contentDiv.appendChild(treeDiv);
 // });
 
-  contentDiv.appendChild(itemDiv);
-
   // =============================================
   // Add: House > Roof
   // =============================================
@@ -510,6 +508,8 @@ function appendElement(item) {
       div.style.textShadow = '';
     });
   }
+
+  return itemDiv;
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -545,7 +545,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     // contentDiv.appendChild(qrDiv);
     // qrDiv.appendChild(qrImg);
 
-    reversedData.forEach(item => appendElement(item));
+    reversedData.forEach(item => {
+      const itemDiv = createElement(item);
+      contentDiv.appendChild(itemDiv);
+    });
 
     // contentDiv.appendChild(qrDiv);
     // qrDiv.appendChild(qrImg);
