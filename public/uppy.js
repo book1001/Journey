@@ -56,6 +56,18 @@ const uppy = new Uppy()
   //   limit: 1
 	// });
 
+  let lastFileID = null;
+
+  // 파일이 추가될 때 중복 추가 방지
+  uppy.on('file-added', (file) => {
+    if (lastFileID && file.id === lastFileID) {
+      uppy.removeFile(file.id);
+      console.log('중복된 파일 제거:', file);
+    } else {
+      lastFileID = file.id;
+      console.log('새로운 파일 추가:', file);
+    }
+  });
   
   uppy.on('complete', async (result) => {
     const successfulUploads = result.successful;
