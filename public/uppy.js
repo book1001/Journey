@@ -65,7 +65,25 @@ uppy.on('transloadit:complete', (assembly) => {
 // });
 
 uppy.on('complete', async (result) => {
-  
+  const successfulUploads = result.successful;
+  if (successfulUploads.length > 0) {
+    setTimeout(async () => {
+      try {
+        const response = await fetch('/fetch-and-append-data');
+        const data = await response.json();
+        console.log(data);
+
+        const contentDiv = document.getElementById('content');
+        const itemDiv = createElement(data);
+        contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+
+        document.getElementById('failAlert').style.background = 'blue';
+      } catch (error) {
+        console.error('Failed to fetch and append data:', error);
+        // Handle error scenario
+      }
+    }, 1000); // 0.5초를 밀리초 단위로 지정
+  }
 });
 
 // uppy.on('complete', async (result) => {
