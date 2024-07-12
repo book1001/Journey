@@ -34,7 +34,9 @@ uppy.use(Webcam, {
 //   formData: true
 // });
 
-uppy.use(Transloadit, {
+uppy.use(Transloadit, {      
+  waitForEncoding: true,
+  alwaysRunAssembly: true,
   assemblyOptions: {
     params: {
       auth: { key: '2568b8e69bc679351eeb9ae93694482e' },
