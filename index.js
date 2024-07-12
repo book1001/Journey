@@ -118,6 +118,7 @@ async function fetchAndAppendData() {
     let processedHiData = [];
     if (containsText) {
       processedHiData = hiData.slice(0, 1).map(item => {
+        console.log("item: " + item);
         return {
           sizeClass: randomSize(),
           colorClass: randomColor(),
