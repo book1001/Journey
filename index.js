@@ -198,7 +198,11 @@ async function fetchAndAppendData() {
   // }
 
     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
-    console.log(processedHiData);
+    console.log("processedHiData: " + processedHiData.length);
+    console.log("treeData: " + treeData.length);
+    console.log("flowerData: " + flowerData.length);
+    console.log("lightData: " + lightData.length);
+    console.log("lightEtcData: " + lightEtcData.length);
     console.log('New data has been appended to db.json');
   } catch (error) {
     console.error('Failed to fetch and append data:', error);
