@@ -76,13 +76,14 @@ uppy.on('complete', async (result) => {
 document.addEventListener('DOMContentLoaded', function() {
   const doneButton = document.querySelector('.uppy-StatusBar-actionBtn--done');
 
-  doneButton.addEventListener('click', async function(event) {
-    const response = await fetch('db.json');
-    const data = await response.json();
-  
-    const contentDiv = document.getElementById('content');
-    const itemDiv = createElement(data[data.length - 1]);
-    contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+  doneButton.addEventListener('click', function(event) {
+    fetch('db.json')
+        .then(res => res.json)
+        .then(data => {
+          const contentDiv = document.getElementById('content');
+          const itemDiv = createElement(data[data.length - 1]);
+          contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+    });
   });
 });
 
