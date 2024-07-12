@@ -62,16 +62,14 @@ uppy.on('complete', async (result) => {
     // setTimeout(async () => {
       try {
         const response = await fetch('/fetch-and-append-data');
-        const message = await response.text();
-        console.log(message);
+        const data = await response.json();
+        console.log(data);
+
+        const contentDiv = document.getElementById('content');
+        const itemDiv = createElement(data);
+        contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+
         document.getElementById('failAlert').style.background = 'blue';
-        fetch('db.json')
-          .then(res => res.json())
-          .then(data => {
-            const contentDiv = document.getElementById('content');
-            const itemDiv = createElement(data[data.length - 1]);
-            contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
-          });
       } catch (error) {
         console.error('Failed to fetch and append data:', error);
         // Handle error scenario
