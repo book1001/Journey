@@ -209,7 +209,8 @@ async function fetchAndAppendData() {
 // Endpoint to fetch new data and append to db.json
 app.get("/fetch-and-append-data", async (req, res) => {
   await fetchAndAppendData();
-  res.send('New data has been fetched and appended to db.json');
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+  res.send(data[data.length - 1]);
 });
 
 // Endpoint to get JSON data (optional, for testing)
