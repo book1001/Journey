@@ -35,13 +35,13 @@ const uppy = new Uppy()
   // });
 
   uppy.use(Transloadit, {
-		assemblyOptions: {
-			params: {
-				auth: { key: '2568b8e69bc679351eeb9ae93694482e' },
-				template_id: 'cc8128449fb849729c3620ceefb5f3e8',
-			},
-		},
-	});
+    assemblyOptions: {
+      params: {
+        auth: { key: '2568b8e69bc679351eeb9ae93694482e' },
+        template_id: 'cc8128449fb849729c3620ceefb5f3e8',
+      },
+    },
+  });
 
   // Optionally listen to events
   uppy.on('transloadit:assembly-created', (assembly, fileIDs) => {});
@@ -55,18 +55,6 @@ const uppy = new Uppy()
 	// 	companionUrl: 'https://companion.uppy.io',
   //   limit: 1
 	// });
-
-  let lastFileID = null;
-
-  // 파일이 추가될 때 중복 추가 방지
-  uppy.on('file-added', (file) => {
-    if (lastFileID && file.id === lastFileID) {
-      console.log('중복된 파일:', file);
-    } else {
-      lastFileID = file.id;
-      console.log('새로운 파일:', file);
-    }
-  });
   
   uppy.on('complete', async (result) => {
     const successfulUploads = result.successful;
