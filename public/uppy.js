@@ -42,6 +42,18 @@ uppy.use(Transloadit, {
       auth: { key: '2568b8e69bc679351eeb9ae93694482e' },
       template_id: 'cc8128449fb849729c3620ceefb5f3e8',
     },
+    steps: {
+      ':original': {
+        robot: '/upload/handle',
+      },
+      text_detected: {
+        use: ':original',
+        robot: '/document/ocr',
+        result_type: 'txt',
+        // Additional settings for OCR
+        language: 'eng',  // Set the language for OCR
+      }
+    }
   },
 });
 
