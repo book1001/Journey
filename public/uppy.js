@@ -74,16 +74,18 @@ uppy.on('complete', async (result) => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const doneButton = document.querySelector('.uppy-StatusBar-actionBtn--done');
+  const doneButton = document.querySelector('.uppy-c-btn');
 
-  doneButton[0].addEventListener('click', function(event) {
-    fetch('db.json')
-        .then(res => res.json)
-        .then(data => {
-          const contentDiv = document.getElementById('content');
-          const itemDiv = createElement(data[data.length - 1]);
-          contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
-    });
+  doneButton.addEventListener('click', function(event) {
+    if(event.target.classList.contains('uppy-StatusBar-actionBtn--done')) {
+      fetch('db.json')
+      .then(res => res.json)
+      .then(data => {
+        const contentDiv = document.getElementById('content');
+        const itemDiv = createElement(data[data.length - 1]);
+        contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+      });
+    }
   });
 });
 
