@@ -59,7 +59,7 @@ uppy.on('transloadit:complete', (assembly) => {});
 uppy.on('complete', async (result) => {
   const successfulUploads = result.successful;
   if (successfulUploads.length > 0) {
-    setTimeout(async () => {
+    // setTimeout(async () => {
       try {
         const response = await fetch('/fetch-and-append-data');
         const message = await response.text();
@@ -76,7 +76,7 @@ uppy.on('complete', async (result) => {
         console.error('Failed to fetch and append data:', error);
         // Handle error scenario
       }
-    }, 1000); // 0.5초를 밀리초 단위로 지정
+    // }, 1000); // 0.5초를 밀리초 단위로 지정
   }
 });
 
