@@ -12,18 +12,18 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const path = require("path");
-// const multer = require("multer");
+const multer = require("multer");
 
-// const storage = multer.diskStorage({
-//   destination: `${__dirname}/uploads/`,
-//   filename: (req, file, cb) => {
-//     // const fileName = `${Date.now()}${path.extname(file.originalname)}`;
-//     const fileName = `hi${path.extname(file.originalname)}`;
-//     cb(null, fileName);
-//   }
-// });
+const storage = multer.diskStorage({
+  destination: `${__dirname}/uploads/`,
+  filename: (req, file, cb) => {
+    // const fileName = `${Date.now()}${path.extname(file.originalname)}`;
+    const fileName = `hi${path.extname(file.originalname)}`;
+    cb(null, fileName);
+  }
+});
 
-// const uploadImage = multer({storage}).single("photo");
+const uploadImage = multer({storage}).single("photo");
 
 app.use(cors());
 app.use(express.static('public'));
@@ -32,12 +32,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "public/index.html"));
 });
 
-// app.post("/image", uploadImage, (req, res) => {
-//   console.log(req.file);
-//   if(req.file) return res.json({mes: "good job uploading that image"});
+app.post("/image", uploadImage, (req, res) => {
+  console.log(req.file);
+  if(req.file) return res.json({mes: "good job uploading that image"});
 
-//   res.send("Image upload failed");
-// });
+  res.send("Image upload failed");
+});
 
 
 require("dotenv").config();
@@ -82,21 +82,26 @@ async function fetchAndAppendData() {
     // ==================================================
     // Json: objData > Detect Objects 
     // ==================================================
-
-    // Function to check if objData contains specific name and create corresponding data
-    function processData(objData, nameKeyword, randomFunction) {
-      const containsName = objData.some(item => item.name.includes(nameKeyword));
-      return containsName ? objData.filter(item => item.name.includes(nameKeyword)).map(item => {
+    // Function to check if objData contains specific keywords and create corresponding data
+    function processData(objData, keywords, randomFunction, className) {
+      const containsKeyword = objData.some(item => 
+        keywords.some(keyword => item.name.includes(keyword))
+      );
+      
+      return containsKeyword ? objData.filter(item => 
+        keywords.some(keyword => item.name.includes(keyword))
+      ).map(item => {
         const dataObject = {};
-        dataObject[nameKeyword.toLowerCase() + 'Class'] = randomFunction();
+        dataObject[className] = randomFunction();
         return dataObject;
       }) : [];
     }
 
-    const treeData = processData(objData, "Tree", randomTree);
-    const flowerData = processData(objData, "Flower", randomFlower);
-    const lightData = processData(objData, "Lamp Post", randomLight);
-    const lightEtcData = processData(objData, "Lamp", randomLight);
+    const treeData = processData(objData, ["Tree"], randomTree, 'treeClass');
+    const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
+    const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
+    const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
+
 
 
 

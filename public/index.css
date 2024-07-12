@@ -38,8 +38,8 @@ html,body{
 
 #failAlert {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 100px;
+  left: 100px;
   width: 100px;
   height: 100px;
   background: green;
