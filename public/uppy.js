@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
   doneButton.addEventListener('click', function(event) {
     if(event.target.classList.contains('uppy-StatusBar-actionBtn--done')) {
       fetch('db.json')
-      .then(res => res.json)
+      .then(res => res.json())
       .then(data => {
         const contentDiv = document.getElementById('content');
         const itemDiv = createElement(data[data.length - 1]);
