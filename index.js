@@ -58,154 +58,151 @@ app.use(express.json());
 
 // Function to fetch new data and append to db.json
 async function fetchAndAppendData() {
-  setTimeout(async () => {
-    try {
-      const objResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/obj.json');
-      const objData = await objResponse.json();
+  try {
+    const objResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/obj.json');
+    const objData = await objResponse.json();
 
-      const hiResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
-      const hiData = await hiResponse.json();
+    const hiResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
+    const hiData = await hiResponse.json();
+    const firstItem = hiData[0];
+
+    // Check if the text contains "Created with\nTransloadit" and replace it with "~"
+    let modifiedText = firstItem.text.replace("\s", " ");
     
-      const firstItem = hiData[0];
-
-      // Check if the text contains "Created with\nTransloadit" and replace it with "~"
-      let modifiedText = firstItem.text.replace("\s", " ");
-      
-      const targetTexts = ["Created", "with", "ste", "QO", "00", "Q Transloadit", "0 Transloadit", "Q Tran loadit", "0 Tran loadit", "QTransloadit", "0Transloadit", "Transloadit", "Transload", "Tran loadit", "Tran load"];
-      targetTexts.forEach(target => {
-        if (modifiedText.includes(target)) {
-          modifiedText = modifiedText.replace(target, "");
-        }
-      });
-
-      firstItem.text = modifiedText.trim();
-      console.log("text: " + firstItem.text);
-
-
-      // ==================================================
-      // Json: objData > Detect Objects 
-      // ==================================================
-      // Function to check if objData contains specific keywords and create corresponding data
-      function processData(objData, keywords, randomFunction, className) {
-        const containsKeyword = objData.some(item => 
-          keywords.some(keyword => item.name.includes(keyword))
-        );
-        
-        return containsKeyword ? objData.filter(item => 
-          keywords.some(keyword => item.name.includes(keyword))
-        ).map(item => {
-          const dataObject = {};
-          dataObject[className] = randomFunction();
-          return dataObject;
-        }) : [];
+    const targetTexts = ["Created", "with", "ste", "QO", "00", "Q Transloadit", "0 Transloadit", "Q Tran loadit", "0 Tran loadit", "QTransloadit", "0Transloadit", "Transloadit", "Transload", "Tran loadit", "Tran load"];
+    targetTexts.forEach(target => {
+      if (modifiedText.includes(target)) {
+        modifiedText = modifiedText.replace(target, "");
       }
+    });
 
-      const treeData = processData(objData, ["Tree"], randomTree, 'treeClass');
-      const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
-      const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
-      const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
-
+    firstItem.text = modifiedText.trim();
+    console.log("text: " + firstItem.text);
 
 
-
-      // ==================================================
-      // Json: objData > Detect Text > processedHiData
-      // ==================================================
-      const containsText = objData.some(item => 
-        item.name.includes("Text") || 
-        item.name.includes("Texting") || 
-        item.name.includes("Sign")
+    // ==================================================
+    // Json: objData > Detect Objects 
+    // ==================================================
+    // Function to check if objData contains specific keywords and create corresponding data
+    function processData(objData, keywords, randomFunction, className) {
+      const containsKeyword = objData.some(item => 
+        keywords.some(keyword => item.name.includes(keyword))
       );
+      
+      return containsKeyword ? objData.filter(item => 
+        keywords.some(keyword => item.name.includes(keyword))
+      ).map(item => {
+        const dataObject = {};
+        dataObject[className] = randomFunction();
+        return dataObject;
+      }) : [];
+    }
 
-      // Process hiData and combine with objData only if objData contains "Text"
-      let processedHiData = [];
-      if (containsText) {
-        processedHiData = hiData.slice(0, 1).map(item => {
-          return {
-            sizeClass: randomSize(),
-            colorClass: randomColor(),
-            roofClass: randomRoof(),
-            text: firstItem.text,
-            // text: item.text,
-            textClass: randomText(),
-            wallClass: randomWall()
-            // gardenClass: randomGarden()
-          };
-        });
-      }
-
-      // const processedHiData = hiData.slice(1).map(item => {
-      //   return {
-      //     sizeClass: randomSize(),
-      //     colorClass: randomColor(),
-      //     roofClass: randomRoof(),
-      //     // text: item.text,
-      //     text: firstItem.text,
-      //     textClass: randomText(),
-      //     wallClass: randomWall()
-      //     // gardenClass: randomGarden()
-      //   };
-      // });
+    const treeData = processData(objData, ["Tree"], randomTree, 'treeClass');
+    const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
+    const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
+    const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
 
 
 
 
-      // ==================================================
-      // Json: Combine all processed data
-      // ==================================================
+    // ==================================================
+    // Json: objData > Detect Text > processedHiData
+    // ==================================================
+    const containsText = objData.some(item => 
+      item.name.includes("Text") || 
+      item.name.includes("Texting") || 
+      item.name.includes("Sign")
+    );
 
-      // Read existing data from db.json
-      const existingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+    // Process hiData and combine with objData only if objData contains "Text"
+    let processedHiData = [];
+    if (containsText) {
+      processedHiData = hiData.slice(0, 1).map(item => {
+        return {
+          sizeClass: randomSize(),
+          colorClass: randomColor(),
+          roofClass: randomRoof(),
+          text: firstItem.text,
+          // text: item.text,
+          textClass: randomText(),
+          wallClass: randomWall()
+          // gardenClass: randomGarden()
+        };
+      });
+    }
 
-      const combinedData = [
-        ...existingData, 
-        ...processedHiData, 
-        ...treeData, 
-        ...flowerData,
-        ...lightData,
-        ...lightEtcData
-      ];
+    // const processedHiData = hiData.slice(1).map(item => {
+    //   return {
+    //     sizeClass: randomSize(),
+    //     colorClass: randomColor(),
+    //     roofClass: randomRoof(),
+    //     // text: item.text,
+    //     text: firstItem.text,
+    //     textClass: randomText(),
+    //     wallClass: randomWall()
+    //     // gardenClass: randomGarden()
+    //   };
+    // });
 
 
-      // ==================================================
-      // Json: Check if all keywords are absent in objData and show failAlert if true
-      // ==================================================
-      // if (!containsText && !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length) {
-      //   // Display failAlert
-      //   document.getElementById('failAlert').style.background = 'blue';
-      // }
-
-      // const shouldDisplayFailAlert = !containsText && !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length;
-
-      // const shouldDisplayFailAlert = !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length;
-
-      // if (shouldDisplayFailAlert) {
-      //   document.getElementById('failAlert').style.background = 'blue';
-      // }
-          
 
 
-      // ==================================================
-      // Json: Write combined data back to db.json
-      // ==================================================
-      // Write combined data back to db.json only if it's not already written
-    //   const currentData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
-    //   if (JSON.stringify(currentData) !== JSON.stringify(combinedData)) {
-    //     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
-    //     console.log('New data has been appended to db.json');
-    //   } else {
-    //     console.log('No new data appended to db.json as it is identical.');
-    //   }
-    // } catch (error) {
-    //   console.error('Failed to fetch and append data:', error);
+    // ==================================================
+    // Json: Combine all processed data
+    // ==================================================
+
+    // Read existing data from db.json
+    const existingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+
+    const combinedData = [
+      ...existingData, 
+      ...processedHiData, 
+      ...treeData, 
+      ...flowerData,
+      ...lightData,
+      ...lightEtcData
+    ];
+
+
+    // ==================================================
+    // Json: Check if all keywords are absent in objData and show failAlert if true
+    // ==================================================
+    // if (!containsText && !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length) {
+    //   // Display failAlert
+    //   document.getElementById('failAlert').style.background = 'blue';
     // }
 
-      fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
-      console.log('New data has been appended to db.json');
-    } catch (error) {
-      console.error('Failed to fetch and append data:', error);
-    }
-  }, 500);
+    // const shouldDisplayFailAlert = !containsText && !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length;
+
+    // const shouldDisplayFailAlert = !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length;
+
+    // if (shouldDisplayFailAlert) {
+    //   document.getElementById('failAlert').style.background = 'blue';
+    // }
+        
+
+
+    // ==================================================
+    // Json: Write combined data back to db.json
+    // ==================================================
+    // Write combined data back to db.json only if it's not already written
+  //   const currentData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+  //   if (JSON.stringify(currentData) !== JSON.stringify(combinedData)) {
+  //     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
+  //     console.log('New data has been appended to db.json');
+  //   } else {
+  //     console.log('No new data appended to db.json as it is identical.');
+  //   }
+  // } catch (error) {
+  //   console.error('Failed to fetch and append data:', error);
+  // }
+
+    fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
+    console.log('New data has been appended to db.json');
+  } catch (error) {
+    console.error('Failed to fetch and append data:', error);
+  }
 }
 
 
