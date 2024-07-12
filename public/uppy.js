@@ -65,7 +65,13 @@ const uppy = new Uppy()
           const message = await response.text();
           console.log(message);
           document.getElementById('failAlert').style.background = 'blue';
-          // window.location.reload();
+          fetch('db.json')
+		  .then(res => res.json())
+		  .then(data => {
+			  const contentDiv = document.getElementById('content');
+			  const itemDiv = createElement(data[data.length - 1]);
+			  contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+		  });
         } catch (error) {
           console.error('Failed to fetch and append data:', error);
           // Handle error scenario
