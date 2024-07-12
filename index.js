@@ -70,6 +70,7 @@ async function fetchAndAppendData() {
     let modifiedText = firstItem.text;
     const targetTexts = ["Created with\nTransloadit", "\nCreated with\nTransloadit", "Created with\nQO Transloadit", "Created with\nQTransloadit", "Created", "with", "Transloadit"];
     targetTexts.forEach(target => {
+      console.log("text: " + modifiedText);
       if (modifiedText.includes(target)) {
         modifiedText = modifiedText.replace(target, "");
       }
