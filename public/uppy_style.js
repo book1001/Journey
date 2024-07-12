@@ -24,3 +24,16 @@ const buttons = document.querySelectorAll(buttonSelector);
 buttons.forEach(button => {
   button.textContent = ''; // 버튼의 텍스트를 삭제
 });
+
+
+
+// ==================================================
+document.querySelector('.uppy-StatusBar-actionBtn--done').addEventListener('click', function() {
+  document.getElementById('failAlert').style.background = 'red';
+});
+
+
+
+function Jg(i) {
+  document.getElementById('failAlert').style.background = 'red';
+}

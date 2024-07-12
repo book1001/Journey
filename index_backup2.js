@@ -59,139 +59,126 @@ app.use(express.json());
 // Function to fetch new data and append to db.json
 async function fetchAndAppendData() {
   try {
+    const hiResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
+    const hiData = await hiResponse.json();
+
+    // Extract only the first item
+    const firstItem = hiData[0];
+
+    // Check if the text contains "Created with\nTransloadit" and replace it with "Apple"
+    // let modifiedText = firstItem.text;
+    // const targetText = "with\nTransloadit";
+    // if (modifiedText.includes(targetText)) {
+    //   modifiedText = modifiedText.replace(targetText, "Apple");
+    // }
+
+    // // Remove specific words from the first item's "text" field
+    // const wordsToRemove = ["Created with\nTransloadit"];
+
+    // const wordsToRemove = ["Created with\nTransloadit", "Created", "Creat", "with", "Transloadit", "Transtuauit", "Transtult", "Transload", "Transinadit", "Transleadit", "Tranetoadit", "Trans", "Transloa", "QO"];
+    let modifiedText = firstItem.text;
+    wordsToRemove.forEach(word => {
+      modifiedText = modifiedText.replace(new RegExp(word, 'gi'), '');
+    });
+
+    // Update the text of the first item
+    firstItem.text = modifiedText.trim();
+
+    // Fetch data from obj.json
     const objResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/obj.json');
     const objData = await objResponse.json();
 
-    const hiResponse = await fetch('https://journey-spaces.nyc3.digitaloceanspaces.com/hi.json');
-    const hiData = await hiResponse.json();
-    const firstItem = hiData[0];
-
-    // Check if the text contains "Created with\nTransloadit" and replace it with "~"
-    let modifiedText = firstItem.text;
-    const targetTexts = ["Created with\nTransloadit", "\nCreated with\nTransloadit", "Created with\nQO Transloadit", "Created with\nQTransloadit", "Created", "with", "Transloadit"];
-    targetTexts.forEach(target => {
-      if (modifiedText.includes(target)) {
-        modifiedText = modifiedText.replace(target, "");
-      }
-    });
-
-    firstItem.text = modifiedText.trim();
-
-
-
     // ==================================================
-    // Json: objData > Detect Objects 
+    // Json: treeData (Process objData to add tree classes for items with "Tree" in the name)
     // ==================================================
-
-    // Function to check if objData contains specific name and create corresponding data
-    function processData(objData, nameKeyword, randomFunction) {
-      const containsName = objData.some(item => item.name.includes(nameKeyword));
-      return containsName ? objData.filter(item => item.name.includes(nameKeyword)).map(item => {
-        const dataObject = {};
-        dataObject[nameKeyword.toLowerCase() + 'Class'] = randomFunction();
-        return dataObject;
-      }) : [];
-    }
-
-    const treeData = processData(objData, "Tree", randomTree);
-    const flowerData = processData(objData, "Flower", randomFlower);
-    const lightData = processData(objData, "Lamp Post", randomLight);
-    const lightEtcData = processData(objData, "Lamp", randomLight);
-
-
-
-    // ==================================================
-    // Json: objData > Detect Text > processedHiData
-    // ==================================================
-    const containsText = objData.some(item => 
-      item.name.includes("Text") || 
-      item.name.includes("Texting") || 
-      item.name.includes("Sign")
-    );
-
-    // Process hiData and combine with objData only if objData contains "Text"
-    let processedHiData = [];
-    if (containsText) {
-      processedHiData = hiData.slice(1).map(item => {
+    const treeData = objData
+      .filter(item => item.name.includes("Tree"))
+      .map(item => {
         return {
-          sizeClass: randomSize(),
-          colorClass: randomColor(),
-          roofClass: randomRoof(),
-          text: firstItem.text,
-          // text: item.text,
-          textClass: randomText(),
-          wallClass: randomWall()
-          // gardenClass: randomGarden()
+          treeClass: randomTree()
         };
       });
-    }
 
-    // const processedHiData = hiData.slice(1).map(item => {
-    //   return {
-    //     sizeClass: randomSize(),
-    //     colorClass: randomColor(),
-    //     roofClass: randomRoof(),
-    //     // text: item.text,
-    //     text: firstItem.text,
-    //     textClass: randomText(),
-    //     wallClass: randomWall()
-    //     // gardenClass: randomGarden()
-    //   };
-    // });
+    const flowerData = objData
+      .filter(item => item.name.includes("Flower"))
+      .map(item => {
+        return {
+          flowerClass: randomFlower()
+        };
+      });
 
+    const lightData = objData
+      .filter(item => item.name.includes("Lamp Post"))
+      .map(item => {
+        return {
+          lightClass: randomLight()
+        };
+      });
 
+    const lightEtcData = objData
+      .filter(item => item.name.includes("Lamp"))
+      .map(item => {
+        return {
+          lightClass: randomLight()
+        };
+      });
+
+    // Check if objData contains "Tree", "Flower", "Lamp Post", "Lamp", or "text"
+    const containsSpecificWords = objData.some(item => 
+      item.name.includes("Flower") 
+      // item.name.includes("Tree") || 
+      // item.name.includes("Flower") || 
+      // item.name.includes("Lamp Post") || 
+      // item.name.includes("Lamp")
+    );
+
+    const containsText = objData.some(item => item.name.includes("Text"));
 
 
     // ==================================================
-    // Json: Combine all processed data
-    // ==================================================
-
     // Read existing data from db.json
     const existingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
 
-    const combinedData = [
-      ...existingData, 
-      ...processedHiData, 
-      ...treeData, 
-      ...flowerData,
-      ...lightData,
-      ...lightEtcData
-    ];
-
-
-    // ==================================================
-    // Json: Check if all keywords are absent in objData and show failAlert if true
-    // ==================================================
-    // if (!containsText && !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length) {
-    //   // Display failAlert
-    //   document.getElementById('failAlert').style.background = 'blue';
+    // // Process hiData and combine with objData based on the conditions
+    // let processedHiData = [];
+    // if (containsSpecificWords) {
+    //   // Do not execute processedHiData
+    // } else if (containsText) {
+    //   processedHiData = hiData.slice(1).filter(item => !isDerivedText(item.text)).map(item => {
+    //     return {
+    //       sizeClass: randomSize(),
+    //       colorClass: randomColor(),
+    //       roofClass: randomRoof(),
+    //       text: firstItem.text,
+    //       textClass: randomText(),
+    //       wallClass: randomWall(),
+    //     };
+    //   });
+    // } else {
+    //   // Display the div with ID 'failAlert'
+    //   document.getElementById('failAlert').style.display = 'block';
     // }
+    
+    // Process hiData and combine with objData
+    const processedHiData = hiData.slice(1).filter(item => !isDerivedText(item.text)).map(item => {
+      return {
+        sizeClass: randomSize(),
+        colorClass: randomColor(),
+        roofClass: randomRoof(),
+        // text: item.text,
+        text: firstItem.text,
+        textClass: randomText(),
+        wallClass: randomWall(),
+        // gardenClass: randomGarden()
+      };
+    });
 
-    // const shouldDisplayFailAlert = !containsText && !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length;
-
-    // const shouldDisplayFailAlert = !treeData.length && !flowerData.length && !lightData.length && !lightEtcData.length;
-
-    // if (shouldDisplayFailAlert) {
-    //   document.getElementById('failAlert').style.background = 'blue';
-    // }
-        
+    // Combine all processed data
+    const combinedData = [...existingData, ...processedHiData, ...treeData, ...flowerData, ...lightData, ...lightEtcData];
 
 
-    // ==================================================
-    // Json: Write combined data back to db.json
-    // ==================================================
-    // Write combined data back to db.json only if it's not already written
-  //   const currentData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
-  //   if (JSON.stringify(currentData) !== JSON.stringify(combinedData)) {
-  //     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
-  //     console.log('New data has been appended to db.json');
-  //   } else {
-  //     console.log('No new data appended to db.json as it is identical.');
-  //   }
-  // } catch (error) {
-  //   console.error('Failed to fetch and append data:', error);
-  // }
 
+    // Write combined data back to db.json
     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
     console.log('New data has been appended to db.json');
   } catch (error) {
@@ -203,6 +190,7 @@ async function fetchAndAppendData() {
 // Endpoint to fetch new data and append to db.json
 app.get("/fetch-and-append-data", async (req, res) => {
   await fetchAndAppendData();
+  // await fetchAndProcessTreeData(); 
   res.send('New data has been fetched and appended to db.json');
 });
 
@@ -217,6 +205,11 @@ app.get("/data", (req, res) => {
   }
 });
 
+// Helper function to check if text contains derived words
+function isDerivedText(text) {
+  const derivedTexts = ["Created", "with", "Transloadit", "Transtuauit"];
+  return derivedTexts.some(word => text.includes(word));
+}
 
 
 // ==================================================
@@ -225,8 +218,6 @@ app.get("/data", (req, res) => {
 function getRandomElement(elements) {
   return elements[Math.floor(Math.random() * elements.length)];
 }
-
-
 
 // ==================================================
 // Json: Random Class > House

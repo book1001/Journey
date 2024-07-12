@@ -36,6 +36,16 @@ html,body{
   z-index: 6;
 }
 
+#failAlert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: green;
+  z-index: 7;
+}
+
 
 /* ============================================= */
 /* Json: Container */

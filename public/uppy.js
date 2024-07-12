@@ -65,11 +65,13 @@ const uppy = new Uppy()
           const response = await fetch('/fetch-and-append-data');
           const message = await response.text();
           console.log(message);
+          document.getElementById('failAlert').style.background = 'blue';
+          window.location.reload();
         } catch (error) {
           console.error('Failed to fetch and append data:', error);
           // Handle error scenario
         }
-      }, 500); // 0.5초를 밀리초 단위로 지정
+      }, 1000); // 0.5초를 밀리초 단위로 지정
     }
   });
 

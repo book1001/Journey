@@ -24,10 +24,10 @@
 //     const response = await fetch('/fetch-and-append-data');
 //     const message = await response.text();
 //     console.log(message);
-//     // Optionally, display a success message or handle UI updates
+//     document.getElementById('failAlert').style.background = 'blue';
+//     window.location.reload();
 //   } catch (error) {
 //     console.error('Failed to fetch and append data:', error);
-//     // Handle error scenario
 //   }
 // });
 
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             div.style.textShadow = '0 0px 3px yellow';
           });
 
-          document.querySelectorAll('.roof1, .roof2, .roof3-R, .roof3-G, .roof3-B, .wall1, .wall2, .wall3').forEach(div => {
+          document.querySelectorAll('.roof1, .roof2, .roof3-R, .roof3-G, .roof3-B').forEach(div => {
             div.style.borderBottom = '1px solid black';
             div.style.textShadow = '0 0px 3px yellow';
           });
@@ -470,6 +470,10 @@ document.addEventListener('DOMContentLoaded', async function () {
           document.querySelectorAll('.text1').forEach(div => {
             div.style.color = 'white';
             div.style.background = 'black';
+            div.style.textShadow = '0 0px 3px yellow';
+          });
+
+          document.querySelectorAll('.wall1, .wall2, .wall3').forEach(div => {
             div.style.textShadow = '0 0px 3px yellow';
           });
 
@@ -504,7 +508,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             div.style.textShadow = '';
           });
 
-          document.querySelectorAll('.roof1, .roof2, .roof3-R, .roof3-G, .roof3-B, .wall1, .wall2, .wall3').forEach(div => {
+          document.querySelectorAll('.roof1, .roof2, .roof3-R, .roof3-G, .roof3-B').forEach(div => {
             div.style.borderBottom = '';
             div.style.textShadow = '';
           });
@@ -512,6 +516,10 @@ document.addEventListener('DOMContentLoaded', async function () {
           document.querySelectorAll('.text1').forEach(div => {
             div.style.color = '';
             div.style.background = '';
+            div.style.textShadow = '';
+          });
+
+          document.querySelectorAll('.wall1, .wall2, .wall3').forEach(div => {
             div.style.textShadow = '';
           });
 

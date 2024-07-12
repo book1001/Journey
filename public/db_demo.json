@@ -1,8 +1,27 @@
 [
   {
-    "roofClass": "roof1",
-    "text": "Bus",
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": " ",
     "textClass": "text1",
     "wallClass": "wall3"
+  },
+  {
+    "treeClass": "tree1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-R",
+    "text": "CHIPOTLE\nMAXICAN\nGRILL\n876",
+    "textClass": "text1",
+    "wallClass": "wall3"
+  },
+  {
+    "flowerClass": "flower1"
+  },
+  {
+    "lightClass": "light1"
   }
 ]
