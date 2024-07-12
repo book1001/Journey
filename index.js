@@ -68,6 +68,7 @@ async function fetchAndAppendData() {
 
     // Check if the text contains "Created with\nTransloadit" and replace it with "~"
     let modifiedText = firstItem.text.replace("\s", " ");
+    console.log("text: " + modifiedText);
     const targetTexts = ["Created", "with", "ste", "QTransloadit", "QO", "Transloadit", "Transload"];
     targetTexts.forEach(target => {
       if (modifiedText.includes(target)) {
@@ -116,7 +117,6 @@ async function fetchAndAppendData() {
 
     // Process hiData and combine with objData only if objData contains "Text"
     let processedHiData = [];
-    console.log("obj: " + objData);
     if (containsText) {
       processedHiData = hiData.slice(0, 1).map(item => {
         return {
