@@ -76,7 +76,7 @@ uppy.on('complete', async (result) => {
 document.addEventListener('DOMContentLoaded', function() {
   const doneButton = document.querySelector('.uppy-StatusBar-actionBtn--done');
 
-  doneButton.addEventListener('click', function(event) {
+  doneButton[0].addEventListener('click', function(event) {
     fetch('db.json')
         .then(res => res.json)
         .then(data => {
