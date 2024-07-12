@@ -116,8 +116,8 @@ async function fetchAndAppendData() {
 
     // Process hiData and combine with objData only if objData contains "Text"
     let processedHiData = [];
+    console.log("obj: " + objData);
     if (containsText) {
-      console.log("text: " + firstItem.text);
       processedHiData = hiData.slice(0, 1).map(item => {
         return {
           sizeClass: randomSize(),
