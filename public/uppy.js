@@ -75,7 +75,7 @@ const uppy = new Uppy()
           console.error('Failed to fetch and append data:', error);
           // Handle error scenario
         }
-      }, 1000); // 0.5초를 밀리초 단위로 지정
+      }, 3000); // 0.5초를 밀리초 단위로 지정
     }
   });
 
