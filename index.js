@@ -12,18 +12,18 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const path = require("path");
-const multer = require("multer");
+// const multer = require("multer");
 
-const storage = multer.diskStorage({
-  destination: `${__dirname}/uploads/`,
-  filename: (req, file, cb) => {
-    // const fileName = `${Date.now()}${path.extname(file.originalname)}`;
-    const fileName = `hi${path.extname(file.originalname)}`;
-    cb(null, fileName);
-  }
-});
+// const storage = multer.diskStorage({
+//   destination: `${__dirname}/uploads/`,
+//   filename: (req, file, cb) => {
+//     // const fileName = `${Date.now()}${path.extname(file.originalname)}`;
+//     const fileName = `hi${path.extname(file.originalname)}`;
+//     cb(null, fileName);
+//   }
+// });
 
-const uploadImage = multer({storage}).single("photo");
+// const uploadImage = multer({storage}).single("photo");
 
 app.use(cors());
 app.use(express.static('public'));
@@ -32,23 +32,23 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "public/index.html"));
 });
 
-app.post("/image", uploadImage, (req, res) => {
-  console.log(req.file);
-  if(req.file) return res.json({mes: "good job uploading that image"});
+// app.post("/image", uploadImage, (req, res) => {
+//   console.log(req.file);
+//   if(req.file) return res.json({mes: "good job uploading that image"});
 
-  res.send("Image upload failed");
-});
+//   res.send("Image upload failed");
+// });
 
 
 require("dotenv").config();
 
 const PORT = process.env.PORT;
 
-app.get("/upload", (req, res) => {
-  return res.status(200).json({
-    meg:"upload",
-  });
-});
+// app.get("/upload", (req, res) => {
+//   return res.status(200).json({
+//     meg:"upload",
+//   });
+// });
 
 
 // ==================================================
