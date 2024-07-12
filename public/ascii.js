@@ -31,7 +31,7 @@
 //   }
 // });
 
-function createItem(item) {
+function createElement(item) {
   let itemDiv = document.createElement('div');
 
   // =============================================
