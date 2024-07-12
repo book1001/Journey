@@ -69,7 +69,7 @@ async function fetchAndAppendData() {
     // Check if the text contains "Created with\nTransloadit" and replace it with "~"
     let modifiedText = firstItem.text.replace("\s", " ");
     console.log("text: " + modifiedText);
-    const targetTexts = ["Created", "with", "ste", "QTransloadit", "QO", "Transloadit", "Transload", "Tran loadit"];
+    const targetTexts = ["Created", "with", "ste", "QTransloadit", "0Transloadit", "QO", "00", "Transloadit", "Transload", "Tran loadit"];
     targetTexts.forEach(target => {
       if (modifiedText.includes(target)) {
         modifiedText = modifiedText.replace(target, "");
