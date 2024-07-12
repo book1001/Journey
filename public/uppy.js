@@ -56,15 +56,6 @@ uppy.on('transloadit:complete', (assembly) => {});
 //   limit: 1
 // });
 
-uppy.on('file-added', async (file) => {
-  const response = await fetch('db.json');
-  const data = await response.json();
-
-  const contentDiv = document.getElementById('content');
-  const itemDiv = createElement(data[data.length - 1]);
-  contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
-});
-
 uppy.on('complete', async (result) => {
   const successfulUploads = result.successful;
   if (successfulUploads.length > 0) {
@@ -80,6 +71,19 @@ uppy.on('complete', async (result) => {
       }
     }, 3000); // 0.5초를 밀리초 단위로 지정
   }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const doneButton = document.querySelector('.uppy-StatusBar-actionBtn--done');
+
+  doneButton.addEventListener('click', async function(event) {
+    const response = await fetch('db.json');
+    const data = await response.json();
+  
+    const contentDiv = document.getElementById('content');
+    const itemDiv = createElement(data[data.length - 1]);
+    contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+  });
 });
 
 // uppy.on('complete', async (result) => {
