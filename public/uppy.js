@@ -66,7 +66,7 @@ const uppy = new Uppy()
           const message = await response.text();
           console.log(message);
           document.getElementById('failAlert').style.background = 'blue';
-          window.location.reload();
+          // window.location.reload();
         } catch (error) {
           console.error('Failed to fetch and append data:', error);
           // Handle error scenario

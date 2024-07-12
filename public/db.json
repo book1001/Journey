@@ -1859,5 +1859,20 @@
     "text": "05\nUNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "lightClass": "light1"
+  },
+  {
+    "flowerClass": "flower1"
   }
 ]
