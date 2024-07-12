@@ -198,6 +198,7 @@ async function fetchAndAppendData() {
   // }
 
     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
+    console.log(hiData.slice(0, 1));
     console.log(processedHiData);
     console.log("processedHiData: " + processedHiData.length);
     console.log('New data has been appended to db.json');
