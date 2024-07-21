@@ -229,6 +229,7 @@ function createElement(item) {
   }
 
   // =============================================
+<<<<<<< HEAD
   // Json: Objects > Theater
   // =============================================
   let theaterText = '';
@@ -280,6 +281,8 @@ function createElement(item) {
         `;  
 
   // =============================================
+=======
+>>>>>>> 3698cc6ba05eb3a16d2ea1e54c52026d9f8e82c8
   // Json: Objects > Light
   // =============================================
   let lightText = '';
@@ -324,7 +327,10 @@ function createElement(item) {
                                        
                                        
         `;
+<<<<<<< HEAD
         
+=======
+>>>>>>> 3698cc6ba05eb3a16d2ea1e54c52026d9f8e82c8
 
 //   const roofDiv = document.createElement('div');
 //   roofDiv.textContent = roofText;
@@ -441,6 +447,7 @@ function createElement(item) {
   }
 
   // =============================================
+<<<<<<< HEAD
   // Add: Objects > Theater
   // =============================================
   if (item.theaterClass) {
@@ -466,6 +473,8 @@ function createElement(item) {
   }
 
   // =============================================
+=======
+>>>>>>> 3698cc6ba05eb3a16d2ea1e54c52026d9f8e82c8
   // Add: Objects > Light
   // =============================================
   if (item.lightClass) {
