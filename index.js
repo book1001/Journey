@@ -67,8 +67,9 @@ async function fetchAndAppendData() {
     const firstItem = hiData[0];
 
     // Check if the text contains "Created with\nTransloadit" and replace it with "~"
-    let modifiedText = firstItem.text;
-    const targetTexts = ["Created with\nTransloadit", "\nCreated with\nTransloadit", "Created with\nQO Transloadit", "Created with\nQTransloadit", "Created", "with", "Transloadit"];
+    let modifiedText = firstItem.text.replace("\s", " ");
+    
+    const targetTexts = ["Created", "with", "ste", "QO", "00", "Q Transloadit", "0 Transloadit", "Q Tran loadit", "0 Tran loadit", "QTransloadit", "0Transloadit", "Transloadit", "Transload", "Tran loadit", "Tran load"];
     targetTexts.forEach(target => {
       if (modifiedText.includes(target)) {
         modifiedText = modifiedText.replace(target, "");
@@ -76,7 +77,7 @@ async function fetchAndAppendData() {
     });
 
     firstItem.text = modifiedText.trim();
-
+    console.log("text: " + firstItem.text);
 
 
     // ==================================================
@@ -101,6 +102,7 @@ async function fetchAndAppendData() {
     const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
     const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
     const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
+    const theaterData = processData(objData, ["TV"], randomTheater, 'theaterClass');
 
 
 
@@ -117,7 +119,7 @@ async function fetchAndAppendData() {
     // Process hiData and combine with objData only if objData contains "Text"
     let processedHiData = [];
     if (containsText) {
-      processedHiData = hiData.slice(1).map(item => {
+      processedHiData = hiData.slice(0, 1).map(item => {
         return {
           sizeClass: randomSize(),
           colorClass: randomColor(),
@@ -160,7 +162,8 @@ async function fetchAndAppendData() {
       ...treeData, 
       ...flowerData,
       ...lightData,
-      ...lightEtcData
+      ...lightEtcData,
+      ...theaterData
     ];
 
 
@@ -208,7 +211,8 @@ async function fetchAndAppendData() {
 // Endpoint to fetch new data and append to db.json
 app.get("/fetch-and-append-data", async (req, res) => {
   await fetchAndAppendData();
-  res.send('New data has been fetched and appended to db.json');
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+  res.send(data[data.length - 1]);
 });
 
 // Endpoint to get JSON data (optional, for testing)
@@ -285,8 +289,12 @@ function randomLight() {
   return getRandomElement(classes);
 }
 
+function randomTheater() {
+  const classes = ['theater1', 'theater1', 'theater1'];
+  return getRandomElement(classes);
+}
+
 
 app.listen(PORT, () => {
   console.log(`Backend running on $(PORT)`);
 });
-

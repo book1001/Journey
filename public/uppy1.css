@@ -1,0 +1,378 @@
+/* font: import ================================================ */
+
+@font-face {
+  font-family: 'Menlo';
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
+}
+
+
+
+/* ======================================================================================================================================= */
+/* 0. Position + Z-index */
+/* ============================================= */
+.uppy-Root {
+  position: fixed !important;
+  top: 0;
+  font-family: Menlo !important;
+  z-index: 3;
+}
+
+
+/* ======================================================================================================================================= */
+/* 1. Dashboard */
+/* ============================================= */
+.uppy-Dashboard-AddFiles-title {
+  display: none !important;
+}
+
+[data-uppy-acquirer-id="MyDevice"] {
+  display: none !important;
+}
+
+.uppy-Dashboard-AddFiles-info {
+  display: none !important;
+}
+
+.uppy-Dashboard-inner {
+  width: auto !important;
+  height: auto !important;
+  /* height: 100svh !important; */
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.uppy-Dashboard-AddFiles {
+  border: none !important;
+}
+
+.uppy-size--md .uppy-Dashboard-AddFiles-list{
+  position: absolute;
+  bottom: 0;
+}
+
+/* ============================================= */
+/* Camera Icon */
+/* ============================================= */
+.uppy-Root *, .uppy-Root :after, .uppy-Root :before {
+  fill: #ffffff !important;
+}
+
+.uppy-DashboardTab-inner {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translate(-50%, 0); /* Safari */
+  -moz-transform: translate(-50%, 0); /* Firefox */
+  -ms-transform: translate(-50%, 0); /* IE 9 */
+  -o-transform: translate(-50%, 0); /* Opera */
+  transform: translate(-50%, 0);
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  background-image: url("icon/camera.svg");
+  background-color: red !important;
+  /* transition: background-color 0.5s; */
+}
+
+/* .uppy-DashboardTab-inner:hover {
+  background-color: green !important;
+} */
+
+.uppy-DashboardTab-btn svg {
+  display: none !important;
+}
+
+.uppy-DashboardTab-btn:hover {
+  background-color: transparent !important;
+}
+
+.uppy-size--md .uppy-DashboardTab-name{
+  display: none !important;
+}
+
+
+/* .uppy-DashboardTab-inner {
+  position: relative;
+  width: 32px; 
+  height: 32px; 
+}
+
+.uppy-DashboardTab-inner svg {
+  display: none;
+}
+
+.uppy-DashboardTab-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('your-svg-path.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+/* ============================================= */
+/* Camera On */
+/* ============================================= */
+/* Header: Title Text */
+.uppy-DashboardContent-title {
+  display: none !important;
+  text-transform: uppercase;
+  color: white !important;
+}
+
+/* Header: Back Button */
+[dir=ltr] .uppy-DashboardContent-back {
+  text-transform: uppercase;
+  color: transparent !important;
+}
+
+/* .uppy-DashboardContent-back::before {
+  content: "Back";
+}
+.uppy-DashboardContent-back {
+  visibility: hidden;
+  position: relative;
+}
+.uppy-DashboardContent-back::before {
+  visibility: visible;
+  position: fixed !important;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  visibility: visible;
+  color: white;
+  font-size: 12px !important;
+  text-transform: uppercase;
+}
+
+.uppy-DashboardContent-back, .uppy-DashboardContent-save {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100px;
+  font-family: Menlo !important;
+  color: #000000 !important;
+} */
+
+.uppy-Webcam-buttonContainer svg {
+  display: none !important;
+}
+
+/* .uppy-size--md .uppy-Dashboard-AddFiles-list {
+  background-color: red !important;
+} */
+
+.uppy-size--md .uppy-Webcam-button {
+  width: 45px;
+  height: 45px;
+}
+
+
+/* ============================================= */
+/* Camera On: WebCamSize */
+/* ============================================= */
+.uppy-Webcam-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* ============================================= */
+/* Camera On: Icon */
+/* ============================================= */
+.uppy-Webcam-button {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translate(-50%, 0); /* Safari */
+  -moz-transform: translate(-50%, 0); /* Firefox */
+  -ms-transform: translate(-50%, 0); /* IE 9 */
+  -o-transform: translate(-50%, 0); /* Opera */
+  transform: translate(-50%, 0);
+    /* background-image: url("icon/camera.svg");
+  background-color: red !important; */
+  background-color: transparent !important;
+  transition: none !important;
+}
+
+.uppy-Webcam-button:focus {
+  box-shadow: none !important;
+}
+
+.uppy-Webcam-button:hover {
+  background-color: green;
+}
+
+.uppy-transitionenter {
+  transition: none !important;
+}
+
+.uppy-transition-slideDownUp-enter-active {
+  display: none !important;
+  transition: none !important;
+}
+
+.uppy-Webcam-button--picture {
+  margin-right: 0 !important;
+}
+
+/* ============================================= */
+/* Camera On: BG */
+/* ============================================= */
+.uppy-DashboardContent-bar {
+  /* position: fixed !important; */
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.uppy-Webcam-videoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black !important;
+  /* background-color: transparent !important; */
+}
+
+.uppy-DashboardContent-panel {
+  background-color: transparent !important;
+}
+
+/* ============================================= */
+/* Upload 1 file */
+/* ============================================= */
+.uppy-DashboardContent-addMore {
+  display: none !important;
+}
+
+.uppy-Dashboard-Item-progress {
+  display: none !important;
+}
+
+.uppy-Dashboard-Item-fileInfoAndButtons {
+  display: none !important;
+}
+
+.uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
+  background-color: transparent !important;
+}
+
+/* .uppy-StatusBar.is-complete .uppy-StatusBar-progress {
+  background-color: #1bb240;
+} */
+
+.uppy-Dashboard-Item-preview {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.uppy-Dashboard-Item-previewInnerWrap {
+  background-color: transparent !important;
+}
+
+
+/* ============================================= */
+/* Upload 1 file: btn */
+/* ============================================= */
+
+.uppy-StatusBar.is-waiting .uppy-StatusBar-actionBtn--upload {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  background-image: url("icon/camera.svg");
+  background-color: green !important;
+  font-size: 0 !important;
+}
+
+/* Upload Icon: focused */
+.uppy-StatusBar-actionBtn--upload:focus {
+  box-shadow: none !important;
+}
+
+
+
+/* ============================================= */
+/* Progress Indicator */
+/* ============================================= */
+
+.uppy-Dashboard-progressindicators {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* ============================================= */
+/* Camera On Permission */
+/* ============================================= */
+.uppy-Webcam-permissons {
+  font-family: Menlo !important;
+  color: #000000 !important;
+}
+
+.uppy-Webcam-permissonsIcon {
+  display: none !important;
+}
+
+.uppy-Webcam-title {
+  font-family: Menlo !important;
+  color: #000000 !important;
+}
+
+.uppy-StatusBar {
+  background-color: transparent !important;
+  border-top: none !important;
+  height: auto !important;
+}
+
+.is-waiting {
+  background-color: transparent !important;
+  border-top: none !important;
+  height: auto !important;
+}
+
+
+/* ============================================= */
+/* Camera On Permission: Btn */
+/* ============================================= */
+/* .uppy-StatusBar.is-waiting {
+  position: fixed;
+  bottom: 0;
+} */
+
+.uppy-StatusBar-actionBtn--upload {
+  position: fixed;
+  bottom: 0;
+  text-transform: uppercase !important;
+}
+
+/* ============================================= */
+/* Mobile */
+/* ============================================= */
+
+.uppy-DashboardTab {
+  border-bottom: none !important;
+}
+
+.uppy-DashboardTab-btn {
+  justify-content: center !important;
+}  
+
+.uppy-DashboardTab-name{
+  display: none !important;
+}
+
+

@@ -22,3 +22,8 @@ body {
   text-shadow: 0 0px 6px yellow;
   background: red;
 }
+
+a {
+  color: red;
+  text-decoration: none;
+}

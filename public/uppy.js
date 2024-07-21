@@ -34,21 +34,48 @@ const uppy = new Uppy()
   //   formData: true
   // });
 
-  uppy.use(Transloadit, {
-		assemblyOptions: {
-			params: {
-				auth: { key: '2568b8e69bc679351eeb9ae93694482e' },
-				template_id: 'cc8128449fb849729c3620ceefb5f3e8',
-			},
-		},
-	});
+  uppy.use(Transloadit, {      
+    waitForEncoding: true,
+    alwaysRunAssembly: true,
+    assemblyOptions: {
+      params: {
+        auth: { key: '2568b8e69bc679351eeb9ae93694482e' },
+        template_id: 'cc8128449fb849729c3620ceefb5f3e8',
+      }
+    },
+  });
 
   // Optionally listen to events
   uppy.on('transloadit:assembly-created', (assembly, fileIDs) => {});
   uppy.on('transloadit:upload', (file, assembly) => {});
   uppy.on('transloadit:assembly-executing', (assembly) => {});
-  uppy.on('transloadit:result', (stepName, result, assembly) => {});
-  uppy.on('transloadit:complete', (assembly) => {});
+  uppy.on('transloadit:result', (stepName, result, assembly) => {
+    console.log("[result]");
+    console.log(stepName);
+    console.log(result);
+    console.log(assembly);
+  });
+  uppy.on('transloadit:complete', (assembly) => {
+    console.log("[complete]");
+    console.log(assembly);
+  
+    setTimeout(async () => {
+      try {
+        const response = await fetch('/fetch-and-append-data');
+        const data = await response.json();
+        console.log(data);
+  
+        const contentDiv = document.getElementById('content');
+        const itemDiv = createElement(data);
+        contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+  
+        document.getElementById('failAlert').style.background = 'blue';
+      } catch (error) {
+        console.error('Failed to fetch and append data:', error);
+        // Handle error scenario
+      }
+    }, 1000); // 0.5초를 밀리초 단위로 지정
+  });
 
   // uppy.use(AwsS3, {
 	// 	shouldUseMultipart: (file) => file.size > 100 * 2 ** 20,
@@ -56,24 +83,31 @@ const uppy = new Uppy()
   //   limit: 1
 	// });
 
-  
   uppy.on('complete', async (result) => {
     const successfulUploads = result.successful;
     if (successfulUploads.length > 0) {
-      setTimeout(async () => {
-        try {
-          const response = await fetch('/fetch-and-append-data');
-          const message = await response.text();
-          console.log(message);
-          document.getElementById('failAlert').style.background = 'blue';
-          // window.location.reload();
-        } catch (error) {
-          console.error('Failed to fetch and append data:', error);
-          // Handle error scenario
-        }
-      }, 1000); // 0.5초를 밀리초 단위로 지정
+      
     }
   });
+  
+  
+  // uppy.on('complete', async (result) => {
+  //   const successfulUploads = result.successful;
+  //   if (successfulUploads.length > 0) {
+  //     setTimeout(async () => {
+  //       try {
+  //         const response = await fetch('/fetch-and-append-data');
+  //         const message = await response.text();
+  //         console.log(message);
+  //         document.getElementById('failAlert').style.background = 'blue';
+  //         // window.location.reload();
+  //       } catch (error) {
+  //         console.error('Failed to fetch and append data:', error);
+  //         // Handle error scenario
+  //       }
+  //     }, 1000); // 0.5초를 밀리초 단위로 지정
+  //   }
+  // });
 
   // uppy.on('complete', async (result) => {
   //   const successfulUploads = result.successful;
@@ -88,8 +122,6 @@ const uppy = new Uppy()
   //     }
   //   }
   // });
-  
-  
 
   // uppy.on('complete', (res) => {
   //   console.log(res.successful);

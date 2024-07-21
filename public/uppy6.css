@@ -5,27 +5,14 @@
   src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
 }
 
-
-/* ======================================================================================================================================= */
-/* #uppy {
-  display: none;
-} */
-
-@media only screen and (max-width:800px) {
-  #uppy {
-    display: block;
-  }
-}
-
-
 /* ======================================================================================================================================= */
 button {
   font-family: 'Menlo';
   text-transform: uppercase;
   border: none;
   background-color: transparent;
-  color: white;
-  /* text-shadow: 0 0px 1px white; */
+  color: red;
+  text-shadow: 0 0px 1px white;
   cursor: pointer;
 }
 
@@ -134,7 +121,6 @@ button {
   bottom: 0;
   right: 0;
   margin: auto;
-  padding-top: 45px;
   padding-bottom: 85px;
   max-width: 100%;
   max-height: 100%;
@@ -147,7 +133,7 @@ button {
 /* Header: Area */
 .uppy-DashboardContent-bar {
   position: fixed;
-  top: 0;
+  bottom: 20px;
   left: 0;
   width: auto;
   height: 45px;
@@ -162,8 +148,7 @@ button {
 /* Header: Back Button */
 .uppy-DashboardContent-back {
   height: 45px;
-  margin-left: 8px;
-  padding: 0 10px !important;
+  margin-left: 20px;
   border: none;
 }
 
@@ -242,8 +227,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  /* height: calc(100% - 85px); */
+  height: calc(100% - 85px);
   /* padding: 0 !important;
   display: flex;
   align-items: center; */
@@ -266,7 +250,6 @@ button {
 }
 
 .uppy-Dashboard-Item-previewInnerWrap {
-  padding: 45px 20px 85px 20px !important;
   background-color: transparent !important;
   /* align-items: center;
   display: flex;
@@ -287,19 +270,11 @@ button {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background: black;
-  /* background: black; */
   /* align-items: center;
   display: flex;
   height: 100%;
   justify-content: center; */
 }
-
-/* Captured Image: Background */
-/* .uppy-Dashboard-Item {
-  background: black;
-} */
-
 
 /* Captured Image: Remove Icon */
 .uppy-Dashboard-Item-fileInfoAndButtons {
@@ -309,9 +284,7 @@ button {
 /* Captured Image: Captured Photo Img */
 .uppy-Dashboard-Item-previewImg {
   width: 100%;
-  border-radius: 10px;
-  /* padding: 45px 10px 85px 10px; */
-  /* padding: 10px; */
+  padding: 10px;
   /* position: fixed;
   top: 50%;
   left: 50%;
@@ -327,14 +300,6 @@ button {
 
 
 /* ============================================= */
-/* 3. Upload 1 File: Captured Image > Fail
-/* ============================================= */
-/* 나중에 수정하기 / 촬영 실패시 프리뷰 이미지 */
-.uppy-Dashboard-Item-previewIconWrap {
-  display: none; 
-}
-
-/* ============================================= */
 /* 3. Upload 1 File: Footer > Upload Button Area
 /* ============================================= */
 /* Upload Button: Footer */
@@ -347,73 +312,6 @@ button {
   height: 85px;
   padding-top: 20px;
   /* background: black; */
-}
-
-/* ============================================= */
-/* 3. Upload 1 File: Footer > Upload Button Area */
-/* ============================================= */
-/* Upload Icon: Area */
-.uppy-StatusBar-actions {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  padding: 0;
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  font-size: 0;
-  z-index: 4;
-}
-
-
-
-/* ============================================= */
-/* 3. Upload 1 File: Footer > Upload Button
-/* ============================================= */
-/* Upload Icon: bg */
-.uppy-StatusBar.is-waiting .uppy-StatusBar-actionBtn--upload {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-image: url("icon/upload.svg");
-  background-color: blue;
-  font-size: 0;
-}
-
-
-
-/* ============================================= */
-/* 3. Upload 1 File: Upload Loading
-/* ============================================= */
-/* Upload Loading */
-.is-postprocessing {
-  position: fixed !important;
-  bottom: 20px !important;
-  left: 50% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  width: 45px !important;
-  height: 45px !important;
-  border-radius: 50% !important;
-  /* background-image: url("icon/camera.svg"); */
-  background-color: gray !important;
-}
-
-/* Upload Loading: Upload 1 File Text */
-.uppy-StatusBar-actionBtn--upload {
-  font-size: 0 !important;
-}
-
-/* Upload Loading: Circle Buttons (Pause / Cancle) */
-.uppy-StatusBar-actionCircleBtn {
-  display: none !important;
 }
 
 
@@ -445,21 +343,24 @@ button {
 
 /* Footer: Complete Text Margin Left */
 .uppy-StatusBar-content {
-  display: none;
   /* height: 45px; */
   margin-left: 20px;
   margin-right: auto;
   text-transform: uppercase;
 }
 
+/* Footer: Done Button Margin Right */
+.uppy-StatusBar-actions {
+  position: fixed;
+  right: 20px;
+  /* margin-left: auto;
+  margin-right: 20px; */
+}
+
 /* Footer: Done Button */
 .uppy-StatusBar-actionBtn--done {
-  width: 45px;
   height: 45px;
-  border-radius: 50%;
-  background-image: url("icon/done.svg");
-  background-color: green;
-  font-size: 0;
+  border: none;
 }
 
 .uppy-StatusBar-statusIndicator .uppy-c-icon svg {
@@ -485,13 +386,4 @@ button {
   height: 2px;
   background-color: green;
   transition: background-color, width .3s ease-out; */
-}
-
-
-
-
-
-/* ======================================================================================================================================= */
-[data-uppy-acquirer-id="MyDevice"] {
-  display: none !important;
 }
