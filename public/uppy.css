@@ -402,8 +402,12 @@ button {
   width: 45px !important;
   height: 45px !important;
   border-radius: 50% !important;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
   /* background-image: url("icon/camera.svg"); */
-  background-color: white !important;
+  /* background-color: white !important; */
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 /* Upload Loading */
@@ -421,8 +425,22 @@ button {
   width: 45px !important;
   height: 45px !important;
   border-radius: 50% !important;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
   /* background-image: url("icon/camera.svg"); */
-  background-color: gray !important;
+  /* background-color: gray !important; */
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* Upload Loading: Animation */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Upload Loading: Upload 1 File Text */
