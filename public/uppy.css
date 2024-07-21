@@ -388,6 +388,25 @@ button {
 /* 3. Upload 1 File: Upload Loading
 /* ============================================= */
 /* Upload Loading */
+.is-uploading {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  /* background-image: url("icon/camera.svg"); */
+  background-color: white !important;
+}
+
+/* Upload Loading */
 .is-postprocessing {
   position: fixed !important;
   bottom: 20px !important;
@@ -469,9 +488,9 @@ button {
 /* ============================================= */
 /* 4. Upload Complete: Footer > is-uploading
 /* ============================================= */
-.uppy-StatusBar .is-uploading {
+/* .uppy-StatusBar .is-uploading {
   display: none !important;
-}
+} */
 
 /* ============================================= */
 /* 4. Upload Complete: Footer > Progress Bar
