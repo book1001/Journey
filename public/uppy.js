@@ -13,7 +13,7 @@ const uppy = new Uppy();
 //   data: blob, // file blob
 // });
 
-<<<<<<< HEAD
+
   uppy.use(Dashboard, { 
     inline: true, 
     target: '#uppy',
@@ -123,7 +123,7 @@ const uppy = new Uppy();
   //     }
   //   }
   // });
-=======
+
 uppy.use(Dashboard, { 
   inline: true, 
   target: '#uppy',
@@ -155,7 +155,7 @@ uppy.use(Transloadit, {
     }
   },
 });
->>>>>>> 3698cc6ba05eb3a16d2ea1e54c52026d9f8e82c8
+
 
 // Optionally listen to events
 uppy.on('transloadit:assembly-created', (assembly, fileIDs) => {});
