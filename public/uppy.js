@@ -70,7 +70,10 @@ const uppy = new Uppy();
         const itemDiv = createElement(data);
         contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
   
-        document.getElementById('failAlert').style.background = 'blue';
+        document.getElementById('failAlert').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('failAlert').style.display = 'none';
+        }, 500);
       } catch (error) {
         console.error('Failed to fetch and append data:', error);
         // Handle error scenario

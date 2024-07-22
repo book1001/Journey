@@ -37,12 +37,17 @@ html,body{
 }
 
 #failAlert {
+  display: none;
   position: fixed;
   top: 100px;
-  left: 100px;
-  width: 100px;
-  height: 100px;
-  background: green;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: auto;
+  height: auto;
   z-index: 7;
 }
 
