@@ -102,7 +102,8 @@ async function fetchAndAppendData() {
     const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
     const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
     const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
-    const theaterData = processData(objData, ["TV"], randomTheater, 'theaterClass');
+    const theaterTvData = processData(objData, ["TV"], randomTheater, 'theaterClass');
+    const theaterScreenData = processData(objData, ["Screen"], randomTheater, 'theaterClass');
 
 
 
@@ -163,7 +164,8 @@ async function fetchAndAppendData() {
       ...flowerData,
       ...lightData,
       ...lightEtcData,
-      ...theaterData
+      ...theaterTvData,
+      ...theaterScreenData
     ];
 
 

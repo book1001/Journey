@@ -18,7 +18,8 @@ body {
   font-family: Menlo;
   font-size: 24px;
   text-align: left;
-  line-height: 24px;
+  line-height: 23px;
+  /* line-height: 24px; */
 /*   display: flex;
   justify-content: center;
   align-items: center; */
@@ -62,6 +63,7 @@ body {
   height: 100vh;
   position: fixed;
   perspective: 1000px;
+  /* background: black; */
 /*   background:Red; */
 }
 
@@ -82,7 +84,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   transform: rotateX(-90deg) translateZ(-50vh);
-/*   background: red; */
+  /* background: red; */
   color: blue;
 }
 
@@ -97,7 +99,7 @@ body {
   overflow: hidden;
   transform: rotateX(90deg) translateZ(-50vh);
 /*   background:red; */
-  color: red;
+  color: green;
 }
 
 .left{
@@ -109,9 +111,9 @@ body {
 /*   transition: all .5s; */
   box-sizing: border-box;
   overflow-x: hidden;
-  transform: rotateY(90deg) translateZ(-50vw);
-/*   background: yellow; */
-  color: red;
+  transform: rotateY(90deg) translateX(50vw) translateZ(-50vw);
+  /* background: black; */
+  color: black;
 }
 
 .right{
@@ -123,9 +125,9 @@ body {
 /*   transition: all .5s; */
   box-sizing: border-box;
   overflow-x: hidden;
-  transform: rotateY(90deg) translateZ(50vw);
-/*   background: yellow; */
-  color: red;
+  transform: rotateY(90deg) translateX(50vw) translateZ(50vw);
+  /* background: black; */
+  color: black;
 }
 
 .front{
@@ -138,8 +140,8 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   transform: rotateX(0deg) translateZ(-50vh);
-  background: white;
-  color: red;
+  background: black;
+  color: black;
 }
 
 .back{

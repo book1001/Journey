@@ -15,7 +15,7 @@ window.onload = function() {
   const wallPaper_right = '████▓▓▓▓';
   const wallPaper_bottom = '████▓▓▓▓';
   const wallPaper_front = '████▓▓▓▓';
-  const repeatTimes = 1000; // 필요한 반복 횟수로 설정
+  const repeatTimes = 1500; // 필요한 반복 횟수로 설정
 
   for (let i = 0; i < repeatTimes; i++) {
     const topText = document.createTextNode(wallPaper_top);
@@ -30,11 +30,11 @@ window.onload = function() {
     const bottomText = document.createTextNode(wallPaper_bottom);
     bottomDiv.appendChild(bottomText);
 
-    const frontText = document.createTextNode(wallPaper_front);
-    frontDiv.appendChild(frontText);
+    // const frontText = document.createTextNode(wallPaper_front);
+    // frontDiv.appendChild(frontText);
   }
 
-  
+
   renderTitle(slug);
   fetchTotalPages(slug).then(() => {
     renderChannel(slug, page);
