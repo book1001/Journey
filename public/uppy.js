@@ -47,19 +47,11 @@ const uppy = new Uppy();
   });
 
   // Optionally listen to events
-  uppy.on('transloadit:assembly-created', (assembly, fileIDs) => {});
-  uppy.on('transloadit:upload', (file, assembly) => {});
-  uppy.on('transloadit:assembly-executing', (assembly) => {});
-  uppy.on('transloadit:result', (stepName, result, assembly) => {
-    console.log("[result]");
-    console.log(stepName);
-    console.log(result);
-    console.log(assembly);
-  });
+  // uppy.on('transloadit:assembly-created', (assembly, fileIDs) => {});
+  // uppy.on('transloadit:upload', (file, assembly) => {});
+  // uppy.on('transloadit:assembly-executing', (assembly) => {});
+  // uppy.on('transloadit:result', (stepName, result, assembly) => {});
   uppy.on('transloadit:complete', (assembly) => {
-    console.log("[complete]");
-    console.log(assembly);
-  
     setTimeout(async () => {
       try {
         const response = await fetch('/fetch-and-append-data');

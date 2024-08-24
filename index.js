@@ -123,9 +123,6 @@ async function fetchAndAppendData() {
     // Process hiData and combine with objData only if objData contains "Text"
     let processedHiData = [];
     if (!containsObj) {
-      console.log("hiData: " + hiData);
-      console.log("hiData slice: " + hiData.slice(0, 1));
-
       processedHiData = hiData.slice(0, 1).map(item => {
         return {
           sizeClass: randomSize(),
@@ -138,7 +135,6 @@ async function fetchAndAppendData() {
           // gardenClass: randomGarden()
         };
       });
-      console.log("processedHiData: " + processedHiData);
     }
 
     // const processedHiData = hiData.slice(1).map(item => {
@@ -209,6 +205,7 @@ async function fetchAndAppendData() {
   //   console.error('Failed to fetch and append data:', error);
   // }
 
+    console.log("New data:");
     console.log(combinedData[combinedData.length - 1]);
     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
     console.log('New data has been appended to db.json');
