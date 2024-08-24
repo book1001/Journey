@@ -59,13 +59,15 @@ const uppy = new Uppy();
         console.log(data);
   
         const contentDiv = document.getElementById('content');
-        const itemDiv = createElement(data);
-        contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
-  
-        document.getElementById('failAlert').style.display = 'block';
-        setTimeout(() => {
-          document.getElementById('failAlert').style.display = 'none';
-        }, 500);
+        for(let i=0; i<data.length; i++) {
+          const itemDiv = createElement(data[i]);
+          contentDiv.insertBefore(itemDiv, contentDiv.children[1]);
+    
+          document.getElementById('failAlert').style.display = 'block';
+          setTimeout(() => {
+            document.getElementById('failAlert').style.display = 'none';
+          }, 500);
+        }
       } catch (error) {
         console.error('Failed to fetch and append data:', error);
         // Handle error scenario

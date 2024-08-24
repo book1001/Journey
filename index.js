@@ -56,6 +56,8 @@ const PORT = process.env.PORT;
 // ==================================================
 app.use(express.json());
 
+var existingSize = 0;
+
 // Function to fetch new data and append to db.json
 async function fetchAndAppendData() {
   try {
@@ -77,7 +79,6 @@ async function fetchAndAppendData() {
     });
 
     firstItem.text = modifiedText.trim();
-    console.log("text: " + firstItem.text);
 
 
     // ==================================================
@@ -159,6 +160,7 @@ async function fetchAndAppendData() {
 
     // Read existing data from db.json
     const existingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
+    existingSize = existingData.length;
 
     const combinedData = [
       ...existingData, 
@@ -227,7 +229,14 @@ async function fetchAndAppendData() {
 app.get("/fetch-and-append-data", async (req, res) => {
   await fetchAndAppendData();
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'db.json')));
-  res.send(data[data.length - 1]);
+
+  let array = [];
+  const size = data.length - existingSize
+  for(let i=0; i<size; i++) {
+    array += data[data.length - 1 - i];
+  }
+
+  res.send(array);
 });
 
 // Endpoint to get JSON data (optional, for testing)
