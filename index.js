@@ -202,8 +202,9 @@ async function fetchAndAppendData() {
   //   console.error('Failed to fetch and append data:', error);
   // }
 
+    console.log(combinedData);
     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
-    
+    console.log('New data has been appended to db.json');
   } catch (error) {
     console.error('Failed to fetch and append data:', error);
   }
