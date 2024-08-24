@@ -111,15 +111,18 @@ async function fetchAndAppendData() {
     // ==================================================
     // Json: objData > Detect Text > processedHiData
     // ==================================================
-    const containsText = objData.some(item => 
-      item.name.includes("Text") || 
-      item.name.includes("Texting") || 
-      item.name.includes("Sign")
+    const containsObj = objData.some(item => 
+      item.name.includes("Tree") || 
+      item.name.includes("Flower") || 
+      item.name.includes("Lamp Post") || 
+      item.name.includes("Lamp") || 
+      item.name.includes("TV") || 
+      item.name.includes("Screen")
     );
 
     // Process hiData and combine with objData only if objData contains "Text"
     let processedHiData = [];
-    if (containsText) {
+    if (!containsObj) {
       console.log("hiData: " + hiData);
       console.log("hiData slice: " + hiData.slice(0, 1));
 
