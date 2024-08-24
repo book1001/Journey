@@ -120,6 +120,9 @@ async function fetchAndAppendData() {
     // Process hiData and combine with objData only if objData contains "Text"
     let processedHiData = [];
     if (containsText) {
+      console.log("hiData: " + hiData);
+      console.log("hiData slice: " + hiData.slice(0, 1));
+
       processedHiData = hiData.slice(0, 1).map(item => {
         return {
           sizeClass: randomSize(),
@@ -132,6 +135,7 @@ async function fetchAndAppendData() {
           // gardenClass: randomGarden()
         };
       });
+      console.log("processedHiData: " + processedHiData);
     }
 
     // const processedHiData = hiData.slice(1).map(item => {
