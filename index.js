@@ -202,10 +202,7 @@ async function fetchAndAppendData() {
   //   console.error('Failed to fetch and append data:', error);
   // }
 
-    await fs.writeFile(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8', (err) => {
-      if (err) console.log('Error: ', err);
-      else console.log('New data has been appended to db.json');
-    });
+    fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');
     
   } catch (error) {
     console.error('Failed to fetch and append data:', error);
