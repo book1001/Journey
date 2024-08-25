@@ -56,7 +56,6 @@ const uppy = new Uppy();
       try {
         const response = await fetch('/fetch-and-append-data');
         const data = await response.json();
-        console.log(data);
   
         const contentDiv = document.getElementById('content');
         for(let i=0; i<data.length; i++) {
