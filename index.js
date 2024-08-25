@@ -233,7 +233,7 @@ app.get("/fetch-and-append-data", async (req, res) => {
   let array = [];
   const size = data.length - existingSize
   for(let i=0; i<size; i++) {
-    array += data[data.length - 1 - i];
+    array.push(data[data.length - 1 - i]);
   }
   console.log("array:");
   console.log(array);
