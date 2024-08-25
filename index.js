@@ -235,6 +235,8 @@ app.get("/fetch-and-append-data", async (req, res) => {
   for(let i=0; i<size; i++) {
     array += data[data.length - 1 - i];
   }
+  console.log("array:");
+  console.log(array);
 
   res.send(array);
 });
