@@ -202,27 +202,34 @@ html,body{
 .item {
   width: 240px;
   margin: 0 auto;
+  gap: 0px 0px;
+  text-align: center;
+  direction: ltr;
+}
+
+.house {
+  width: 100%;
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 100px 1fr;
-  gap: 0px 0px;
-  border: none;
   text-align: center;
   direction: ltr;
   overflow: hidden;
+  cursor: pointer;
 }
+
 
 .color1 {
   color: red;
 }
 
 .color2 {
-  color: blue;
+  color: green;
 }
 
 .color3 {
-  color: green;
+  color: blue;
 }
 
 

@@ -1,8 +1,10 @@
 /* font: import /* ======================================================================================================================================= */
 @font-face {
   font-family: 'Menlo';
-  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
-  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
+  src: url('font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('font/Menlo-Regular_RadioClub.woff2') format('woff2');
+  /* src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2'); */
 }
 
 

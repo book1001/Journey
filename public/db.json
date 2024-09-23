@@ -1831,31 +1831,31 @@
   {
     "sizeClass": "size2",
     "colorClass": "color1",
-    "roofClass": "roof3-G",
-    "text": "05\nUNI\nQLO",
-    "textClass": "text1",
-    "wallClass": "wall2"
-  },
-  {
-    "sizeClass": "size3",
-    "colorClass": "color1",
     "roofClass": "roof2",
     "text": "05\nUNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2"
   },
   {
+    "sizeClass": "size1",
+    "colorClass": "color1",
+    "roofClass": "roof1",
+    "text": "05\nUNI\nQLO",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
     "sizeClass": "size3",
-    "colorClass": "color2",
+    "colorClass": "color1",
     "roofClass": "roof3-G",
     "text": "05\nUNI\nQLO",
     "textClass": "text1",
-    "wallClass": "wall2"
+    "wallClass": "wall1"
   },
   {
-    "sizeClass": "size2",
+    "sizeClass": "size3",
     "colorClass": "color3",
-    "roofClass": "roof3-B",
+    "roofClass": "roof3-G",
     "text": "05\nUNI\nQLO",
     "textClass": "text1",
     "wallClass": "wall2"

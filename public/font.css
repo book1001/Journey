@@ -2,9 +2,16 @@
 
 @font-face {
   font-family: 'Menlo';
+  src: url('font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('font/Menlo-Regular_RadioClub.woff2') format('woff2');
+}
+
+/* @font-face {
+  font-family: 'Menlo';
   src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
   src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
-}
+} */
+
 
 html,
 body {
@@ -26,4 +33,9 @@ body {
 a {
   color: red;
   text-decoration: none;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }

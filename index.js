@@ -6,6 +6,12 @@ const fs = require('fs');
 
 
 // ==================================================
+// socket.io
+// ==================================================
+
+
+
+// ==================================================
 // express + Uppy
 // ==================================================
 const express = require("express");
@@ -13,6 +19,16 @@ const app = express();
 const cors = require("cors");
 const path = require("path");
 const multer = require("multer");
+
+// const { createServer } = require('node:http');
+// const { join } = require('node:path');
+// const { Server } = require('socket.io');
+// const server = createServer(app);
+// const io = new Server(server);
+
+// var http = require("http").createServer(app);
+// var io = require("socket.io")(http);
+
 
 const storage = multer.diskStorage({
   destination: `${__dirname}/uploads/`,
@@ -32,17 +48,25 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "public/index.html"));
 });
 
+app.get("/rooms/:filename", (req, res) => {
+  const filePath = path.join(__dirname, `/public/rooms/${req.params.filename}.html`);
+  res.sendFile(filePath);
+});
+
+// app.get("/color2_roof3-B_wall2_size2", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/public/house/color2_roof3-B_wall2_size2.html"));
+// });
+
+
 app.post("/image", uploadImage, (req, res) => {
   console.log(req.file);
   if(req.file) return res.json({mes: "good job uploading that image"});
-
   res.send("Image upload failed");
 });
 
-
 require("dotenv").config();
-
 const PORT = process.env.PORT;
+
 
 // app.get("/upload", (req, res) => {
 //   return res.status(200).json({
@@ -137,21 +161,6 @@ async function fetchAndAppendData() {
         };
       });
     }
-
-    // const processedHiData = hiData.slice(1).map(item => {
-    //   return {
-    //     sizeClass: randomSize(),
-    //     colorClass: randomColor(),
-    //     roofClass: randomRoof(),
-    //     // text: item.text,
-    //     text: firstItem.text,
-    //     textClass: randomText(),
-    //     wallClass: randomWall()
-    //     // gardenClass: randomGarden()
-    //   };
-    // });
-
-
 
 
     // ==================================================
@@ -319,7 +328,7 @@ function randomTheater() {
   return getRandomElement(classes);
 }
 
-
 app.listen(PORT, () => {
   console.log(`Backend running on $(PORT)`);
 });
+
