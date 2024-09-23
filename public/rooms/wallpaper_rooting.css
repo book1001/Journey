@@ -1,0 +1,87 @@
+
+/* =========================================================== */
+/* Input: Color */
+/* =========================================================== */
+
+.focused {
+  caret-color: transparent;
+  border-left: 5px solid red;
+/*   animation: blink 0.9s infinite; */
+/*   background: red; */
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-left-color: red; /* 처음과 끝에서 빨간색 */
+  }
+  50% {
+    border-left-color: transparent; /* 중간에 투명하게 */
+  }
+}
+
+
+/* =========================================================== */
+/* Wallpaper: BG color */
+/* =========================================================== */
+
+#wallpaper-top {
+  background: var(--roof);
+}
+
+#wallpaper-left,
+#wallpaper-right {
+  opacity: 0.8;
+}
+
+#wallpaper-left,
+#wallpaper-front,
+#wallpaper-right,
+#wallpaper-bottom {
+  background: var(--floor);
+}
+
+
+
+/* =========================================================== */
+/* Wallpaper: Tile */
+/* =========================================================== */
+
+/* Tile: size ------------------------------------------------ */
+
+.tile {
+  width: 16px;
+  height: 28px;
+  display: inline-block;
+}
+
+
+/* Tile: patterns ------------------------------------------------ */
+
+.pattern-R1 {
+  background: var(--roofBg1);
+  -webkit-mask-image: var(--roofPattern1);
+  mask-image: var(--roofPattern1);
+  background-repeat: repeat;
+}
+
+.pattern-R2 {
+  background: var(--roofBg2);
+  -webkit-mask-image: var(--roofPattern2);
+  mask-image: var(--roofPattern2);
+  background-repeat: repeat;
+}
+
+.pattern-W1{
+  background: var(--floorBg1);
+  -webkit-mask-image: var(--floorPattern1);
+  mask-image: var(--floorPattern1);
+  background-repeat: repeat;
+}
+
+.pattern-W2{
+  background: var(--floorBg2);
+  -webkit-mask-image: var(--floorPattern2);
+  mask-image: var(--floorPattern2);
+  background-repeat: repeat;
+}
+

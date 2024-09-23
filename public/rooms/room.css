@@ -1,0 +1,152 @@
+/* =========================================================== */
+/* Font */
+/* =========================================================== */
+
+@font-face {
+  font-family: 'Menlo';
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff') format('woff');
+  src: url('https://communalradio.club/font/Menlo-Regular_RadioClub.woff2') format('woff2');
+}
+
+
+
+/* =========================================================== */
+/* Default */
+/* =========================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  background: black;
+}
+
+/* text: drag color ================================================ */
+
+::selection {
+  color: white;
+  background: red;
+}
+
+::-moz-selection {
+  color: white;
+  background: red;
+}
+
+
+
+/* =========================================================== */
+/* 3D */
+/* =========================================================== */
+
+
+/* 3D: Inputs ------------------------------------------------ */
+
+.inputs-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  perspective: 500px;
+}
+
+.inputs {
+  position: fixed;
+  transform-style: preserve-3d;
+}
+
+
+/* 3D: rooms ------------------------------------------------ */
+
+.wallpapers-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  perspective: 500px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.wallpapers {
+  position: fixed;
+  transform-style: preserve-3d;
+}
+
+
+/* 3D: sides ------------------------------------------------ */
+
+.top, 
+.left,
+.front,
+.right,
+.bottom {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+.top {
+  padding: 50vh 0 0 0;
+  transform: rotateX(-90deg) translateZ(-50vh);
+}
+
+.left{
+  padding: 0 0 0 50vw;
+  transform: rotateY(90deg) translateZ(-50vw);
+}
+
+.front{
+  padding: 0;
+  transform: rotateX(0deg) translateZ(-50vh);
+}
+
+.right{
+  padding: 0 50vw 0 0;
+  transform: rotateY(90deg) translateZ(50vw) scale(-1, 1);
+}
+
+.bottom {
+  padding: 0 0 50vh;
+  transform: rotateX(90deg) translateZ(-50vh);
+}
+
+
+
+/* =========================================================== */
+/* Input */
+/* =========================================================== */
+
+
+input {
+  box-sizing: border-box;
+  width: 16px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  resize: none;
+  background: transparent;
+  border: none;
+  outline: none;
+   
+  font-family: Menlo,sans-serif;
+  font-size: 19px;
+  text-align: center;
+  color: red;
+}
+
+.input-texted {
+  background: black;
+}
+
+
+
+
+
