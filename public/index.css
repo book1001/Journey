@@ -172,12 +172,56 @@ html,body{
 }
 
 .infoSign {
-  display: none;
-  width: 240px;
+  position: relative;
   margin: 0 auto;
+  border: none;
   text-align: center;
   direction: ltr;
   overflow: hidden;
+  transition: background-color 0.5s;
+  /* width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  direction: ltr;
+  overflow: hidden; */
+}
+
+.infoSign:hover {
+  cursor: pointer;
+}
+
+.info-roof {
+  position: absolute;
+  top: 0;
+  width: 240px;
+  color: blue;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.info-wall {
+  width: 240px;
+  margin: 0 0 0 auto;
+  word-wrap: break-word;
+  color: blue;
+}
+
+/* .infoSign:hover {
+  color: white;
+  text-shadow: blue 0px 0px 5px;
+  cursor: pointer;
+} */
+
+
+@keyframes blink {
+  0%, 100% {
+    color: blue;
+    text-shadow: none;
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    color: white;
+    text-shadow: blue 0px 0px 5px;
+  }
 }
 
 .qrItem {
@@ -418,6 +462,7 @@ html,body{
 /* Json: Objects > Theater */
 /* ============================================= */
 .theater {
+  display: none;
   position: relative;
   margin: 0 auto;
   border: none;
@@ -450,8 +495,6 @@ html,body{
   z-index: 2;
   pointer-events: none;
 }
-
-
 
 
 /* ============================================= */

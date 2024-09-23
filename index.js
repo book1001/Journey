@@ -127,8 +127,8 @@ async function fetchAndAppendData() {
     const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
     const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
     const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
-    const theaterTvData = processData(objData, ["TV"], randomTheater, 'theaterClass');
-    const theaterScreenData = processData(objData, ["Screen"], randomTheater, 'theaterClass');
+    // const theaterTvData = processData(objData, ["TV"], randomTheater, 'theaterClass');
+    // const theaterScreenData = processData(objData, ["Screen"], randomTheater, 'theaterClass');
 
 
 
@@ -178,8 +178,8 @@ async function fetchAndAppendData() {
       ...flowerData,
       ...lightData,
       ...lightEtcData,
-      ...theaterTvData,
-      ...theaterScreenData
+      // ...theaterTvData,
+      // ...theaterScreenData
     ];
 
 
@@ -222,8 +222,9 @@ async function fetchAndAppendData() {
       ...flowerData,
       ...lightData,
       ...lightEtcData,
-      ...theaterTvData,
-      ...theaterScreenData];
+      // ...theaterTvData,
+      // ...theaterScreenData
+    ];
     console.log("New data:");
     console.log(newData);
     fs.writeFileSync(path.join(__dirname, 'public', 'db.json'), JSON.stringify(combinedData, null, 2), 'utf-8');

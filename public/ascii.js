@@ -275,7 +275,7 @@ function createElement(item) {
                                        
       ███████                   ███████
       ███▓▓▓██                 ██▓▓▓███
-      ▓▓▓███▓▓▓███░▓░░░░░░░███▓▓▓███▓▓▓
+      ▓▓▓███▓▓▓███░░░░░░░░░███▓▓▓███▓▓▓
       ███▓▓▓███▓▓▓░░░░░░░░░▓▓▓███▓▓▓███
       ▓▓▓███▓▓▓███░░░░░░░░░███▓▓▓███▓▓▓
       ███▓▓▓███▓▓▓░░░░░░░░░▓▓▓███▓▓▓███
@@ -295,8 +295,8 @@ function createElement(item) {
       ▒▒▒▒▒▒▒▒▒▒▒▒▓▒▓▒▓▒▓▒▓▒▒▒▒▒▒▒▒▒▒▒▒
       ▒▒▒▒▒▒▒▒▒▒▒▓▒░▒░▒░▒░▒▓▒▒▒▒▒▒▒▒▒▒▒
       ▒▒▒▒▒▒▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▒▒▒▒▒▒
-      ▓▒▓▒▓▒▓▒  A R E  .  N A  ▒▓▒▓▒▓▒▓
-             ▓  T H E A T E R  ▓       
+      ▓▒▓▒▓▒▓▒  V I S I T O R  ▒▓▒▓▒▓▒▓
+             ▓     I N F O     ▓       
               ▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓        
                                        
                                        
@@ -707,6 +707,16 @@ function createElement(item) {
       div.style.color = 'yellow';
       div.style.textShadow = '0 2px 5px yellow';
     });
+
+    document.querySelectorAll('.info-roof').forEach(div => {
+      div.style.color = 'white';
+      div.style.textShadow = '0 2px 5px yellow';
+    });
+
+    document.querySelectorAll('.info-wall').forEach(div => {
+      div.style.color = 'green';
+      div.style.textShadow = '0 0 3px yellow';
+    });
   }
 
   function dayMode() {
@@ -763,6 +773,16 @@ function createElement(item) {
       div.style.color = '';
       div.style.textShadow = '';
     });
+
+    document.querySelectorAll('.info-roof').forEach(div => {
+      div.style.color = '';
+      div.style.textShadow = '';
+    });
+
+    document.querySelectorAll('.info-wall').forEach(div => {
+      div.style.color = '';
+      div.style.textShadow = '';
+    });
   }
 
   return itemDiv;
@@ -793,25 +813,77 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const infoSignDiv = document.createElement('div');
     infoSignDiv.classList.add(`infoSign`);
-    infoSignDiv.textContent = 
+    
+    infoSignDiv.onclick = function() {
+      let roomLink = 'rooms/info.html';
+    
+      let width = 1400;
+      let height = 900;
+      
+      // Current browser position, size
+      const screenLeft = window.screenX || window.screenLeft;
+      const screenTop = window.screenY || window.screenTop;
+      const screenWidth = window.outerWidth;
+      const screenHeight = window.outerHeight;
+      
+      // Browser position center calcurate
+      const left = screenLeft + (screenWidth - width) / 2;
+      const top = screenTop + (screenHeight - height) / 2;
+
+      // new window
+      window.open(roomLink, '_blank', `width=${width},height=${height},left=${left},top=${top}`);
+
+    };
+
+
+    const infoRoofDiv = document.createElement('div');
+    infoRoofDiv.classList.add('info-roof');
+    infoSignDiv.appendChild(infoRoofDiv);
+    const infoWallDiv = document.createElement('div');
+    infoWallDiv.classList.add('info-wall');
+    infoSignDiv.appendChild(infoWallDiv);
+
+    infoRoofDiv.textContent = 
     `
-            ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂        
-           ▕▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎       
-           ▕▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎       
-           ▕▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎       
-           ▕▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎       
-           ▕▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎       
-           ▕▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎       
-            ▔▔▔▔▔▔▔▔▒▔▔▔▔▔▔▔▔        
-                    ▒                
-                    ▒                
-                    ▒                
-                    ▒                
-                    ▒                
-                   ▕▓▎               
-                  ▄▓█▓▄              
+    ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+    ▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓
+    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+    ▒▒▒▒▒▒▒▒▒▒▒▒▓▒▓▒▓▒▓▒▓▒▒▒▒▒▒▒▒▒▒▒▒
+    ▒▒▒▒▒▒▒▒▒▒▒▓▒░▒░▒░▒░▒▓▒▒▒▒▒▒▒▒▒▒▒
+    ▒▒▒▒▒▒▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▒▒▒▒▒▒
+    ▓▒▓▒▓▒▓▒  V I S I T O R  ▒▓▒▓▒▓▒▓
+           ▓     I N F O     ▓       
+            ▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓        
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
       `;
 
+    infoWallDiv.textContent = 
+    `
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+      ███████                   ███████
+      ███▓▓▓██                 ██▓▓▓███
+      ▓▓▓███▓▓▓███░░░░░░░░░███▓▓▓███▓▓▓
+      ███▓▓▓███▓▓▓░░░░░░░░░▓▓▓███▓▓▓███
+      ▓▓▓███▓▓▓███░░░░░░░░░███▓▓▓███▓▓▓
+      ███▓▓▓███▓▓▓░░░░░░░░░▓▓▓███▓▓▓███
+      ▓▓▓███▓▓▓███░░░░░░░░░███▓▓▓███▓▓▓
+      ███▓▓▓███▓▓▓░░░░░░░░░▓▓▓███▓▓▓███
+        `;
 
 
     const qrDiv = document.createElement('div');
@@ -841,3 +913,4 @@ document.addEventListener('DOMContentLoaded', async function () {
     console.error('Failed to fetch data:', error);
   }
 });
+
