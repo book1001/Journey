@@ -1230,6 +1230,33 @@
     "wallClass": "wall3"
   },
   {
+    "sizeClass": "size3",
+    "colorClass": "color3",
+    "roofClass": "roof3-G",
+    "text": "180",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
     "flowerClass": "flower1"
+  },
+  {
+    "sizeClass": "size3",
+    "colorClass": "color1",
+    "roofClass": "roof3-G",
+    "text": "CLEAR\nFLOUR\nBREAD",
+    "textClass": "text1",
+    "wallClass": "wall1"
+  },
+  {
+    "sizeClass": "size1",
+    "colorClass": "color2",
+    "roofClass": "roof3-B",
+    "text": "Inscript.tf",
+    "textClass": "text1",
+    "wallClass": "wall2"
+  },
+  {
+    "lightClass": "light1"
   }
 ]

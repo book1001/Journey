@@ -437,6 +437,7 @@ function createElement(item) {
       }
 
       let width = 800;
+
       
       // Current browser position, size
       const screenLeft = window.screenX || window.screenLeft;
