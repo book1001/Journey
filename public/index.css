@@ -166,6 +166,7 @@ html,body{
 /* Json: Info */
 /* ============================================= */
 .infoItem {
+  padding-top: 1px;
   text-transform: uppercase;
   /* direction: ltr; */
   /* order: 1; */

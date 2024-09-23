@@ -807,7 +807,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     // =============================================
     const infoDiv = document.createElement('div');
     infoDiv.classList.add(`infoItem`);
-    infoDiv.textContent = 'Scrape the World scrapes landscapes from around the world into the web. Hit the camera button to add your world hear! Some items have special Easter eggs. (More to be added soon!) Click here for detailed usage instructions. If you want to know more about Scrape the World, click here. — 2024. 7. 23 Halim';
+    infoDiv.textContent = 'Scrape the World combines landscapes from around the world into the web to build a digitally constructed new village. Click the camera button at the bottom of this page and upload a photo of your city’s landscape. If you don’t have a webcam, you can open this site on your mobile device. The world you scrape will be immediately stored on this site. For more information, please check the Visitor Info Center, the blue house located at the top right corner!';
     // infoDiv.textContent = '';
     // infoDiv.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 
@@ -816,9 +816,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     
     infoSignDiv.onclick = function() {
       let roomLink = 'rooms/info.html';
-    
-      let width = 1400;
-      let height = 900;
+
+      let width = 1000;
+      let height = 1000;
+      // let width = 1400;
+      // let height = 900;
       
       // Current browser position, size
       const screenLeft = window.screenX || window.screenLeft;

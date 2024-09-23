@@ -26,8 +26,10 @@
 
     .textbox {
       position: fixed; 
-      top: 20px;
+      top: 10px;
       left: 20px;
+      width: calc(100% - 40px);
+      padding: 0 0 10px 0;
       /* top: 50%; 
       left: 50%; 
       width: 70%; 
@@ -39,7 +41,8 @@
       /* mix-blend-mode: difference; */
       /* text-shadow: 0px 1px gray !important; */
       text-transform: uppercase;
-      line-height: 24px;
+      letter-spacing: 0.15;
+      line-height: 23px;
       /* padding: 40px; */
     }
   </style>
@@ -48,12 +51,15 @@
 <body>
 
   <div class="textbox">
-    If new landscapes are not registered, it is likely that the above items were not recognized. Adjust the camera angle and try again! The recognition rate is higher when you capture one object at a time. 
-    If new landscapes are not registered, it is likely that the above items were not recognized. Adjust the camera angle and try again! The recognition rate is higher when you capture one object at a time. 
-    If new landscapes are not registered, it is likely that the above items were not recognized. Adjust the camera angle and try again! The recognition rate is higher when you capture one object at a time. 
-    If new landscapes are not registered, it is likely that the above items were not recognized. Adjust the camera angle and try again! The recognition rate is higher when you capture one object at a time. 
-    <br><br>
-    
+    <p style="padding-bottom: 9px;">
+      Hello everyone from all around the world! Though we are physically disconnected, the magic of the web brings us together here. 
+      In “Scrape the World,” we can even combine the landscapes of our cities to build a digitally constructed new village. 
+      Scan <span style="color: white;">the QR code</span> below and upload a photo of your city’s landscape. The world you scrape will be immediately stored in “Scrape the World.”
+    </p>
+    <p>
+      Currently, the objects that you can upload are <span style="color: yellow;">building signs, trees, flowers, and streetlights.</span>  
+      I will keep updating to add more objects. If no new item is uploaded, it may be because the items listed above weren’t recognized. Try adjusting the camera angle and giving it another shot! You'll have better recognition by photographing one object at a time.
+    </p>
   </div>
 
   <div class="wallpapers-container">
@@ -61,7 +67,7 @@
       <div class="top" id="wallpaper-top"></div>
       <div class="left" id="wallpaper-left"></div>
       <div class="front" id="wallpaper-front">
-        <video src="../help/guide1.mp4" width="100%" autoplay muted loop></video>
+        <video src="../help/website_intro1.mp4" width="100%" autoplay muted loop></video>
         <!-- <iframe src="https://journey-qxo4f.ondigitalocean.app" frameborder="0"></iframe> -->
       </div>
       <div class="right" id="wallpaper-right"></div>
@@ -69,6 +75,12 @@
     </div>
   </div>
 
+  <!-- <div style="position: fixed; bottom: 0; left: 50%; padding-bottom: 20px;"></div>
+    About
+  </div> -->
+  <!-- <div style="position: fixed; bottom: 0; left: 50%;">
+    <img style="width: 80px; height: 100px;" src="../qrcode/qr_r.svg">
+  </div> -->
 
   <!-- <div class="wallpapers-container"></div>
     <div class="wallpapers">
