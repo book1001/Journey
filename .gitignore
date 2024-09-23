@@ -2,3 +2,6 @@
 /node_modules
 /visonkey
 /git_ignored_files
+.DS_Store
+public/.DS_Store
+public/font/.DS_Store
