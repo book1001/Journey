@@ -10,7 +10,10 @@ if (roomLink.includes("color1")) {
 
 if (roomLink.includes("roof1")) {
   root.style.setProperty("--roof", "var(--floor)");
-
+  root.style.setProperty("--roofBg1", "rgba(255, 255, 255, 0.6)");
+  root.style.setProperty("--roofPattern1", "url(wallpaper/pattern_roof1.svg)");
+  root.style.setProperty("--roofBg2", "rgba(255, 255, 255, 0.6)");
+  root.style.setProperty("--roofPattern2", "url(wallpaper/pattern_roof1.svg)");
 } else if (roomLink.includes("roof2")) {
   root.style.setProperty("--roof", "var(--floor)");
   root.style.setProperty("--roofBg1", "rgba(255, 255, 255, 1)");

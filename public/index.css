@@ -225,20 +225,20 @@ html,body{
   }
 }
 
-.qrItem {
+/* .qrItem {
   width: 240px;
   height: 100px;
   margin: 0 auto;
   border: none;
   text-align: center;
-  /* direction: ltr; */
+  direction: ltr;
   overflow: hidden;
   background: green;
 }
 
 .qrImg {
   width: 86px;
-}
+} */
 
 
 /* ============================================= */

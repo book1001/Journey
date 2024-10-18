@@ -24,10 +24,22 @@ const multer = require("multer");
 // const { join } = require('node:path');
 // const { Server } = require('socket.io');
 // const server = createServer(app);
-// const io = new Server(server);
+// // const io = new Server(server);
+
+// const io = new Server({ /* options */ });
+
+
+// const { createServer } = require("http");
+// const { Server } = require("socket.io");
+// const httpServer = createServer();
+// const io = new Server(httpServer, { /* options */ });
+
 
 // var http = require("http").createServer(app);
 // var io = require("socket.io")(http);
+
+// const server = createServer(app);
+// const io = new Server(server);
 
 
 const storage = multer.diskStorage({
@@ -48,10 +60,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "public/index.html"));
 });
 
-app.get("/rooms/:filename", (req, res) => {
-  const filePath = path.join(__dirname, `/public/rooms/${req.params.filename}.html`);
-  res.sendFile(filePath);
-});
+// app.get("/rooms/:filename", (req, res) => {
+//   const filePath = path.join(__dirname, `/public/rooms/${req.params.filename}.html`);
+//   res.sendFile(filePath);
+// });
 
 // app.get("/color2_roof3-B_wall2_size2", (req, res) => {
 //   res.sendFile(path.join(__dirname + "/public/house/color2_roof3-B_wall2_size2.html"));
@@ -71,6 +83,102 @@ const PORT = process.env.PORT;
 // app.get("/upload", (req, res) => {
 //   return res.status(200).json({
 //     meg:"upload",
+//   });
+// });
+
+// ==================================================
+// Socket
+// ==================================================
+
+
+// // 가능한 조합들 생성
+// const colors = ["color1", "color2", "color3"];
+// const roofs = ["roof1", "roof2", "roof3-R", "roof3-G", "roof3-B"];
+// const walls = ["wall1", "wall2", "wall3"];
+// const sizes = ["size1", "size2", "size3"];
+// let fileNames = [];
+
+// // 파일 이름 조합 생성
+// colors.forEach(color => {
+//   roofs.forEach(roof => {
+//     walls.forEach(wall => {
+//       sizes.forEach(size => {
+//         fileNames.push(`${color}_${roof}_${wall}_${size}`);
+//       });
+//     });
+//   });
+// });
+
+// // 각 조합에 대한 초기 데이터 설정 및 파일 로드
+// let textDataMap = {};
+// fileNames.forEach(fileName => {
+//   const dataFilePath = path.join(__dirname, "data", `${fileName}.json`);
+  
+//   if (fs.existsSync(dataFilePath)) {
+//     textDataMap[fileName] = JSON.parse(fs.readFileSync(dataFilePath, "utf8"));
+//   } else {
+//     console.log(dataFilePath + " is not exist");
+//     textDataMap[fileName] = {};
+//     for (let i = 1; i <= 4200; i++) {
+//       textDataMap[fileName][`input${i}`] = "";
+//     }
+//     fs.writeFileSync(dataFilePath, JSON.stringify(textDataMap[fileName], null, 2), "utf8");
+//   }
+// });
+
+// // get Rooms
+// app.get("/rooms/:filename", (req, res) => {
+//   const filePath = path.join(__dirname, `/public/rooms/${req.params.filename}.html`);
+//   res.sendFile(filePath);
+// });
+
+// // get Json
+// app.get("/data/:filename", (req, res) => {
+//   const filePath = path.join(__dirname, `/data/${req.params.filename}.json`);
+//   res.sendFile(filePath);
+// });
+
+
+// // 클라이언트 접속 처리
+// io.on("connection", (socket) => {
+//   // 모든 파일의 데이터를 클라이언트로 전송
+//   fileNames.forEach(fileName => {
+//     socket.emit(`update_data_${fileName}`, textDataMap[fileName]);
+//   });
+
+//   // 데이터 업데이트 및 전송 처리
+//   fileNames.forEach(fileName => {
+//     const handleDataUpdates = (dataType) => {
+//       socket.on(`new_data_${fileName}`, (data) => {
+//         textDataMap[fileName][data.id] = data.value;
+//         io.emit(`update_data_${fileName}`, textDataMap[fileName]);
+
+//         const dataFilePath = path.join(__dirname, "data", `${fileName}.json`);
+//         fs.writeFile(dataFilePath, JSON.stringify(textDataMap[fileName], null, 2), (err) => {
+//           if (err) {
+//             console.error(`Error writing file ${dataFilePath}:`, err);
+//           }
+//         });
+//       });
+
+//       socket.on(`delete_data_${fileName}`, (data) => {
+//         textDataMap[fileName][data.id] = ''; // 텍스트 삭제
+//         io.emit(`update_data_${fileName}`, textDataMap[fileName]);
+
+//         const dataFilePath = path.join(__dirname, "data", `${fileName}.json`);
+//         fs.writeFile(dataFilePath, JSON.stringify(textDataMap[fileName], null, 2), (err) => {
+//           if (err) {
+//             console.error(`Error writing file ${dataFilePath}:`, err);
+//           }
+//         });
+//       });
+
+//       socket.on(`focus_change_${fileName}`, (data) => {
+//         io.emit(`focus_change_${fileName}`, data);
+//       });
+//     };
+
+//     handleDataUpdates(fileName);
 //   });
 // });
 
@@ -126,7 +234,7 @@ async function fetchAndAppendData() {
     const treeData = processData(objData, ["Tree"], randomTree, 'treeClass');
     const flowerData = processData(objData, ["Flower"], randomFlower, 'flowerClass');
     const lightData = processData(objData, ["Lamp Post"], randomLight, 'lightClass');
-    const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
+    // const lightEtcData = processData(objData, ["Lamp"], randomLight, 'lightClass');
     // const theaterTvData = processData(objData, ["TV"], randomTheater, 'theaterClass');
     // const theaterScreenData = processData(objData, ["Screen"], randomTheater, 'theaterClass');
 

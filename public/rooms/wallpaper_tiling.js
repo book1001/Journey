@@ -49,3 +49,30 @@ elements.forEach(({ div, repeat, pattern1, pattern2, repeatPattern1, repeatPatte
 //   elements.forEach(({ div, repeat, pattern1, pattern2 }) => 
 //     createTiles(div, repeat, pattern1, pattern2)
 //   );
+
+
+
+// ======================================================
+// Window Size Change (Temp)
+// ======================================================
+
+const frontElement = document.querySelector('.front');
+const MIN_WIDTH = 800;
+const MIN_HEIGHT = 784;
+const MAX_TRANSLATE_Z = -50;
+
+function adjustTransform() {
+  const widthRatio = Math.min(window.innerWidth / MIN_WIDTH, 1);
+  const heightRatio = Math.min(window.innerHeight / MIN_HEIGHT, 1);
+
+  // translateZ 값 계산 (비례해서 줄어듦)
+  const newTranslateZ = MAX_TRANSLATE_Z * Math.min(widthRatio, heightRatio) + 10;
+
+  frontElement.style.transform = `rotateX(0deg) translateZ(${newTranslateZ}vh)`;
+}
+
+// 창 크기 변경 시 이벤트 등록
+window.addEventListener('resize', adjustTransform);
+
+// 페이지 로드 시 초기 transform 설정
+window.addEventListener('load', adjustTransform);

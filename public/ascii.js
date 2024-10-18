@@ -429,12 +429,19 @@ function createElement(item) {
 
       let height;
       if (item.sizeClass === 'size1') {
-        height = 640; //72px
+        height = 784; //72px
       } else if (item.sizeClass === 'size2') {
-        height = 720; //96px
+        height = 784; //96px
       } else if (item.sizeClass === 'size3') { 
         height = 784; //120px (800px)
       }
+      // if (item.sizeClass === 'size1') {
+      //   height = 640; //72px
+      // } else if (item.sizeClass === 'size2') {
+      //   height = 720; //96px
+      // } else if (item.sizeClass === 'size3') { 
+      //   height = 784; //120px (800px)
+      // }
 
       let width = 800;
 

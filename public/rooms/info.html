@@ -49,6 +49,31 @@
       line-height: 23px;
       /* padding: 40px; */
     }
+
+    .qr-container {
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.15;
+      color: yellow;
+      /* left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); */
+    }
+
+    .qrImg {
+      /* position: fixed; 
+      bottom: 20px; 
+      right: 20px; */
+      width: 47px;
+      height: auto;
+      /* margin: 5px 10px 0 0; */
+    }
   </style>
 </head>
 
@@ -58,12 +83,15 @@
     <p style="padding-bottom: 9px;">
       Hello everyone from all around the world! Though we are physically disconnected, the magic of the web brings us together here. 
       In “Scrap the World,” we can even combine the landscapes of our cities to build a digitally constructed new village. 
-      Scan <span style="color: white;">the QR code</span> below and upload a photo of your city’s landscape. The world you scrap will be immediately stored in “Scrap the World.”
+      <span style="color: yellow;">Scan the QR code below</span> and upload a photo of your city’s landscape. The world you scrap will be immediately stored in “Scrap the World.”
     </p>
-    <p>
-      Currently, the objects that you can upload are <span style="color: yellow;">building signs, trees, flowers, and streetlights,</span> though I will keep updating to make more objects available. 
-      If no new item is uploaded, it may be because the items listed above weren’t recognized. Try adjusting the camera angle and giving it another shot! You'll have better recognition by photographing one object at a time.
-    </p>
+    <div>
+      <p>
+        Currently, the objects that you can upload are <span style="color: yellow;">building signs, trees, flowers, and streetlights,</span> though I will keep updating to make more objects available. 
+        If no new item is uploaded, it may be because the items listed above weren’t recognized. Try adjusting the camera angle and giving it another shot! You'll have better recognition by photographing one object at a time.
+      </p>
+      <!-- <img class="qrImg" src="../qrcode/qr.svg"> -->
+    </div>
   </div>
 
   <div class="wallpapers-container">
@@ -82,9 +110,12 @@
   <!-- <div style="position: fixed; bottom: 0; left: 50%; padding-bottom: 20px;"></div>
     About
   </div> -->
-  <!-- <div style="position: fixed; bottom: 0; left: 50%;">
-    <img style="width: 80px; height: 100px;" src="../qrcode/qr_r.svg">
-  </div> -->
+ 
+  <div class="qr-container">
+    Beta version try —————▶
+    <img class="qrImg" src="../qrcode/qr.svg">
+  </div>
+  
 
   <!-- <div class="wallpapers-container"></div>
     <div class="wallpapers">
