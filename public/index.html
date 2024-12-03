@@ -8,133 +8,16 @@
   <!-- css -->
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="index.css">
-  <!-- <link href="https://releases.transloadit.com/uppy/v3.25.2/uppy.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="uppy.css">
   <link rel="stylesheet" href="index_media.css">
 </head>
 
 
 <body>
-  <!-- <script>
-    if (!localStorage.getItem('reloaded')) {
-      // 3초 후 새로고침
-      setTimeout(function() {
-        localStorage.setItem('reloaded', 'true'); // 새로고침 기록
-        location.reload(); // 브라우저 새로고침
-      }, 3000);
-    } else {
-      localStorage.removeItem('reloaded'); // 새로고침 상태 초기화
-    }
-  </script> -->
-
   <div id="uppy"></div>
   <div id="content"></div>
   <div id="landscape"></div>
   <div id="failAlert">The world you scraped has been added!</div>
-
-  <div id="help-test">
-    <!-- <div id="help1"></div> -->
-    <!-- <iframe src="link_help" style="width: 100%; height: 100%; border:none;"></iframe> -->
-
-    <!-- <iframe src="https://www.nikmaths.com/" style="width: 100%; height: 100%; border:none;"></iframe> -->
-  </div>
-  <div id="help-bg"></div>
-  <div id="help">
-    <span>
-      ███ HOW TO USE ██<span style="color: white; background:red;"> BEHIND STORY </span>████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████████▓▓▓▓███▓▓▓▓███▓▓▓▓███▓▓▓▓████████▓▓▓▓███ X█
-      ▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-      ███ https://scrapethe.world/howtouse
-      ▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-      ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-      <br>
-      <img src="qrcode/qr_r.svg" style="width: 80px;">
-      <p style="word-wrap: break-word;">
-        2 Try capturing the following items. We will be updating to allow for more landscapes to be scraped.
-        <br><br>
-        <!-- <video src="help/guide1.mp4" style="width: 240px;" autoplay muted loop> -->
-        Updated on July 23, 2024:
-        <ul>
-          <li>
-            Building signs: Currently, anything recognized as "text" will be returned as a building. You might have fun experimenting with this loophole!
-          </li>
-          <li>
-            Trees
-          </li>
-          <li>
-            Flowers
-          </li>
-          <li>
-            Streetlights or lamps: Streetlights have a special feature that allows you to turn them off with a click!
-          </li>
-          <li>
-            TVs, screens: An Are.na Theater will be set up. In the Theater, videos uploaded to this Are.na channel will be shown randomly. This idea originates from my other project, Are.na TV.
-          </li>
-        </ul>
-        <br><br>
-        If new landscapes are not registered, it is likely that the above items were not recognized. Adjust the camera angle and try again! The recognition rate is higher when you capture one object at a time. 
-      </p>
-    </span>
-    <!-- <p class="help1"></p>
-    <div class="help-content">
-      <span class="help-side">
-        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-      </span>
-      <span>
-        <p style="word-wrap: break-word;">Friendly Guideline for the new visitors</p>
-        
-        <p style="word-wrap: normal;" class="help1"></p>
-      </span>
-      <span class="help-side" style="text-align: right;">
-        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-      </span>
-    </div>
-    
-    <p class="help1"></p>
-    <div class="help-content">
-      <span class="help-side">
-        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-      </span>
-      <span>
-        <p style="word-wrap: break-word;">
-          Try capturing the following items. We will be updating to allow for more landscapes to be scraped.
-          <br><br>
-          Updated on July 23, 2024:
-          <ul>
-            <li>
-              Building signs: Currently, anything recognized as "text" will be returned as a building. You might have fun experimenting with this loophole!
-            </li>
-            <li>
-              Trees
-            </li>
-            <li>
-              Flowers
-            </li>
-            <li>
-              Streetlights or lamps: Streetlights have a special feature that allows you to turn them off with a click!
-            </li>
-            <li>
-              TVs, screens: An Are.na Theater will be set up. In the Theater, videos uploaded to this Are.na channel will be shown randomly. This idea originates from my other project, Are.na TV.
-            </li>
-          </ul>
-          <br><br>
-          If new landscapes are not registered, it is likely that the above items were not recognized. Adjust the camera angle and try again! The recognition rate is higher when you capture one object at a time. 
-        </p>
-
-      </span>
-      <span class="help-side" style="text-align: right;">
-        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-      </span>
-    </div>
-    <p class="help1" style="word-wrap: break-word;"></p> -->
-  </div>
-
-  <!-- <button id="apple" style="position:fixed; top: 300px;">Fetch and Append Data</button> -->
-
-  <!-- <div id="result"></div>
-  <div id="text-container"></div> -->
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script> -->
-
 
   <script type="text/javascript" src="ascii.js"></script>
   <script type="module" src="uppy.js"></script>
